@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <title>SolarConnector | Save 70% on Electricity Bill in 30 Days | Guaranteed</title>
+    <meta name="description" content="SolarConnector helps you save 70% of your residential electricity bill in 30 days using Solar. Owned by Mariba Media in partnership with SwitchPay and Accredited EPCs.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Save 70% on Electricity in 30 Days | Solar Guarantee">
+    <meta property="og:description" content="70% savings on your electricity bill in 30 days with solar or we work for free until we achieve it. Book your residential solar package today.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:url" content="https://solarconnector.co.za">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/96/000000/solar-panel.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/96/000000/solar-panel.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/96/000000/solar-panel.png">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230033a0'/><path d='M50,20 L50,30 M50,70 L50,80 M30,50 L20,50 M80,50 L70,50 M35,35 L40,40 M65,35 L60,40 M35,65 L40,60 M65,65 L60,60' stroke='%23FFD700' stroke-width='4' stroke-linecap='round'/><circle cx='50' cy='50' r='15' fill='%23FFD700'/><circle cx='50' cy='50' r='8' fill='%230033a0'/></svg>" type="image/svg+xml">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#f0f7ff',
+                100: '#e0effe',
+                200: '#bae0fd',
+                300: '#7cc4fa',
+                400: '#36a5f3',
+                500: '#0d8ae3',
+                600: '#0067c2',
+                700: '#0052a0',
+                800: '#003d7d',
+                900: '#002a5a',
+              },
+              accent: {
+                50: '#f8fafc',
+                100: '#f1f5f9',
+                500: '#64748b',
+                700: '#334155',
+                900: '#0f172a',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in',
+              'slide-up': 'slideUp 0.6s ease-out',
+              'pulse-subtle': 'pulseSubtle 3s infinite',
+              'float': 'float 3s ease-in-out infinite',
+              'gradient': 'gradient 8s ease infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              pulseSubtle: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0.8' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              gradient: {
+                '0%, 100%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      html {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        overflow-x: hidden;
+        background: linear-gradient(135deg, #f8fafc 0%, #f0f7ff 100%);
+      }
+      
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      
+      .gradient-bg {
+        background: linear-gradient(-45deg, #f0f7ff, #ffffff, #e0effe, #ffffff);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+      }
+      
+      .hero-gradient {
+        background: linear-gradient(135deg, #0033a0 0%, #0056cc 50%, #0077ff 100%);
+      }
+      
+      .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 51, 160, 0.1);
+      }
+      
+      .text-gradient {
+        background: linear-gradient(135deg, #0033a0 0%, #0056cc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .border-gradient {
+        position: relative;
+        border: 2px solid transparent;
+        background: linear-gradient(white, white) padding-box,
+                    linear-gradient(135deg, #0033a0, #0056cc) border-box;
+      }
+      
+      .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+      }
+      
+      @media (max-width: 768px) {
+        .mobile-stack {
+          flex-direction: column;
+        }
+        
+        .mobile-center {
+          text-align: center;
+        }
+        
+        .mobile-full {
+          width: 100%;
+        }
+        
+        .mobile-padding {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+      
+      .section-padding {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+      
+      @media (max-width: 768px) {
+        .section-padding {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+      }
+      
+      .nav-link {
+        position: relative;
+        padding-bottom: 4px;
+      }
+      
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #0033a0, #0056cc);
+        transition: width 0.3s ease;
+      }
+      
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+      }
+      
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .stat-counter {
+        font-variant-numeric: tabular-nums;
+      }
+      
+      .sun-glow {
+        filter: drop-shadow(0 0 20px rgba(255, 200, 0, 0.3));
+      }
+      
+      .whatsapp-button {
+        background: linear-gradient(135deg, #25D366, #128C7E);
+      }
+      
+      .whatsapp-button:hover {
+        background: linear-gradient(135deg, #128C7E, #0E6E5E);
+      }
+      
+      .image-hover-zoom {
+        overflow: hidden;
+        border-radius: 1rem;
+      }
+      
+      .image-hover-zoom img {
+        transition: transform 0.5s ease;
+      }
+      
+      .image-hover-zoom:hover img {
+        transform: scale(1.05);
+      }
+      
+      .guarantee-badge {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+        color: white;
+        animation: pulse 2s infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+      
+      .package-card {
+        border: 2px solid transparent;
+        background: linear-gradient(white, white) padding-box,
+                    linear-gradient(135deg, #0033a0, #0056cc) border-box;
+      }
+      
+      .premium-package {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .premium-package::before {
+        content: 'MOST POPULAR';
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: linear-gradient(135deg, #ff9500, #ff6b00);
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 5px 40px;
+        transform: rotate(45deg);
+        z-index: 10;
+      }
+      
+      .cash-quote-button {
+        background: linear-gradient(135deg, #10b981, #059669);
+      }
+      
+      .cash-quote-button:hover {
+        background: linear-gradient(135deg, #059669, #047857);
+      }
+      
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .testimonial-card {
+        background: linear-gradient(135deg, #ffffff, #f8fafc);
+        border-left: 4px solid #0d8ae3;
+      }
+      
+      .partner-logo {
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+      
+      .partner-logo:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+    </style>
+</head>
+<body class="text-accent-900 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full glass-effect z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L3 12H6V22H18V12H21L12 2Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold text-primary-800 group-hover:text-primary-600 transition-colors">SolarConnector</span>
+                        <span class="block text-xs text-accent-500">by Mariba Media</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#hero" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Home</a>
+                    <a href="#packages" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Solar Packages</a>
+                    <a href="#gallery" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Gallery</a>
+                    <a href="#guarantee" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">70% Guarantee</a>
+                    <a href="#partners" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Partners</a>
+                    <a href="#finance" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Financing</a>
+                    <a href="#contact" class="nav-link text-sm font-medium text-accent-700 hover:text-primary-600 transition-colors">Contact</a>
+                    <a href="https://wa.me/27766473499" target="_blank" class="flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-800 transition-colors">
+                        <span>💬</span>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://wa.me/27766473499" target="_blank" class="whatsapp-button text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:shadow-lg transition-all shadow-md hover-lift">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden touch-target p-2 text-accent-700 hover:bg-accent-100 rounded-lg transition-colors">
+                    <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-white border-t border-accent-100 hidden shadow-xl">
+            <div class="px-4 py-6 flex flex-col gap-1">
+                <a href="#hero" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Home</a>
+                <a href="#packages" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Solar Packages</a>
+                <a href="#gallery" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Gallery</a>
+                <a href="#guarantee" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">70% Guarantee</a>
+                <a href="#partners" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Partners</a>
+                <a href="#finance" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Financing</a>
+                <a href="#contact" class="py-3 px-4 text-accent-700 font-medium rounded-lg hover:bg-accent-50 transition-colors">Contact</a>
+                <div class="pt-4 mt-2 border-t border-accent-100">
+                    <a href="https://wa.me/27766473499" target="_blank" class="flex items-center gap-3 py-3 px-4 text-primary-600 font-medium rounded-lg hover:bg-accent-50 transition-colors">
+                        <span>💬</span>
+                        <span>WhatsApp: +27766473499</span>
+                    </a>
+                    <a href="mailto:victor@maribamedia.co.za" class="flex items-center gap-3 py-3 px-4 text-primary-600 font-medium rounded-lg hover:bg-accent-50 transition-colors">
+                        <span>📧</span>
+                        <span>victor@maribamedia.co.za</span>
+                    </a>
+                    <a href="tel:+27766473499" class="flex items-center gap-3 py-3 px-4 text-primary-600 font-medium rounded-lg hover:bg-accent-50 transition-colors">
+                        <span>📞</span>
+                        <span>Call: +27766473499</span>
+                    </a>
+                </div>
+                <a href="https://wa.me/27766473499" target="_blank" class="mt-4 whatsapp-button text-white py-3.5 rounded-lg text-center font-semibold shadow-md hover:shadow-lg transition-all">
+                    Book Solar Package
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden gradient-bg">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-50 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow animation-delay-2000"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto text-center">
+                <!-- Guarantee Badge -->
+                <div class="inline-flex items-center gap-2 px-5 py-3 rounded-full guarantee-badge mb-8 animate-slide-up shadow-lg">
+                    <span class="w-3 h-3 rounded-full bg-white animate-ping"></span>
+                    <span class="text-sm font-bold">GUARANTEED SAVINGS</span>
+                </div>
+                
+                <!-- Main Headline -->
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    <span class="block text-accent-900">Save 70% on Your</span>
+                    <span class="block text-gradient mt-2">Electricity Bill</span>
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-xl md:text-2xl text-accent-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    <span class="font-bold text-primary-700">In 30 Days or We Keep Working for FREE</span> Until We Achieve Your 70% Savings
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent-100 card-hover">
+                        <div class="text-3xl md:text-4xl font-bold text-primary-700 mb-2 stat-counter">70%</div>
+                        <div class="text-sm font-medium text-accent-700">Guaranteed Savings</div>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent-100 card-hover">
+                        <div class="text-3xl md:text-4xl font-bold text-primary-700 mb-2">30</div>
+                        <div class="text-sm font-medium text-accent-700">Day Installation</div>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent-100 card-hover">
+                        <div class="text-3xl md:text-4xl font-bold text-primary-700 mb-2">0%</div>
+                        <div class="text-sm font-medium text-accent-700">Upfront Cost Option</div>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-accent-100 card-hover">
+                        <div class="text-3xl md:text-4xl font-bold text-primary-700 mb-2">25</div>
+                        <div class="text-sm font-medium text-accent-700">Year Warranty</div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I%20want%20to%20book%20the%2070%%20savings%20guarantee%20package" target="_blank" class="touch-target inline-flex items-center justify-center gap-3 whatsapp-button text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover-lift group">
+                        <span class="text-xl">💬</span>
+                        <span>Book 70% Savings Guarantee</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="#packages" class="touch-target inline-flex items-center justify-center gap-3 bg-white text-primary-700 px-8 py-4 rounded-xl font-semibold hover:bg-accent-50 transition-all shadow-lg hover:shadow-xl hover-lift border border-primary-100">
+                        <span class="text-xl">🔍</span>
+                        <span>View Solar Packages</span>
+                    </a>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="mt-12 flex flex-wrap justify-center gap-6">
+                    <div class="flex items-center gap-2">
+                        <span class="text-green-500 text-xl">✓</span>
+                        <span class="text-sm text-accent-700">No Deposit Required</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-green-500 text-xl">✓</span>
+                        <span class="text-sm text-accent-700">30-Day Money-Back Guarantee</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-green-500 text-xl">✓</span>
+                        <span class="text-sm text-accent-700">Free Installation & Maintenance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section id="guarantee" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-700 text-sm font-medium mb-6">
+                        <span>🔥</span>
+                        <span>Bold Guarantee</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-6">
+                        Our <span class="text-gradient">70% Savings Guarantee</span>
+                    </h2>
+                    <p class="text-lg text-accent-600 mb-6 leading-relaxed">
+                        <span class="font-bold text-primary-700">We help you save 70% of your residential electricity bill in 30 days using Solar</span> or we keep working for free until we do.
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="text-xl">📅</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900 mb-1">30-Day Performance Promise</h4>
+                                <p class="text-accent-600">If we don't deliver 70% savings within 30 days of installation, we continue working at no extra cost until we achieve it.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="text-xl">⚡</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900 mb-1">Full System Optimization</h4>
+                                <p class="text-accent-600">We don't just install solar panels - we optimize your entire energy consumption to maximize savings.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="text-xl">📊</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900 mb-1">Real-Time Monitoring</h4>
+                                <p class="text-accent-600">Track your savings in real-time through our mobile app. See exactly how much you're saving every day.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I%20want%20to%20learn%20more%20about%20the%2070%%20savings%20guarantee" target="_blank" class="touch-target inline-flex items-center gap-3 whatsapp-button text-white px-6 py-3.5 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
+                        <span>💬 Claim Your Guarantee</span>
+                        <span>→</span>
+                    </a>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div class="bg-gradient-to-br from-primary-50 to-white p-8 rounded-2xl border border-primary-100 shadow-xl">
+                        <div class="text-center mb-8">
+                            <div class="text-5xl font-bold text-primary-700 mb-2">70%</div>
+                            <div class="text-lg font-medium text-accent-700">GUARANTEED SAVINGS</div>
+                            <div class="text-sm text-accent-500 mt-1">or we work for FREE</div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-4 bg-white rounded-lg border">
+                                <span class="font-medium text-accent-700">Current Monthly Bill</span>
+                                <span class="font-bold text-primary-700">R3,500</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-white rounded-lg border">
+                                <span class="font-medium text-accent-700">After Solar Installation</span>
+                                <span class="font-bold text-green-600">R1,050</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-green-50 rounded-lg border border-green-200">
+                                <span class="font-bold text-accent-900">Monthly Savings</span>
+                                <span class="font-bold text-green-700">R2,450</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-primary-50 rounded-lg border border-primary-200">
+                                <span class="font-bold text-accent-900">Yearly Savings</span>
+                                <span class="font-bold text-primary-700">R29,400</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 text-center text-sm text-accent-600">
+                            *Based on average household electricity consumption
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-16 md:py-24 bg-accent-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
+                    <span class="text-gradient">Trusted Partnerships</span>
+                </h2>
+                <p class="text-lg text-accent-600 mb-6">
+                    SolarConnector is owned and operated by Mariba Media in partnership with SwitchPay and Accredited EPCs (Engineering, Procurement & Construction companies).
+                </p>
+                <p class="text-accent-700">
+                    Our partnerships ensure you get premium solar equipment, flexible financing options, and professional installation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-on-scroll">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mx-auto mb-4">
+                            <span class="text-2xl">🏢</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-accent-900 mb-2">Mariba Media</h3>
+                        <p class="text-sm text-accent-600">Owner & Operator</p>
+                    </div>
+                    <p class="text-accent-700 text-center">
+                        As the parent company, Mariba Media brings digital expertise and customer-focused solutions to the solar industry.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-on-scroll">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center text-white mx-auto mb-4">
+                            <span class="text-2xl">💰</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-accent-900 mb-2">SwitchPay</h3>
+                        <p class="text-sm text-accent-600">Financing Partner</p>
+                    </div>
+                    <p class="text-accent-700 text-center">
+                        Providing flexible financing solutions with zero upfront costs, making solar accessible to more homeowners.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover animate-on-scroll">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-600 to-orange-800 flex items-center justify-center text-white mx-auto mb-4">
+                            <span class="text-2xl">🔧</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-accent-900 mb-2">Accredited EPCs</h3>
+                        <p class="text-sm text-accent-600">Installation Partners</p>
+                    </div>
+                    <p class="text-accent-700 text-center">
+                        Certified Engineering, Procurement & Construction companies ensure professional installation and system optimization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solar Packages -->
+    <section id="packages" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
+                    Complete <span class="text-gradient">Solar Packages</span>
+                </h2>
+                <p class="text-lg text-accent-600">
+                    Choose the perfect solar solution for your home. All packages include our 70% savings guarantee.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter 3KW Package -->
+                <div class="bg-white rounded-2xl overflow-hidden package-card card-hover animate-on-scroll">
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-4">
+                                <span class="text-2xl">🏠</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent-900 mb-2">Starter 3KW</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="text-3xl font-bold text-primary-700">From R1,499<span class="text-lg text-accent-500">/mo</span></div>
+                                <div class="text-lg font-bold text-green-600">Cash: R53,000</div>
+                            </div>
+                            <div class="text-sm text-accent-600">Perfect for small homes & apartments</div>
+                        </div>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">3KW Solar System</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">High-Efficiency Panels</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">Smart Hybrid Inverter</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">5KWH Battery Backup</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">Free Installation</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">70% Savings Guarantee</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="space-y-3">
+                            <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I'm%20interested%20in%20the%20Starter%203KW%20package%20on%20finance" target="_blank" class="touch-target inline-flex items-center justify-center gap-2 whatsapp-button text-white w-full py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
+                                <span>💬</span>
+                                <span>Book on Finance</span>
+                            </a>
+                            <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I%20want%20a%20CASH%20quote%20for%20the%20Starter%203KW%20package" target="_blank" class="touch-target inline-flex items-center justify-center gap-2 cash-quote-button text-white w-full py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
+                                <span>💰</span>
+                                <span>Get Cash Quote</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional 5KW Package -->
+                <div class="bg-white rounded-2xl overflow-hidden package-card card-hover animate-on-scroll premium-package">
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white mx-auto mb-4">
+                                <span class="text-2xl">🏡</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent-900 mb-2">Professional 5KW</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="text-3xl font-bold text-primary-700">From R2,299<span class="text-lg text-accent-500">/mo</span></div>
+                                <div class="text-lg font-bold text-green-600">Cash: R80,000</div>
+                            </div>
+                            <div class="text-sm text-accent-600">Best for medium-sized family homes</div>
+                        </div>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">5KW Solar System</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">Tier-1 Solar Panels</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">Advanced Hybrid Inverter</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">10KWH Battery Backup</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">Smart Home Integration</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">70% Savings Guarantee + App</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="space-y-3">
+                            <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I'm%20interested%20in%20the%20Professional%205KW%20package%20on%20finance" target="_blank" class="touch-target inline-flex items-center justify-center gap-2 whatsapp-button text-white w-full py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl">
+                                <span>💬</span>
+                                <span>Book Most Popular</span>
+                            </a>
+                            <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I%20want%20a%20CASH%20quote%20for%20the%20Professional%205KW%20package" target="_blank" class="touch-target inline-flex items-center justify-center gap-2 cash-quote-button text-white w-full py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
+                                <span>💰</span>
+                                <span>Get Cash Quote</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business 10KW Package -->
+                <div class="bg-white rounded-2xl overflow-hidden package-card card-hover animate-on-scroll">
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 mx-auto mb-4">
+                                <span class="text-2xl">🏘️</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent-900 mb-2">Business 10KW</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="text-3xl font-bold text-primary-700">From R3,999<span class="text-lg text-accent-500">/mo</span></div>
+                                <div class="text-lg font-bold text-green-600">Cash: R170,000</div>
+                            </div>
+                            <div class="text-sm text-accent-600">For large homes & home offices</div>
+                        </div>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">10KW Solar System</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">Premium Solar Panels</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">Commercial Grade Inverter</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">20KWH Battery Backup</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">Full Home Backup + EV Charging</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-xs">✓</span>
+                                <span class="text-accent-700">70% Savings Guarantee + Premium Support</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="space-y-3">
+                            <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I'm%20interested%20in%20the%20Business%2010KW%20package%20on%20finance" target="_blank" class="touch-target inline-flex items-center justify-center gap-2 whatsapp-button text-white w-full py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
+                                <span>💬</span>
+                                <span>Book Premium Package</span>
+                            </a>
+                            <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I%20want%20a%20CASH%20quote%20for%20the%20Business%2010KW%20package" target="_blank" class="touch-target inline-flex items-center justify-center gap-2 cash-quote-button text-white w-full py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg">
+                                <span>💰</span>
+                                <span>Get Cash Quote</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Package Comparison -->
+            <div class="mt-16 bg-white rounded-2xl p-8 border border-accent-100">
+                <h3 class="text-2xl font-bold text-center text-accent-900 mb-8">Package Comparison</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-accent-200">
+                                <th class="text-left py-4 font-bold text-accent-900">Feature</th>
+                                <th class="text-center py-4 font-bold text-accent-700">Starter 3KW</th>
+                                <th class="text-center py-4 font-bold text-primary-700">Professional 5KW</th>
+                                <th class="text-center py-4 font-bold text-accent-700">Business 10KW</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-accent-100">
+                                <td class="py-4 text-accent-700">Monthly Finance</td>
+                                <td class="text-center py-4 font-bold text-accent-900">R1,499/mo</td>
+                                <td class="text-center py-4 font-bold text-primary-700">R2,299/mo</td>
+                                <td class="text-center py-4 font-bold text-accent-900">R3,999/mo</td>
+                            </tr>
+                            <tr class="border-b border-accent-100">
+                                <td class="py-4 text-accent-700">Cash Price</td>
+                                <td class="text-center py-4 font-bold text-green-600">R53,000</td>
+                                <td class="text-center py-4 font-bold text-green-600">R80,000</td>
+                                <td class="text-center py-4 font-bold text-green-600">R170,000</td>
+                            </tr>
+                            <tr class="border-b border-accent-100">
+                                <td class="py-4 text-accent-700">System Size</td>
+                                <td class="text-center py-4">3KW</td>
+                                <td class="text-center py-4">5KW</td>
+                                <td class="text-center py-4">10KW</td>
+                            </tr>
+                            <tr class="border-b border-accent-100">
+                                <td class="py-4 text-accent-700">Battery Backup</td>
+                                <td class="text-center py-4">5KWH</td>
+                                <td class="text-center py-4">10KWH</td>
+                                <td class="text-center py-4">20KWH</td>
+                            </tr>
+                            <tr class="border-b border-accent-100">
+                                <td class="py-4 text-accent-700">COC Included</td>
+                                <td class="text-center py-4 text-green-600">✓ Yes</td>
+                                <td class="text-center py-4 text-green-600">✓ Yes</td>
+                                <td class="text-center py-4 text-green-600">✓ Yes</td>
+                            </tr>
+                            <tr class="border-b border-accent-100">
+                                <td class="py-4 text-accent-700">70% Savings Guarantee</td>
+                                <td class="text-center py-4 text-green-600">✓ Included</td>
+                                <td class="text-center py-4 text-green-600">✓ Included</td>
+                                <td class="text-center py-4 text-green-600">✓ Included</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 text-accent-700">Free Installation</td>
+                                <td class="text-center py-4 text-green-600">✓ Yes</td>
+                                <td class="text-center py-4 text-green-600">✓ Yes</td>
+                                <td class="text-center py-4 text-green-600">✓ Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding bg-accent-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
+                    Our <span class="text-gradient">Work & Happy Clients</span>
+                </h2>
+                <p class="text-lg text-accent-600">
+                    See our quality hardware, professional installations, and satisfied customers
+                </p>
+            </div>
+
+            <!-- Hardware Gallery -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-accent-900 mb-8 text-center">Premium Solar Hardware</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Solar Panels on roof" 
+                             class="w-full h-64 object-cover">
+                        <div class="p-4 bg-white">
+                            <h4 class="font-bold text-accent-900">High-Efficiency Solar Panels</h4>
+                            <p class="text-sm text-accent-600">Tier-1 quality with 25-year warranty</p>
+                        </div>
+                    </div>
+                    <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Solar Inverter installation" 
+                             class="w-full h-64 object-cover">
+                        <div class="p-4 bg-white">
+                            <h4 class="font-bold text-accent-900">Smart Hybrid Inverters</h4>
+                            <p class="text-sm text-accent-600">Advanced technology for maximum efficiency</p>
+                        </div>
+                    </div>
+                    <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1629654291660-3c98113a0438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Lithium Battery system" 
+                             class="w-full h-64 object-cover">
+                        <div class="p-4 bg-white">
+                            <h4 class="font-bold text-accent-900">Li-ion Battery Systems</h4>
+                            <p class="text-sm text-accent-600">Reliable energy storage for 24/7 power</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Gallery -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-accent-900 mb-8 text-center">Professional Installations</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Residential solar installation" 
+                             class="w-full h-64 object-cover">
+                        <div class="p-4 bg-white">
+                            <h4 class="font-bold text-accent-900">Residential Installations</h4>
+                            <p class="text-sm text-accent-600">Clean, professional installations for homes</p>
+                        </div>
+                    </div>
+                    <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1559304783-6b3d55e8d1b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Solar panel roof mounting" 
+                             class="w-full h-64 object-cover">
+                        <div class="p-4 bg-white">
+                            <h4 class="font-bold text-accent-900">Expert Roof Mounting</h4>
+                            <p class="text-sm text-accent-600">Safe and secure panel installation</p>
+                        </div>
+                    </div>
+                    <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1509390039947-309e6fe1243d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Solar system monitoring" 
+                             class="w-full h-64 object-cover">
+                        <div class="p-4 bg-white">
+                            <h4 class="font-bold text-accent-900">System Commissioning</h4>
+                            <p class="text-sm text-accent-600">Thorough testing and optimization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Happy Clients Testimonials -->
+            <div>
+                <h3 class="text-2xl font-bold text-accent-900 mb-8 text-center">Happy Client Stories</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl testimonial-card">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center">
+                                <span class="text-primary-600 font-bold">JS</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900">John S.</h4>
+                                <p class="text-sm text-accent-600">Sandton, Johannesburg</p>
+                            </div>
+                        </div>
+                        <p class="text-accent-700 italic mb-4">
+                            "My electricity bill went from R4,200 to R1,150 in the first month! The 70% guarantee is real!"
+                        </p>
+                        <div class="flex text-yellow-400">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl testimonial-card">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center">
+                                <span class="text-primary-600 font-bold">MR</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900">Megan R.</h4>
+                                <p class="text-sm text-accent-600">Pretoria East</p>
+                            </div>
+                        </div>
+                        <p class="text-accent-700 italic mb-4">
+                            "Professional installation completed in 3 days. Now I'm completely load-shedding proof!"
+                        </p>
+                        <div class="flex text-yellow-400">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl testimonial-card">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center">
+                                <span class="text-primary-600 font-bold">TP</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900">Thomas P.</h4>
+                                <p class="text-sm text-accent-600">Centurion</p>
+                            </div>
+                        </div>
+                        <p class="text-accent-700 italic mb-4">
+                            "The cash option was perfect for me. Saved R80,000 upfront and got premium equipment!"
+                        </p>
+                        <div class="flex text-yellow-400">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finance Section -->
+    <section id="finance" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
+                    Zero Upfront <span class="text-gradient">Financing</span>
+                </h2>
+                <p class="text-lg text-accent-600">
+                    Start saving immediately with our flexible payment options. No deposit required.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll">
+                    <div class="bg-gradient-to-br from-primary-50 to-white p-8 rounded-2xl border border-primary-100 shadow-lg">
+                        <h3 class="text-2xl font-bold text-accent-900 mb-6">How Our Financing Works</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                    <span class="text-xl">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-accent-900 mb-2">Free Energy Assessment</h4>
+                                    <p class="text-accent-600">We analyze your current electricity usage and recommend the perfect solar package.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                    <span class="text-xl">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-accent-900 mb-2">Choose Your Package</h4>
+                                    <p class="text-accent-600">Select from our 3KW, 5KW, or 10KW solar packages based on your needs and budget.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                    <span class="text-xl">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-accent-900 mb-2">No Deposit Installation</h4>
+                                    <p class="text-accent-600">We install your solar system with zero upfront costs. Start saving immediately.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                    <span class="text-xl">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-accent-900 mb-2">Monthly Payments</h4>
+                                    <p class="text-accent-600">Pay a fixed monthly amount that's less than your current electricity bill savings.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-accent-900 mb-6">Instant Savings Calculator</h3>
+                    <p class="text-lg text-accent-600 mb-8 leading-relaxed">
+                        See exactly how much you'll save with solar. Most homeowners save more on their electricity bill than they pay for their solar system.
+                    </p>
+                    
+                    <div class="bg-primary-50 rounded-2xl p-6 mb-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-medium text-accent-700">Current Monthly Bill</span>
+                            <span class="text-2xl font-bold text-primary-700">R3,500</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-medium text-accent-700">Solar System Payment</span>
+                            <span class="text-2xl font-bold text-accent-700">-R2,299</span>
+                        </div>
+                        <div class="h-px bg-accent-300 my-4"></div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-accent-900">Net Monthly Savings</span>
+                            <span class="text-3xl font-bold text-green-600">+R1,201</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center text-sm text-accent-600 mb-8">
+                        *Based on Professional 5KW package for a home with R3,500 monthly electricity bill
+                    </div>
+                    
+                    <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I%20want%20a%20personalized%20savings%20calculation" target="_blank" class="touch-target inline-flex items-center gap-3 whatsapp-button text-white px-6 py-3.5 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg w-full justify-center">
+                        <span>💬 Get Your Personal Savings Report</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-accent-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
+                    Ready for <span class="text-gradient">70% Savings?</span>
+                </h2>
+                <p class="text-lg text-accent-600">
+                    Contact us today for your free energy assessment and personalized savings report
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="bg-white p-8 rounded-2xl border border-accent-100 shadow-lg animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-accent-900 mb-8">Get Your Free Assessment</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="text-xl">💬</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900 mb-1">WhatsApp Quote</h4>
+                                <a href="https://wa.me/27766473499" target="_blank" class="text-primary-600 hover:text-primary-800 transition-colors text-lg">
+                                    +27766473499
+                                </a>
+                                <p class="text-accent-500 text-sm mt-1">Fastest way to get a quote</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="text-xl">📧</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900 mb-1">Email Address</h4>
+                                <a href="mailto:victor@maribamedia.co.za" class="text-primary-600 hover:text-primary-800 transition-colors text-lg">
+                                    victor@maribamedia.co.za
+                                </a>
+                                <p class="text-accent-500 text-sm mt-1">Send us your electricity bill for analysis</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="text-xl">📞</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900 mb-1">Phone Number</h4>
+                                <a href="tel:+27766473499" class="text-primary-600 hover:text-primary-800 transition-colors text-lg">
+                                    +27766473499
+                                </a>
+                                <p class="text-accent-500 text-sm mt-1">Mon-Fri 8am-6pm, Sat 9am-1pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 flex-shrink-0">
+                                <span class="text-xl">📍</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-accent-900 mb-1">Office Location</h4>
+                                <p class="text-accent-700">
+                                    Gauteng, South Africa<br>
+                                    Serving Johannesburg, Pretoria & surrounding areas
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick CTA -->
+                <div class="animate-on-scroll">
+                    <div class="bg-gradient-to-br from-primary-600 to-primary-800 p-8 rounded-2xl text-white mb-8">
+                        <h3 class="text-2xl font-bold mb-6">Free Energy Audit</h3>
+                        <p class="text-white/90 mb-8">
+                            Send us your latest electricity bill and we'll show you exactly how much you can save with our 70% savings guarantee.
+                        </p>
+                        <a href="https://wa.me/27766473499?text=Hi%20SolarConnector,%20I'd%20like%20a%20FREE%20energy%20audit%20and%20savings%20report" target="_blank" class="touch-target inline-flex items-center justify-center gap-3 whatsapp-button text-white w-full py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl">
+                            <span>📊 Send Bill for Free Audit</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-accent-50 p-6 rounded-2xl border border-accent-200">
+                        <h4 class="font-bold text-accent-900 mb-4">What You'll Get:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-600 text-lg">✓</span>
+                                <span class="text-accent-700">Personalized savings projection</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-600 text-lg">✓</span>
+                                <span class="text-accent-700">Recommended solar package</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-600 text-lg">✓</span>
+                                <span class="text-accent-700">Financing options with zero deposit</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-600 text-lg">✓</span>
+                                <span class="text-accent-700">70% savings guarantee details</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">
+                        <span class="text-primary-400">SolarConnector</span>
+                        <span class="text-white"> Residential Solar</span>
+                    </div>
+                    <p class="mb-4 text-accent-300">
+                        SolarConnector is owned and operated by Mariba Media in partnership with SwitchPay and Accredited EPCs.
+                    </p>
+                    <p class="mb-4">
+                        We help you save 70% of your residential electricity bill in 30 days using Solar or we keep working for free until we do.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span>📞</span>
+                            <span>+27766473499</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span>📧</span>
+                            <span>victor@maribamedia.co.za</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span>📍</span>
+                            <span>Gauteng, South Africa</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="#hero" class="hover:text-primary-300 transition-colors">Home</a>
+                        <a href="#guarantee" class="hover:text-primary-300 transition-colors">70% Guarantee</a>
+                        <a href="#packages" class="hover:text-primary-300 transition-colors">Solar Packages</a>
+                        <a href="#gallery" class="hover:text-primary-300 transition-colors">Our Gallery</a>
+                        <a href="#partners" class="hover:text-primary-300 transition-colors">Partners</a>
+                        <a href="#finance" class="hover:text-primary-300 transition-colors">Financing</a>
+                        <a href="#contact" class="hover:text-primary-300 transition-colors">Free Audit</a>
+                        <a href="https://wa.me/27766473499" target="_blank" class="hover:text-primary-300 transition-colors">WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Our Solar Packages</h4>
+                    <div class="space-y-2">
+                        <div class="text-primary-300">Starter 3KW Package</div>
+                        <div class="text-primary-300">Professional 5KW Package</div>
+                        <div class="text-primary-300">Business 10KW Package</div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-accent-800">
+                        <h4 class="font-bold mb-3">Our Partners</h4>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm">Mariba Media</span>
+                            <span class="text-sm">SwitchPay</span>
+                            <span class="text-sm">Accredited EPCs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-accent-800 text-center">
+                <p class="text-white/80">
+                    All rights reserved © 2024 by SolarConnector Residential Solar | 70% Savings Guarantee | Owned by Mariba Media | Partnered with SwitchPay & Accredited EPCs | Gauteng, South Africa
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open');
+        const menuCloseIcon = document.getElementById('menu-close');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.contains('hidden');
+                
+                if (isOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    menuOpenIcon.classList.add('hidden');
+                    menuCloseIcon.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking links
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuOpenIcon.classList.remove('hidden');
+                        menuCloseIcon.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }
+                    
+                    // Calculate header height
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    
+                    // Scroll to element
+                    window.scrollTo({
+                        top: targetElement.offsetTop - headerHeight - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements with animation class
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Animate stats counting
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + '%';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start) + '%';
+                }
+            }, 16);
+        }
+
+        // Start counter animation when stats come into view
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target.querySelector('.stat-counter');
+                    if (counter && counter.textContent.includes('%')) {
+                        const target = parseInt(counter.textContent);
+                        animateCounter(counter, target, 2000);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe stat elements
+        document.querySelectorAll('.bg-white\\/80').forEach(stat => {
+            statObserver.observe(stat);
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.card-hover').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.createElement('button');
+        backToTop.innerHTML = '↑';
+        backToTop.className = 'fixed bottom-8 right-8 w-12 h-12 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors z-40 hidden items-center justify-center text-xl';
+        backToTop.style.transform = 'translateY(100px)';
+        backToTop.style.transition = 'transform 0.3s ease';
+        document.body.appendChild(backToTop);
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('hidden');
+                backToTop.style.transform = 'translateY(0)';
+            } else {
+                backToTop.style.transform = 'translateY(100px)';
+                setTimeout(() => {
+                    if (window.scrollY <= 500) {
+                        backToTop.classList.add('hidden');
+                    }
+                }, 300);
+            }
+        });
+
+        // WhatsApp button enhancement
+        const whatsappButtons = document.querySelectorAll('a[href*="whatsapp"], a[href*="wa.me"]');
+        whatsappButtons.forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Package selection animation
+        const packageCards = document.querySelectorAll('.package-card');
+        packageCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                packageCards.forEach(c => {
+                    if (c !== this) {
+                        c.style.transform = 'scale(0.98)';
+                        c.style.opacity = '0.9';
+                    }
+                });
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                packageCards.forEach(c => {
+                    c.style.transform = '';
+                    c.style.opacity = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
