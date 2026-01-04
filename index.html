@@ -9,14 +9,13 @@
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Save 70% on Electricity in 30 Days | Solar Guarantee">
     <meta property="og:description" content="70% savings on your electricity bill in 30 days with solar or we work for free until we achieve it. Book your residential solar package today.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:image" content="https://images.pexels.com/photos/89724/solar-system-sun-power-energy-89724.jpeg">
     <meta property="og:url" content="https://solarconnector.co.za">
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/96/000000/solar-panel.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/96/000000/solar-panel.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/96/000000/solar-panel.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230033a0'/><path d='M50,20 L50,30 M50,70 L50,80 M30,50 L20,50 M80,50 L70,50 M35,35 L40,40 M65,35 L60,40 M35,65 L40,60 M65,65 L60,60' stroke='%23FFD700' stroke-width='4' stroke-linecap='round'/><circle cx='50' cy='50' r='15' fill='%23FFD700'/><circle cx='50' cy='50' r='8' fill='%230033a0'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230033a0'/><path d='M50,20 L50,30 M50,70 L50,80 M30,50 L20,50 M80,50 L70,50 M35,35 L40,40 M65,35 L60,40 M35,65 L40,60 M65,65 L60,60' stroke='%23FFD700' stroke-width='4' stroke-linecap='round'/><circle cx='50' cy='50' r='15' fill='%23FFD700'/><circle cx='50' cy='50' r='8' fill='%230033a0'/></svg>">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230033a0'/><path d='M50,20 L50,30 M50,70 L50,80 M30,50 L20,50 M80,50 L70,50 M35,35 L40,40 M65,35 L60,40 M35,65 L40,60 M65,65 L60,60' stroke='%23FFD700' stroke-width='4' stroke-linecap='round'/><circle cx='50' cy='50' r='15' fill='%23FFD700'/><circle cx='50' cy='50' r='8' fill='%230033a0'/></svg>" type="image/svg+xml">
     
     <!-- Fonts -->
@@ -301,10 +300,10 @@
         opacity: 1;
       }
       
-      /* Hero background image */
+      /* Hero background image - Using Pexels reliable source */
       .hero-bg-image {
         background: linear-gradient(rgba(0, 51, 160, 0.85), rgba(0, 86, 204, 0.9)), 
-                    url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                    url('https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1920');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -325,6 +324,13 @@
         color: white;
         font-weight: bold;
         min-height: 200px;
+      }
+      
+      /* Base64 encoded placeholder as backup */
+      .img-placeholder {
+        background: linear-gradient(45deg, #0d8ae3 25%, #0056cc 25%, #0056cc 50%, #0d8ae3 50%, #0d8ae3 75%, #0056cc 75%, #0056cc);
+        background-size: 20px 20px;
+        animation: gradient 4s ease infinite;
       }
     </style>
 </head>
@@ -536,12 +542,8 @@
                 
                 <div class="animate-on-scroll">
                     <div class="relative overflow-hidden rounded-2xl shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1573667714229-8a6db0b8a7f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Solar monitoring dashboard showing savings"
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                            <div class="text-center">
+                        <div class="w-full h-64 img-placeholder flex items-center justify-center">
+                            <div class="text-center text-white">
                                 <div class="text-5xl font-bold mb-1">70%</div>
                                 <div class="text-lg font-medium">GUARANTEED SAVINGS</div>
                                 <div class="text-sm opacity-90 mt-1">or we work for FREE</div>
@@ -652,10 +654,13 @@
                 <!-- Starter 3KW Package -->
                 <div class="bg-white rounded-2xl overflow-hidden package-card card-hover animate-on-scroll">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Small home solar installation"
-                             class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="w-full h-full img-placeholder flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-4xl mb-2">🏠</div>
+                                <div class="text-lg font-bold">3KW Solar System</div>
+                                <div class="text-sm">Perfect for Small Homes</div>
+                            </div>
+                        </div>
                         <div class="absolute bottom-4 left-4">
                             <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-600">
                                 <span class="text-xl">🏠</span>
@@ -713,10 +718,13 @@
                 <!-- Professional 5KW Package -->
                 <div class="bg-white rounded-2xl overflow-hidden package-card card-hover animate-on-scroll premium-package">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1588854337236-3b4d1c44e4b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Medium family home solar installation"
-                             class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="w-full h-full img-placeholder flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-4xl mb-2">🏡</div>
+                                <div class="text-lg font-bold">5KW Solar System</div>
+                                <div class="text-sm">Most Popular Choice</div>
+                            </div>
+                        </div>
                         <div class="absolute bottom-4 left-4">
                             <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white">
                                 <span class="text-xl">🏡</span>
@@ -774,10 +782,13 @@
                 <!-- Business 10KW Package -->
                 <div class="bg-white rounded-2xl overflow-hidden package-card card-hover animate-on-scroll">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581791536682-0af2f8e1d2a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Large home solar installation"
-                             class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="w-full h-full img-placeholder flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-4xl mb-2">🏘️</div>
+                                <div class="text-lg font-bold">10KW Solar System</div>
+                                <div class="text-sm">Premium Home & Business</div>
+                            </div>
+                        </div>
                         <div class="absolute bottom-4 left-4">
                             <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-600">
                                 <span class="text-xl">🏘️</span>
@@ -853,37 +864,34 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Solar Panels -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Solar Panels on roof" 
-                             class="w-full h-64 object-cover"
-                             loading="lazy">
-                        <div class="p-6 bg-white">
-                            <h4 class="font-bold text-accent-900 mb-2">High-Efficiency Solar Panels</h4>
-                            <p class="text-sm text-accent-600">Tier-1 quality with 25-year warranty</p>
+                        <div class="w-full h-64 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-4">☀️</div>
+                                <h4 class="text-xl font-bold">Solar Panels</h4>
+                                <p class="text-sm opacity-90">High-Efficiency 25-Year Warranty</p>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Inverters -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Solar Inverter installation" 
-                             class="w-full h-64 object-cover"
-                             loading="lazy">
-                        <div class="p-6 bg-white">
-                            <h4 class="font-bold text-accent-900 mb-2">Smart Hybrid Inverters</h4>
-                            <p class="text-sm text-accent-600">Advanced technology for maximum efficiency</p>
+                        <div class="w-full h-64 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-4">🔋</div>
+                                <h4 class="text-xl font-bold">Smart Inverters</h4>
+                                <p class="text-sm opacity-90">Advanced Hybrid Technology</p>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Battery Systems -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Lithium Battery system" 
-                             class="w-full h-64 object-cover"
-                             loading="lazy">
-                        <div class="p-6 bg-white">
-                            <h4 class="font-bold text-accent-900 mb-2">Li-ion Battery Systems</h4>
-                            <p class="text-sm text-accent-600">Reliable energy storage for 24/7 power</p>
+                        <div class="w-full h-64 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-4">⚡</div>
+                                <h4 class="text-xl font-bold">Battery Systems</h4>
+                                <p class="text-sm opacity-90">Li-ion 24/7 Power Backup</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -895,37 +903,34 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Residential Installation -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1588854337236-3b4d1c44e4b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Residential solar installation" 
-                             class="w-full h-64 object-cover"
-                             loading="lazy">
-                        <div class="p-6 bg-white">
-                            <h4 class="font-bold text-accent-900 mb-2">Residential Installations</h4>
-                            <p class="text-sm text-accent-600">Clean, professional installations for homes</p>
+                        <div class="w-full h-64 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-4">🏡</div>
+                                <h4 class="text-xl font-bold">Residential Install</h4>
+                                <p class="text-sm opacity-90">Clean Professional Setup</p>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Roof Mounting -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Solar panel roof mounting" 
-                             class="w-full h-64 object-cover"
-                             loading="lazy">
-                        <div class="p-6 bg-white">
-                            <h4 class="font-bold text-accent-900 mb-2">Expert Roof Mounting</h4>
-                            <p class="text-sm text-accent-600">Safe and secure panel installation</p>
+                        <div class="w-full h-64 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-4">🔧</div>
+                                <h4 class="text-xl font-bold">Expert Roof Mounting</h4>
+                                <p class="text-sm opacity-90">Safe & Secure Installation</p>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- System Commissioning -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1509390039947-309e6fe1243d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Solar system monitoring" 
-                             class="w-full h-64 object-cover"
-                             loading="lazy">
-                        <div class="p-6 bg-white">
-                            <h4 class="font-bold text-accent-900 mb-2">System Commissioning</h4>
-                            <p class="text-sm text-accent-600">Thorough testing and optimization</p>
+                        <div class="w-full h-64 bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-4">📊</div>
+                                <h4 class="text-xl font-bold">System Commissioning</h4>
+                                <p class="text-sm opacity-90">Thorough Testing & Optimization</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -937,8 +942,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-white p-6 rounded-2xl testimonial-card">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center">
-                                <img src="https://i.pravatar.cc/150?img=1" alt="John S." class="w-12 h-12 rounded-full object-cover">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white">
+                                <span class="text-xl">👤</span>
                             </div>
                             <div>
                                 <h4 class="font-bold text-accent-900">John S.</h4>
@@ -954,8 +959,8 @@
                     </div>
                     <div class="bg-white p-6 rounded-2xl testimonial-card">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center">
-                                <img src="https://i.pravatar.cc/150?img=2" alt="Megan R." class="w-12 h-12 rounded-full object-cover">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white">
+                                <span class="text-xl">👤</span>
                             </div>
                             <div>
                                 <h4 class="font-bold text-accent-900">Megan R.</h4>
@@ -971,8 +976,8 @@
                     </div>
                     <div class="bg-white p-6 rounded-2xl testimonial-card">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center">
-                                <img src="https://i.pravatar.cc/150?img=3" alt="Thomas P." class="w-12 h-12 rounded-full object-cover">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-white">
+                                <span class="text-xl">👤</span>
                             </div>
                             <div>
                                 <h4 class="font-bold text-accent-900">Thomas P.</h4>
@@ -1054,13 +1059,12 @@
                 
                 <div class="animate-on-scroll">
                     <div class="relative mb-8 rounded-2xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1573667714229-8a6db0b8a7f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Savings calculator dashboard"
-                             class="w-full h-48 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/70 to-transparent"></div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-2xl font-bold mb-1">Instant Savings Calculator</h3>
-                            <p class="text-sm opacity-90">See exactly how much you'll save</p>
+                        <div class="w-full h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-4">💰</div>
+                                <h3 class="text-2xl font-bold mb-2">Instant Savings Calculator</h3>
+                                <p class="text-white/90">See exactly how much you'll save</p>
+                            </div>
                         </div>
                     </div>
                     
@@ -1163,15 +1167,14 @@
                 <!-- Quick CTA -->
                 <div class="animate-on-scroll">
                     <div class="relative rounded-2xl overflow-hidden shadow-xl mb-8">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Energy audit consultation"
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                            <h3 class="text-2xl font-bold mb-2">Free Energy Audit</h3>
-                            <p class="text-white/90">
-                                Send us your latest electricity bill and we'll show you exactly how much you can save.
-                            </p>
+                        <div class="w-full h-64 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-4">📊</div>
+                                <h3 class="text-2xl font-bold mb-2">Free Energy Audit</h3>
+                                <p class="text-white/90">
+                                    Send us your latest electricity bill for personalized savings analysis
+                                </p>
+                            </div>
                         </div>
                     </div>
                     
@@ -1480,7 +1483,7 @@
             
             // Preload hero image for better loading
             const heroImage = new Image();
-            heroImage.src = 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
+            heroImage.src = 'https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1920';
         });
     </script>
 </body>
