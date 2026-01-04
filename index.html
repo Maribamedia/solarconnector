@@ -300,6 +300,16 @@
         filter: grayscale(0);
         opacity: 1;
       }
+      
+      /* Image backup styling */
+      .image-fallback {
+        background: linear-gradient(135deg, #0d8ae3, #0056cc);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+      }
     </style>
 </head>
 <body class="text-accent-900 antialiased">
@@ -784,67 +794,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Package Comparison -->
-            <div class="mt-16 bg-white rounded-2xl p-8 border border-accent-100">
-                <h3 class="text-2xl font-bold text-center text-accent-900 mb-8">Package Comparison</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full">
-                        <thead>
-                            <tr class="border-b border-accent-200">
-                                <th class="text-left py-4 font-bold text-accent-900">Feature</th>
-                                <th class="text-center py-4 font-bold text-accent-700">Starter 3KW</th>
-                                <th class="text-center py-4 font-bold text-primary-700">Professional 5KW</th>
-                                <th class="text-center py-4 font-bold text-accent-700">Business 10KW</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-accent-100">
-                                <td class="py-4 text-accent-700">Monthly Finance</td>
-                                <td class="text-center py-4 font-bold text-accent-900">R1,499/mo</td>
-                                <td class="text-center py-4 font-bold text-primary-700">R2,299/mo</td>
-                                <td class="text-center py-4 font-bold text-accent-900">R3,999/mo</td>
-                            </tr>
-                            <tr class="border-b border-accent-100">
-                                <td class="py-4 text-accent-700">Cash Price</td>
-                                <td class="text-center py-4 font-bold text-green-600">R53,000</td>
-                                <td class="text-center py-4 font-bold text-green-600">R80,000</td>
-                                <td class="text-center py-4 font-bold text-green-600">R170,000</td>
-                            </tr>
-                            <tr class="border-b border-accent-100">
-                                <td class="py-4 text-accent-700">System Size</td>
-                                <td class="text-center py-4">3KW</td>
-                                <td class="text-center py-4">5KW</td>
-                                <td class="text-center py-4">10KW</td>
-                            </tr>
-                            <tr class="border-b border-accent-100">
-                                <td class="py-4 text-accent-700">Battery Backup</td>
-                                <td class="text-center py-4">5KWH</td>
-                                <td class="text-center py-4">10KWH</td>
-                                <td class="text-center py-4">20KWH</td>
-                            </tr>
-                            <tr class="border-b border-accent-100">
-                                <td class="py-4 text-accent-700">COC Included</td>
-                                <td class="text-center py-4 text-green-600">✓ Yes</td>
-                                <td class="text-center py-4 text-green-600">✓ Yes</td>
-                                <td class="text-center py-4 text-green-600">✓ Yes</td>
-                            </tr>
-                            <tr class="border-b border-accent-100">
-                                <td class="py-4 text-accent-700">70% Savings Guarantee</td>
-                                <td class="text-center py-4 text-green-600">✓ Included</td>
-                                <td class="text-center py-4 text-green-600">✓ Included</td>
-                                <td class="text-center py-4 text-green-600">✓ Included</td>
-                            </tr>
-                            <tr>
-                                <td class="py-4 text-accent-700">Free Installation</td>
-                                <td class="text-center py-4 text-green-600">✓ Yes</td>
-                                <td class="text-center py-4 text-green-600">✓ Yes</td>
-                                <td class="text-center py-4 text-green-600">✓ Yes</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -853,39 +802,47 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-accent-900 mb-4">
-                    Our <span class="text-gradient">Work & Happy Clients</span>
+                    Our <span class="text-gradient">Premium Work</span>
                 </h2>
                 <p class="text-lg text-accent-600">
                     See our quality hardware, professional installations, and satisfied customers
                 </p>
             </div>
 
-            <!-- Hardware Gallery -->
+            <!-- Premium Solar Hardware -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold text-accent-900 mb-8 text-center">Premium Solar Hardware</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Solar Panels -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
                         <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Solar Panels on roof" 
-                             class="w-full h-64 object-cover">
+                             class="w-full h-64 object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x400/0033a0/ffffff?text=Solar+Panels'; this.parentElement.classList.add('image-fallback')">
                         <div class="p-4 bg-white">
                             <h4 class="font-bold text-accent-900">High-Efficiency Solar Panels</h4>
                             <p class="text-sm text-accent-600">Tier-1 quality with 25-year warranty</p>
                         </div>
                     </div>
+                    
+                    <!-- Inverters -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
                         <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Solar Inverter installation" 
-                             class="w-full h-64 object-cover">
+                             class="w-full h-64 object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x400/0056cc/ffffff?text=Smart+Inverter'; this.parentElement.classList.add('image-fallback')">
                         <div class="p-4 bg-white">
                             <h4 class="font-bold text-accent-900">Smart Hybrid Inverters</h4>
                             <p class="text-sm text-accent-600">Advanced technology for maximum efficiency</p>
                         </div>
                     </div>
+                    
+                    <!-- Battery Systems -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
                         <img src="https://images.unsplash.com/photo-1629654291660-3c98113a0438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Lithium Battery system" 
-                             class="w-full h-64 object-cover">
+                             class="w-full h-64 object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x400/0d8ae3/ffffff?text=Li-ion+Battery'; this.parentElement.classList.add('image-fallback')">
                         <div class="p-4 bg-white">
                             <h4 class="font-bold text-accent-900">Li-ion Battery Systems</h4>
                             <p class="text-sm text-accent-600">Reliable energy storage for 24/7 power</p>
@@ -894,32 +851,40 @@
                 </div>
             </div>
 
-            <!-- Installation Gallery -->
+            <!-- Professional Installations -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold text-accent-900 mb-8 text-center">Professional Installations</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Residential Installation -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
                         <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Residential solar installation" 
-                             class="w-full h-64 object-cover">
+                             class="w-full h-64 object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x400/0067c2/ffffff?text=Residential+Installation'; this.parentElement.classList.add('image-fallback')">
                         <div class="p-4 bg-white">
                             <h4 class="font-bold text-accent-900">Residential Installations</h4>
                             <p class="text-sm text-accent-600">Clean, professional installations for homes</p>
                         </div>
                     </div>
+                    
+                    <!-- Roof Mounting -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
                         <img src="https://images.unsplash.com/photo-1559304783-6b3d55e8d1b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Solar panel roof mounting" 
-                             class="w-full h-64 object-cover">
+                             class="w-full h-64 object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x400/0052a0/ffffff?text=Roof+Mounting'; this.parentElement.classList.add('image-fallback')">
                         <div class="p-4 bg-white">
                             <h4 class="font-bold text-accent-900">Expert Roof Mounting</h4>
                             <p class="text-sm text-accent-600">Safe and secure panel installation</p>
                         </div>
                     </div>
+                    
+                    <!-- System Commissioning -->
                     <div class="image-hover-zoom rounded-2xl overflow-hidden shadow-lg">
                         <img src="https://images.unsplash.com/photo-1509390039947-309e6fe1243d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Solar system monitoring" 
-                             class="w-full h-64 object-cover">
+                             class="w-full h-64 object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x400/003d7d/ffffff?text=System+Testing'; this.parentElement.classList.add('image-fallback')">
                         <div class="p-4 bg-white">
                             <h4 class="font-bold text-accent-900">System Commissioning</h4>
                             <p class="text-sm text-accent-600">Thorough testing and optimization</p>
@@ -1454,6 +1419,17 @@
                 packageCards.forEach(c => {
                     c.style.transform = '';
                     c.style.opacity = '';
+                });
+            });
+        });
+
+        // Image error handling - if an image fails to load, use fallback
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('error', function() {
+                    this.src = 'https://placehold.co/800x400/0033a0/ffffff?text=Solar+Connector';
+                    this.parentElement.classList.add('image-fallback');
                 });
             });
         });
