@@ -280,7 +280,6 @@
         }
       }
       
-      /* Mobile Header Improvements */
       @media (max-width: 768px) {
         .mobile-stack {
           flex-direction: column;
@@ -315,193 +314,17 @@
           height: 56px;
         }
         
-        /* Improved Mobile Header */
-        nav {
-          height: auto;
-          min-height: 80px;
-        }
-        
-        .header-container {
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-          min-height: 80px;
-          flex-wrap: nowrap;
-          gap: 0.5rem;
-        }
-        
-        .header-logo-container {
-          margin-bottom: 0;
-          justify-content: flex-start;
-          text-align: left;
-          flex-shrink: 0;
-          max-width: 50%;
-        }
-        
-        .header-logo-container a {
-          gap: 0.5rem;
-        }
-        
-        .header-logo-container .text-2xl {
-          font-size: 1.25rem;
-          line-height: 1.5rem;
-        }
-        
-        .header-logo-container .text-sm {
-          font-size: 0.7rem;
-          line-height: 1rem;
-        }
-        
-        .header-logo-container .w-12 {
-          width: 2.5rem;
-          height: 2.5rem;
-          min-width: 2.5rem;
-        }
-        
-        .header-logo-container .w-7 {
-          width: 1rem;
-          height: 1rem;
-        }
-        
-        /* Improved Mobile Navigation */
-        .header-nav-container {
-          display: none !important; /* Hide on mobile - use hamburger menu instead */
-        }
-        
-        /* Improved Mobile CTA Button */
-        .header-cta-container {
-          width: auto;
-          max-width: 45%;
-          display: flex;
-          justify-content: flex-end;
-          flex-shrink: 0;
-        }
-        
-        .header-cta-button {
-          width: auto;
-          max-width: 100%;
-          padding: 0.5rem 0.75rem !important;
-          white-space: nowrap;
-          font-size: 0.7rem !important;
-        }
-        
-        .header-cta-button .badge {
-          font-size: 0.6rem;
-          letter-spacing: 0.02em;
-        }
-        
-        .header-cta-button span:first-child {
-          display: none; /* Hide emoji on mobile */
-        }
-        
-        .header-cta-button span:last-child {
-          display: none; /* Hide arrow on mobile */
-        }
-        
-        /* Mobile Menu Toggle */
-        .mobile-menu-toggle {
-          display: flex !important;
-          margin-left: 0.5rem;
-        }
-        
-        /* Mobile Menu */
-        .mobile-menu {
-          position: fixed;
-          top: 80px;
-          left: 0;
-          right: 0;
-          background: white;
-          border-bottom: 2px solid black;
-          z-index: 100;
-          padding: 1rem;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .mobile-menu.open {
-          display: block;
-        }
-        
-        .mobile-menu-links {
-          display: flex;
-          flex-direction: column;
-          gap: 0.75rem;
-        }
-        
-        .mobile-menu-links a {
-          padding: 0.75rem;
-          border-bottom: 1px solid #f3f4f6;
-          font-weight: 600;
-        }
-        
-        .mobile-menu-links a:last-child {
-          border-bottom: none;
-        }
-        
-        /* Hero CTA improvements for mobile */
-        #hero .inline-flex {
-          padding: 0.75rem 1rem !important;
-          font-size: 0.875rem !important;
-        }
-        
-        #hero .inline-flex span:first-child {
-          font-size: 1rem;
-        }
-        
-        #hero .inline-flex span:nth-child(2) {
-          font-size: 0.75rem !important;
-        }
-        
-        /* Adjust main headlines for mobile */
-        #hero h1 {
-          font-size: 2.5rem !important;
-          line-height: 3rem !important;
-        }
-        
-        #hero .text-3xl {
-          font-size: 1.5rem !important;
-        }
-        
-        #hero .text-5xl {
-          font-size: 2rem !important;
-        }
-        
-        #hero .text-6xl {
-          font-size: 2.25rem !important;
-        }
-        
-        /* Adjust guarantee badge */
-        .guarantee-badge {
-          padding: 0.5rem 1rem !important;
-          font-size: 0.7rem !important;
-          margin-bottom: 1.5rem !important;
-        }
-        
-        .guarantee-badge span:first-child {
-          width: 8px;
-          height: 8px;
-        }
-      }
-      
-      /* Tablet optimizations */
-      @media (min-width: 769px) and (max-width: 1024px) {
-        .header-logo-container .text-2xl {
-          font-size: 1.5rem;
-        }
-        
-        .header-logo-container .text-sm {
-          font-size: 0.8rem;
-        }
-        
-        .header-cta-button {
+        .header-cta {
           padding: 0.5rem 1rem !important;
           font-size: 0.75rem !important;
         }
         
-        .nav-link {
-          font-size: 0.875rem;
-          padding: 0.25rem 0.5rem;
+        .header-logo-text {
+          font-size: 1.125rem !important;
+        }
+        
+        .header-logo-subtext {
+          font-size: 0.625rem !important;
         }
       }
       
@@ -535,58 +358,45 @@
         font-size: 24px;
       }
       
-      /* Mobile menu toggle button */
-      .mobile-menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-        margin-left: 0.5rem;
-        flex-shrink: 0;
+      /* Header specific fixes */
+      .header-container {
+        height: 80px;
       }
       
-      .mobile-menu-toggle span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background: black;
-        margin: 5px 0;
-        transition: 0.3s;
-      }
-      
-      .mobile-menu {
-        display: none;
-      }
-      
-      /* Desktop header optimizations */
-      @media (min-width: 1025px) {
+      @media (max-width: 1024px) {
         .header-container {
-          gap: 1rem;
+          height: 70px;
         }
         
-        .header-nav-links {
-          display: flex;
-          gap: 1.5rem;
-          flex-wrap: nowrap;
+        .desktop-nav {
+          display: none;
         }
         
-        .nav-link {
-          font-size: 0.875rem;
-          white-space: nowrap;
-        }
-        
-        .header-cta-button {
-          padding: 0.75rem 1.5rem !important;
-          font-size: 0.875rem !important;
+        .mobile-menu-button {
+          display: block;
         }
       }
       
-      /* Prevent text overflow in CTA buttons */
-      .cta-text-truncate {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+      @media (max-width: 640px) {
+        .header-container {
+          height: 65px;
+          padding: 0 1rem;
+        }
+        
+        .header-cta {
+          white-space: nowrap;
+          padding: 0.5rem 0.75rem !important;
+        }
+      }
+      
+      .mobile-menu-button {
+        display: none;
+      }
+      
+      @media (max-width: 1024px) {
+        .mobile-menu-button {
+          display: flex;
+        }
       }
     </style>
 </head>
@@ -594,73 +404,86 @@
     <!-- Navigation -->
     <nav class="fixed w-full glass-effect z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20 header-container">
+            <div class="flex items-center justify-between header-container">
                 <!-- Logo -->
-                <div class="header-logo-container flex items-center">
-                    <a href="#" class="flex items-center gap-4 group">
-                        <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center flex-shrink-0">
-                            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2L3 12H6V22H18V12H21L12 2Z"/>
-                            </svg>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-2xl font-black group-hover:opacity-80 transition-opacity cta-text-truncate">SolarConnector</span>
-                            <span class="block text-sm text-gray-600 font-medium cta-text-truncate">Solar Installer Bronkhorstspruit</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Toggle -->
-                <button class="mobile-menu-toggle md:hidden" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <a href="#" class="flex items-center gap-3 group flex-shrink-0">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-black flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 md:w-7 md:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L3 12H6V22H18V12H21L12 2Z"/>
+                        </svg>
+                    </div>
+                    <div class="min-w-0">
+                        <span class="header-logo-text text-xl md:text-2xl font-black group-hover:opacity-80 transition-opacity truncate">SolarConnector</span>
+                        <span class="header-logo-subtext hidden md:block text-xs md:text-sm text-gray-600 font-medium truncate">Solar Installer Bronkhorstspruit</span>
+                    </div>
+                </a>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center gap-6 header-nav-container">
-                    <div class="header-nav-links">
-                        <a href="#hero" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors">Home</a>
-                        <a href="#local" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors">Local Service</a>
-                        <a href="#problems" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors">The Problem</a>
-                        <a href="#solution" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors">Our Solution</a>
-                        <a href="#packages" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors">Packages</a>
-                        <a href="#guarantee" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors">Guarantee</a>
-                        <a href="#process" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors">Process</a>
-                    </div>
+                <div class="desktop-nav hidden lg:flex items-center gap-8 mx-4 flex-1 justify-center">
+                    <a href="#hero" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors whitespace-nowrap">Home</a>
+                    <a href="#local" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors whitespace-nowrap">Local Service</a>
+                    <a href="#problems" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors whitespace-nowrap">The Problem</a>
+                    <a href="#solution" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors whitespace-nowrap">Our Solution</a>
+                    <a href="#packages" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors whitespace-nowrap">Packages</a>
+                    <a href="#guarantee" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors whitespace-nowrap">Guarantee</a>
                 </div>
 
                 <!-- Main CTA Button -->
-                <div class="header-cta-container">
+                <div class="flex items-center gap-4">
                     <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I%20would%20like%20to%20request%20a%20FREE%20Site%20Assessment%20for%20my%20home%20in%20Bronkhorstspruit/Cullinan/Rayton." 
                        target="_blank"
-                       class="bg-black text-white px-4 py-3 rounded-lg text-sm font-bold hover:bg-gray-900 transition-all duration-300 shadow-md group border-2 border-black header-cta-button cta-text-truncate">
-                        <span class="flex items-center justify-center gap-2">
-                            <span class="hidden md:inline">📋</span>
-                            <span class="badge cta-text-truncate">FREE ASSESSMENT</span>
-                            <span class="group-hover:translate-x-1 transition-transform hidden md:inline">→</span>
+                       class="header-cta bg-black text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-gray-900 transition-all duration-300 shadow-md group border-2 border-black whitespace-nowrap flex-shrink-0">
+                        <span class="flex items-center gap-2">
+                            <span>📋</span>
+                            <span class="badge">FREE ASSESSMENT</span>
                         </span>
                     </a>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div class="mobile-menu md:hidden" id="mobileMenu">
-                <div class="mobile-menu-links">
-                    <a href="#hero" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors" onclick="closeMobileMenu()">Home</a>
-                    <a href="#local" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors" onclick="closeMobileMenu()">Local Service</a>
-                    <a href="#problems" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors" onclick="closeMobileMenu()">The Problem</a>
-                    <a href="#solution" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors" onclick="closeMobileMenu()">Our Solution</a>
-                    <a href="#packages" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors" onclick="closeMobileMenu()">Packages</a>
-                    <a href="#guarantee" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors" onclick="closeMobileMenu()">Guarantee</a>
-                    <a href="#process" class="nav-link text-sm font-semibold hover:text-gray-800 transition-colors" onclick="closeMobileMenu()">Process</a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-button lg:hidden w-10 h-10 flex items-center justify-center border-2 border-black rounded-lg bg-white hover:bg-gray-50 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobileMenu" class="fixed inset-0 z-40 hidden lg:hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50" onclick="closeMobileMenu()"></div>
+        <div class="absolute top-0 right-0 w-64 h-full bg-white shadow-lg border-l-2 border-black">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-xl font-black">Menu</h3>
+                    <button onclick="closeMobileMenu()" class="w-8 h-8 flex items-center justify-center border border-black rounded">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="space-y-4">
+                    <a href="#hero" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Home</a>
+                    <a href="#local" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Local Service</a>
+                    <a href="#problems" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">The Problem</a>
+                    <a href="#solution" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Our Solution</a>
+                    <a href="#packages" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Packages</a>
+                    <a href="#guarantee" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Guarantee</a>
+                    <a href="#process" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Process</a>
+                    <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I%20would%20like%20to%20request%20a%20FREE%20Site%20Assessment%20for%20my%20home%20in%20Bronkhorstspruit/Cullinan/Rayton." 
+                       target="_blank"
+                       onclick="closeMobileMenu()"
+                       class="block py-3 px-4 bg-black text-white rounded-lg font-bold text-center hover:bg-gray-900 transition-colors border-2 border-black">
+                        📋 FREE ASSESSMENT
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 relative bg-white overflow-hidden border-b-2 border-black">
+    <section id="hero" class="pt-28 pb-20 md:pt-40 md:pb-32 relative bg-white overflow-hidden border-b-2 border-black">
         <!-- Animated background elements -->
         <div class="absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
             <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gray-100 blur-3xl"></div>
@@ -670,9 +493,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-6xl mx-auto">
                 <!-- Guarantee Badge -->
-                <div class="inline-flex items-center gap-3 px-4 md:px-6 py-3 rounded-full guarantee-badge mb-8 md:mb-10 animate-slide-up">
-                    <span class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white animate-ping"></span>
-                    <span class="text-xs md:text-sm font-black uppercase tracking-wider">80% ELECTRICITY BILL REDUCTION GUARANTEED</span>
+                <div class="inline-flex items-center gap-3 px-6 py-3.5 rounded-full guarantee-badge mb-10 animate-slide-up">
+                    <span class="w-3 h-3 rounded-full bg-white animate-ping"></span>
+                    <span class="text-sm font-black uppercase tracking-wider">80% ELECTRICITY BILL REDUCTION GUARANTEED</span>
                 </div>
                 
                 <!-- Main Headline -->
@@ -682,38 +505,38 @@
                 </h1>
                 
                 <!-- Subheadline -->
-                <div class="text-2xl md:text-4xl text-gray-800 mb-8 md:mb-12 max-w-5xl leading-relaxed">
+                <div class="text-2xl md:text-4xl text-gray-800 mb-12 max-w-5xl leading-relaxed">
                     <div class="font-black mb-4">You Just Did.</div>
                     <div class="text-4xl md:text-6xl font-black text-black mb-4">Cut up to 80% of</div>
                     <div class="text-4xl md:text-6xl font-black text-black">Your Energy Costs</div>
                 </div>
 
                 <!-- Key Stats Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
-                    <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-2 border-black card-hover">
-                        <div class="text-4xl md:text-6xl font-black mb-3">80%</div>
-                        <div class="text-base md:text-lg font-bold mb-2">Electricity Bill Reduction</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Guaranteed minimum savings on your monthly bill</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="bg-gray-50 p-8 rounded-xl border-2 border-black card-hover">
+                        <div class="text-5xl md:text-6xl font-black mb-3">80%</div>
+                        <div class="text-lg font-bold mb-2">Electricity Bill Reduction</div>
+                        <div class="text-gray-600 text-sm">Guaranteed minimum savings on your monthly bill</div>
                     </div>
-                    <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-2 border-black card-hover">
-                        <div class="text-4xl md:text-6xl font-black mb-3">R0</div>
-                        <div class="text-base md:text-lg font-bold mb-2">Upfront Cost</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Start saving immediately with zero deposit required</div>
+                    <div class="bg-gray-50 p-8 rounded-xl border-2 border-black card-hover">
+                        <div class="text-5xl md:text-6xl font-black mb-3">R0</div>
+                        <div class="text-lg font-bold mb-2">Upfront Cost</div>
+                        <div class="text-gray-600 text-sm">Start saving immediately with zero deposit required</div>
                     </div>
-                    <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-2 border-black card-hover">
-                        <div class="text-4xl md:text-6xl font-black mb-3">10 Years</div>
-                        <div class="text-base md:text-lg font-bold mb-2">Comprehensive Warranty</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Full system protection including parts & labor</div>
+                    <div class="bg-gray-50 p-8 rounded-xl border-2 border-black card-hover">
+                        <div class="text-5xl md:text-6xl font-black mb-3">10 Years</div>
+                        <div class="text-lg font-bold mb-2">Comprehensive Warranty</div>
+                        <div class="text-gray-600 text-sm">Full system protection including parts & labor</div>
                     </div>
-                    <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-2 border-black card-hover">
-                        <div class="text-4xl md:text-6xl font-black mb-3">24/7</div>
-                        <div class="text-base md:text-lg font-bold mb-2">Dedicated Support</div>
-                        <div class="text-gray-600 text-xs md:text-sm">Your personal technical team always available</div>
+                    <div class="bg-gray-50 p-8 rounded-xl border-2 border-black card-hover">
+                        <div class="text-5xl md:text-6xl font-black mb-3">24/7</div>
+                        <div class="text-lg font-bold mb-2">Dedicated Support</div>
+                        <div class="text-gray-600 text-sm">Your personal technical team always available</div>
                     </div>
                 </div>
 
                 <!-- Video Section -->
-                <div class="mb-12 md:mb-16">
+                <div class="mb-16">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
                                 frameborder="0" 
@@ -722,52 +545,52 @@
                                 loading="lazy">
                         </iframe>
                     </div>
-                    <p class="text-gray-600 text-center text-xs md:text-sm mt-4">
+                    <p class="text-gray-600 text-center text-sm mt-4">
                         Watch how SolarConnector transforms energy security for families in Bronkhorstspruit, Cullinan & Rayton (2:30 min)
                     </p>
                 </div>
 
                 <!-- Main CTA -->
-                <div class="mb-12 md:mb-16 text-center">
+                <div class="mb-16 text-center">
                     <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I%20want%20a%20FREE%20Site%20Assessment%20to%20see%20how%20I%20can%20save%2080%%20on%20my%20electricity%20bill%20and%20end%20loadshedding%20in%20Bronkhorstspruit/Cullinan/Rayton." 
                        target="_blank"
-                       class="inline-flex items-center justify-center gap-3 bg-black text-white px-4 md:px-8 lg:px-16 py-4 md:py-6 rounded-xl font-black text-base md:text-lg lg:text-xl transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 group mx-auto border-2 border-black cta-text-truncate">
-                        <span class="text-xl md:text-2xl">📋</span>
-                        <span class="text-sm md:text-base lg:text-lg cta-text-truncate">GET FREE SITE ASSESSMENT VIA WHATSAPP</span>
+                       class="inline-flex items-center justify-center gap-4 bg-black text-white px-8 md:px-16 py-6 rounded-xl font-black text-lg md:text-2xl transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 group mx-auto border-2 border-black">
+                        <span class="text-2xl">📋</span>
+                        <span>GET FREE SITE ASSESSMENT VIA WHATSAPP</span>
                         <span class="group-hover:translate-x-3 transition-transform duration-300">→</span>
                     </a>
-                    <p class="text-gray-700 text-base md:text-lg mt-4 md:mt-6">
+                    <p class="text-gray-700 text-lg mt-6">
                         ⚡ No Upfront Cost • 10-Year Warranty • 24/7 Support • Custom Solutions
                     </p>
                 </div>
 
                 <!-- Trust Indicators -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center">
-                    <div class="flex items-center justify-center gap-3 md:gap-4">
-                        <div class="icon-circle-black text-sm md:text-base">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="flex items-center justify-center gap-4">
+                        <div class="icon-circle-black">
                             ✓
                         </div>
                         <div class="text-left">
-                            <div class="font-bold text-sm md:text-base">No Upfront Payment</div>
-                            <div class="text-gray-600 text-xs md:text-sm">100% financed solution</div>
+                            <div class="font-bold">No Upfront Payment</div>
+                            <div class="text-gray-600 text-sm">100% financed solution</div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-center gap-3 md:gap-4">
-                        <div class="icon-circle-black text-sm md:text-base">
+                    <div class="flex items-center justify-center gap-4">
+                        <div class="icon-circle-black">
                             ✓
                         </div>
                         <div class="text-left">
-                            <div class="font-bold text-sm md:text-base">10-Year Full Warranty</div>
-                            <div class="text-gray-600 text-xs md:text-sm">Comprehensive coverage</div>
+                            <div class="font-bold">10-Year Full Warranty</div>
+                            <div class="text-gray-600 text-sm">Comprehensive coverage</div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-center gap-3 md:gap-4">
-                        <div class="icon-circle-black text-sm md:text-base">
+                    <div class="flex items-center justify-center gap-4">
+                        <div class="icon-circle-black">
                             ✓
                         </div>
                         <div class="text-left">
-                            <div class="font-bold text-sm md:text-base">Dedicated Technical Support</div>
-                            <div class="text-gray-600 text-xs md:text-sm">24/7 assistance</div>
+                            <div class="font-bold">Dedicated Technical Support</div>
+                            <div class="text-gray-600 text-sm">24/7 assistance</div>
                         </div>
                     </div>
                 </div>
@@ -776,13 +599,13 @@
     </section>
 
     <!-- Local Service Area Section -->
-    <section id="local" class="py-16 md:py-24 bg-gray-50 border-b-2 border-black">
+    <section id="local" class="py-24 bg-gray-50 border-b-2 border-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-5xl font-black mb-6">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
                     Your Local Solar Experts in<br>Pretoria East & Surrounding Areas
                 </h2>
-                <div class="text-lg md:text-xl text-gray-600 leading-relaxed space-y-4">
+                <div class="text-xl text-gray-600 leading-relaxed space-y-4">
                     <p>Hello to our neighbours in <strong>Pretoria East, Bronkhorstspruit, Cullinan, and Rayton!</strong> We're SolarConnector, your local solar panel experts serving the entire eastern region.</p>
                     <p>Whether you're on a farmstead near <strong>Cullinan</strong>, in a family home in <strong>Rayton</strong>, or a new estate in <strong>Pretoria East</strong>, we understand the unique energy needs of our communities.</p>
                     <p>We specialise in helping homes and farms in our area become independent from loadshedding and unpredictable Eskom hikes. As your trusted <strong>solar installer in Bronkhorstspruit</strong> and beyond, we provide a personal service—from a free, no-obligation assessment of your property to a complete, guaranteed system.</p>
@@ -790,57 +613,963 @@
             </div>
 
             <!-- Service Areas Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                <div class="bg-white p-6 md:p-8 rounded-xl border-2 border-black card-hover">
-                    <div class="text-2xl md:text-3xl mb-4">📍</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-4">Solar Installer Bronkhorstspruit</h3>
-                    <p class="text-gray-600 text-sm md:text-base">Professional solar installation and maintenance for homes and farms throughout Bronkhorstspruit.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-xl border-2 border-black card-hover">
+                    <div class="text-3xl mb-4">📍</div>
+                    <h3 class="text-2xl font-bold mb-4">Solar Installer Bronkhorstspruit</h3>
+                    <p class="text-gray-600">Professional solar installation and maintenance for homes and farms throughout Bronkhorstspruit.</p>
                     <div class="mt-4">
-                        <span class="badge bg-black text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs">Local Expert</span>
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Local Expert</span>
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 md:p-8 rounded-xl border-2 border-black card-hover">
-                    <div class="text-2xl md:text-3xl mb-4">☀️</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-4">Solar Panels Cullinan</h3>
-                    <p class="text-gray-600 text-sm md:text-base">High-efficiency solar panels in Cullinan, tailored to farmsteads and residential needs.</p>
+                <div class="bg-white p-8 rounded-xl border-2 border-black card-hover">
+                    <div class="text-3xl mb-4">☀️</div>
+                    <h3 class="text-2xl font-bold mb-4">Solar Panels Cullinan</h3>
+                    <p class="text-gray-600">High-efficiency solar panels in Cullinan, tailored to farmsteads and residential needs.</p>
                     <div class="mt-4">
-                        <span class="badge bg-black text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs">Farm Solutions</span>
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Farm Solutions</span>
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 md:p-8 rounded-xl border-2 border-black card-hover">
-                    <div class="text-2xl md:text-3xl mb-4">🏡</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-4">Solar Rayton</h3>
-                    <p class="text-gray-600 text-sm md:text-base">Custom solar solutions for Rayton residents, ensuring energy independence and savings.</p>
+                <div class="bg-white p-8 rounded-xl border-2 border-black card-hover">
+                    <div class="text-3xl mb-4">🏡</div>
+                    <h3 class="text-2xl font-bold mb-4">Solar Rayton</h3>
+                    <p class="text-gray-600">Custom solar solutions for Rayton residents, ensuring energy independence and savings.</p>
                     <div class="mt-4">
-                        <span class="badge bg-black text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs">Family Homes</span>
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Family Homes</span>
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 md:p-8 rounded-xl border-2 border-black card-hover">
-                    <div class="text-2xl md:text-3xl mb-4">⚡</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-4">Solar Pretoria East</h3>
-                    <p class="text-gray-600 text-sm md:text-base">Leading solar provider in Pretoria East, delivering reliable solar power to new estates and established homes.</p>
+                <div class="bg-white p-8 rounded-xl border-2 border-black card-hover">
+                    <div class="text-3xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4">Solar Pretoria East</h3>
+                    <p class="text-gray-600">Leading solar provider in Pretoria East, delivering reliable solar power to new estates and established homes.</p>
                     <div class="mt-4">
-                        <span class="badge bg-black text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs">Estate Specialists</span>
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Estate Specialists</span>
                     </div>
                 </div>
             </div>
 
             <!-- Local CTA -->
-            <div class="text-center mt-12 md:mt-16">
+            <div class="text-center mt-16">
                 <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I'm%20in%20Bronkhorstspruit/Cullinan/Rayton/Pretoria%20East%20and%20want%20a%20FREE%20Site%20Assessment%20from%20my%20local%20solar%20expert." 
                    target="_blank"
-                   class="inline-flex items-center justify-center gap-2 md:gap-3 bg-black text-white px-4 md:px-8 lg:px-12 py-3 md:py-5 rounded-xl font-bold text-base md:text-lg hover:bg-gray-900 transition-colors shadow-md border-2 border-black cta-text-truncate">
+                   class="inline-flex items-center justify-center gap-3 bg-black text-white px-8 md:px-12 py-5 rounded-xl font-bold text-lg hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
                     <span>📍</span>
-                    <span class="badge cta-text-truncate">GET YOUR LOCAL ASSESSMENT</span>
+                    <span class="badge">GET YOUR LOCAL ASSESSMENT</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- The rest of the sections remain the same as in your original HTML, with the same responsive improvements applied consistently... -->
+    <!-- The South African Energy Crisis -->
+    <section id="problems" class="py-24 bg-white border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    The South African Energy Crisis<br>Every Family in Our Area Faces
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Loadshedding isn't just about darkness - it's destroying household budgets, threatening food security, 
+                    and creating constant stress for families in Bronkhorstspruit, Cullinan, Rayton, and Pretoria East.
+                </p>
+            </div>
+
+            <!-- Problems Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+                <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-black card-hover">
+                    <div class="icon-circle mb-6">💰</div>
+                    <h3 class="text-2xl font-bold mb-4">Skyrocketing Bills</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Municipality tariffs increased 18.65% this year alone</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Average family spends R3,500-R6,000 monthly on electricity</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">No control over future price increases</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-black card-hover">
+                    <div class="icon-circle mb-6">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4">Loadshedding Chaos</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Stage 4-6 loadshedding destroying appliances</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Food spoilage costing families R800+ monthly</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Work-from-home interruptions & productivity loss</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-black card-hover">
+                    <div class="icon-circle mb-6">🏠</div>
+                    <h3 class="text-2xl font-bold mb-4">Home Security Risks</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Electric fences & alarm systems failing</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">CCTV cameras going offline during blackouts</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Vulnerability to break-ins during darkness</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-black card-hover">
+                    <div class="icon-circle mb-6">😰</div>
+                    <h3 class="text-2xl font-bold mb-4">Family Stress & Health</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Children unable to study in evenings</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Medical equipment failures risk lives</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">•</span>
+                            <span class="text-gray-700">Constant anxiety about next blackout</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Financial Impact Calculator -->
+            <div class="bg-gray-50 p-10 rounded-2xl border-2 border-black">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h3 class="text-3xl font-black mb-6">
+                            Your Current Financial Drain in Our Area
+                        </h3>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            Most families in Bronkhorstspruit, Cullinan, Rayton and Pretoria East don't realize how much loadshedding and high electricity costs are actually draining from their household budget.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-5 bg-white rounded-lg border-2 border-black">
+                                <span class="font-bold">Current Monthly Electricity</span>
+                                <span class="text-2xl font-black">R4,500</span>
+                            </div>
+                            <div class="flex items-center justify-between p-5 bg-white rounded-lg border-2 border-black">
+                                <span class="font-bold">Food Spoilage During Loadshedding</span>
+                                <span class="text-2xl font-black">R850</span>
+                            </div>
+                            <div class="flex items-center justify-between p-5 bg-white rounded-lg border-2 border-black">
+                                <span class="font-bold">Generator/Diesel Costs</span>
+                                <span class="text-2xl font-black">R1,200</span>
+                            </div>
+                            <div class="flex items-center justify-between p-5 bg-white rounded-lg border-2 border-black">
+                                <span class="font-bold">Appliance Damage (Annual)</span>
+                                <span class="text-2xl font-black">R6,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="savings-card p-10 rounded-2xl mb-8 border-2 border-black">
+                            <div class="text-5xl md:text-6xl font-black mb-2">R78,600</div>
+                            <div class="text-xl font-bold mb-1">YEARLY COST TO YOUR FAMILY</div>
+                            <div class="text-white/90">Just to keep the lights on (and often failing)</div>
+                        </div>
+                        <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I%20want%20a%20FREE%20Site%20Assessment%20in%20Bronkhorstspruit/Cullinan/Rayton%20to%20see%20how%20much%20I%20can%20save%20on%20my%20current%20energy%20costs." 
+                           target="_blank"
+                           class="inline-flex items-center justify-center gap-3 bg-black text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-900 transition-colors shadow-md w-full border-2 border-black">
+                            <span>📋</span>
+                            <span class="badge">GET FREE SITE ASSESSMENT</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The SolarConnector Solution -->
+    <section id="solution" class="py-24 bg-gray-50 border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    The SolarConnector Solution<br>Complete Energy Independence
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    As your trusted <strong>solar installer in Bronkhorstspruit</strong> and surrounding areas, we don't just install solar panels. We deliver comprehensive energy solutions that solve every aspect of South Africa's energy crisis for residential families.
+                </p>
+            </div>
+
+            <!-- Solution Components -->
+            <div class="grid md:grid-cols-3 gap-6 mb-20">
+                <div class="bg-white p-8 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-8 mx-auto">
+                        ☀️
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-center">Premium Solar Generation</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Tier-1 solar panels with 25-year performance warranty</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Advanced MPPT technology for maximum efficiency</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Weather-resistant mounting systems</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Real-time generation monitoring via mobile app</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-8 mx-auto">
+                        🔋
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-center">Intelligent Energy Storage</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Li-ion batteries with 10-year warranty</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Automatic load-shedding detection & switching</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Backup power for essential & non-essential loads</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Smart battery management for optimal lifespan</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-8 mx-auto">
+                        🎛️
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-center">Smart Energy Management</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Advanced hybrid inverters with grid-tie capability</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Load prioritization during loadshedding</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Peak shaving to avoid high tariff periods</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-black text-xl mt-1">✓</span>
+                            <span>Remote monitoring & control via smartphone</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <div class="bg-white p-10 rounded-2xl border-2 border-black">
+                <h3 class="text-3xl font-black mb-10 text-center">
+                    How SolarConnector Works in Your Area
+                </h3>
+                
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="icon-circle-black mx-auto mb-6">
+                            1
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Free Local Assessment</h4>
+                        <p class="text-gray-600">We analyze your home's energy needs in Bronkhorstspruit, Cullinan, Rayton or Pretoria East</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="icon-circle-black mx-auto mb-6">
+                            2
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Custom Design</h4>
+                        <p class="text-gray-600">Personalized system design for maximum efficiency & savings in your specific area</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="icon-circle-black mx-auto mb-6">
+                            3
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Professional Installation</h4>
+                        <p class="text-gray-600">Certified technicians install your complete system in 3-5 days</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="icon-circle-black mx-auto mb-6">
+                            4
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Ongoing Local Support</h4>
+                        <p class="text-gray-600">24/7 monitoring, maintenance, and technical support from your local solar experts</p>
+                    </div>
+                </div>
+                
+                <!-- CTA Button in Process -->
+                <div class="text-center mt-10">
+                    <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I'm%20ready%20for%20my%20FREE%20Local%20Site%20Assessment%20in%20Bronkhorstspruit/Cullinan/Rayton.%20Please%20schedule%20a%20consultation." 
+                       target="_blank"
+                       class="inline-flex items-center justify-center gap-3 bg-black text-white px-8 md:px-12 py-4 rounded-lg font-bold text-lg hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
+                        <span>📋</span>
+                        <span class="badge">SCHEDULE FREE LOCAL ASSESSMENT</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 bg-white border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    Complete Solar Products<br>For Every Need in Our Area
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Choose from our range of premium solar products, each designed to deliver maximum efficiency and reliability for homes in Bronkhorstspruit, Cullinan, Rayton and Pretoria East.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+                <!-- Product 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-6 mx-auto">☀️</div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Premium Solar Panels</h3>
+                    <p class="text-gray-600 text-sm mb-4">Tier-1 monocrystalline panels with 25-year performance warranty</p>
+                    <div class="flex justify-center">
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Efficiency: 21.5%</span>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-6 mx-auto">🔋</div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Lithium Batteries</h3>
+                    <p class="text-gray-600 text-sm mb-4">10-year warranty, 70% capacity retention after 10 years</p>
+                    <div class="flex justify-center">
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Capacity: 5-20KWh</span>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-6 mx-auto">🎛️</div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Hybrid Inverters</h3>
+                    <p class="text-gray-600 text-sm mb-4">Smart grid-tie with load prioritization and peak shaving</p>
+                    <div class="flex justify-center">
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Power: 3-10KW</span>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-gray-50 p-6 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-6 mx-auto">📱</div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Smart Monitoring</h3>
+                    <p class="text-gray-600 text-sm mb-4">Real-time energy monitoring via mobile app with alerts</p>
+                    <div class="flex justify-center">
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">24/7 Tracking</span>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="bg-gray-50 p-6 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-6 mx-auto">🔌</div>
+                    <h3 class="text-xl font-bold mb-3 text-center">EV Chargers</h3>
+                    <p class="text-gray-600 text-sm mb-4">Smart EV charging integrated with solar generation</p>
+                    <div class="flex justify-center">
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Fast Charge</span>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="bg-gray-50 p-6 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-6 mx-auto">🏠</div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Home Integration</h3>
+                    <p class="text-gray-600 text-sm mb-4">Seamless integration with existing home electrical systems</p>
+                    <div class="flex justify-center">
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Plug & Play</span>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="bg-gray-50 p-6 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-6 mx-auto">🛡️</div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Surge Protection</h3>
+                    <p class="text-gray-600 text-sm mb-4">Complete surge protection for all connected equipment</p>
+                    <div class="flex justify-center">
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">Full Safety</span>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="bg-gray-50 p-6 rounded-xl border-2 border-black card-hover">
+                    <div class="icon-circle mb-6 mx-auto">🔧</div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Maintenance Package</h3>
+                    <p class="text-gray-600 text-sm mb-4">Annual maintenance and cleaning services included</p>
+                    <div class="flex justify-center">
+                        <span class="badge bg-black text-white px-3 py-1 rounded-full text-xs">10 Years</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA After Products -->
+            <div class="text-center">
+                <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I%20want%20to%20discuss%20the%20best%20solar%20products%20for%20my%20home%20in%20Bronkhorstspruit/Cullinan/Rayton.%20Can%20I%20get%20a%20FREE%20Site%20Assessment?" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center gap-4 bg-black text-white px-8 md:px-16 py-5 rounded-xl font-bold text-lg hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
+                    <span>📞</span>
+                    <span>CHAT FOR LOCAL PRODUCT RECOMMENDATIONS</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section id="guarantee" class="py-24 bg-gray-50 border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    Our Iron-Clad Guarantees<br>You're Protected Every Step
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    As your trusted <strong>solar installer in Bronkhorstspruit</strong> and surrounding areas, we stand behind our solution with the strongest guarantees in the South African solar industry.
+                </p>
+            </div>
+
+            <!-- Guarantee Grid -->
+            <div class="grid lg:grid-cols-2 gap-10 mb-20">
+                <!-- Left Column: What We Guarantee -->
+                <div class="bg-white p-10 rounded-2xl border-2 border-black">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="icon-circle-black">
+                            ✓
+                        </div>
+                        <h3 class="text-3xl font-black">What We Guarantee</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl">💰</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">80% Bill Reduction</h4>
+                                <p class="text-gray-600">We guarantee your electricity bill will reduce by at least 80% compared to your current costs. If we don't achieve this, we'll make up the difference.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl">⚡</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Continuous Power</h4>
+                                <p class="text-gray-600">Your essential circuits will remain powered during loadshedding, with automatic switchover in under 10 milliseconds.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl">🏆</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">10-Year Warranty</h4>
+                                <p class="text-gray-600">Comprehensive coverage on all components including panels, batteries, inverters, and installation workmanship.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Risk-Free Premium Implementation -->
+                <div class="bg-white p-10 rounded-2xl border-2 border-black">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="icon-circle-black">
+                            🛡️
+                        </div>
+                        <h3 class="text-3xl font-black">Risk-Free Premium Implementation</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="border-2 border-black p-6 rounded-lg">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="icon-circle">🔧</div>
+                                <h4 class="text-xl font-bold">Professional Installation</h4>
+                            </div>
+                            <p class="text-gray-600">Certified technicians handle everything from permits to final commissioning, ensuring perfect system integration for homes in Cullinan, Rayton and surrounding areas.</p>
+                        </div>
+                        
+                        <div class="border-2 border-black p-6 rounded-lg">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="icon-circle">👨‍💻</div>
+                                <h4 class="text-xl font-bold">Dedicated Local Support</h4>
+                            </div>
+                            <p class="text-gray-600">Your personal support team available 24/7 for any questions, issues, or maintenance needs. We respond within 2 hours throughout Pretoria East and surrounding areas.</p>
+                        </div>
+                        
+                        <div class="border-2 border-black p-6 rounded-lg">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="icon-circle">📊</div>
+                                <h4 class="text-xl font-bold">Performance Monitoring</h4>
+                            </div>
+                            <p class="text-gray-600">We actively monitor your system's performance and proactively address any issues before they affect your power supply.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guarantee Badges -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-black text-white p-8 rounded-xl text-center">
+                    <div class="text-3xl mb-4">✓</div>
+                    <div class="text-lg font-bold mb-2 badge">NO UPFRONT COST</div>
+                    <div class="text-white/90 text-sm">100% financed solution available</div>
+                </div>
+                
+                <div class="bg-black text-white p-8 rounded-xl text-center">
+                    <div class="text-3xl mb-4">✓</div>
+                    <div class="text-lg font-bold mb-2 badge">10-YEAR WARRANTY</div>
+                    <div class="text-white/90 text-sm">Full system coverage</div>
+                </div>
+                
+                <div class="bg-black text-white p-8 rounded-xl text-center">
+                    <div class="text-3xl mb-4">✓</div>
+                    <div class="text-lg font-bold mb-2 badge">24/7 LOCAL SUPPORT</div>
+                    <div class="text-white/90 text-sm">Dedicated technical team</div>
+                </div>
+                
+                <div class="bg-black text-white p-8 rounded-xl text-center">
+                    <div class="text-3xl mb-4">✓</div>
+                    <div class="text-lg font-bold mb-2 badge">FREE ASSESSMENT</div>
+                    <div class="text-white/90 text-sm">No obligation site evaluation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-24 bg-white border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    Complete Solar Packages<br>For Every Family & Budget in Our Area
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    As your local <strong>solar installer in Bronkhorstspruit</strong>, Cullinan, Rayton and Pretoria East, all packages include our comprehensive 80% bill reduction guarantee, 10-year warranty, and dedicated 24/7 support. Zero upfront cost available on all options.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <!-- Family Starter Package -->
+                <div class="bg-white rounded-2xl overflow-hidden border-2 border-black card-hover">
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                            <div class="text-5xl mb-4">🏠</div>
+                            <h3 class="text-3xl font-black mb-2">Family Starter</h3>
+                            <div class="text-lg text-gray-600">Perfect for small families in Rayton & Pretoria East</div>
+                        </div>
+                        
+                        <div class="text-center mb-8">
+                            <div class="text-xl font-bold text-gray-700 mb-2">Custom Designed Solution</div>
+                            <div class="text-lg font-bold badge bg-black text-white px-3 py-1 rounded-full inline-block">ZERO UPFRONT COST AVAILABLE</div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-lg font-bold mb-4 pb-2 border-b-2 border-black">Package Includes:</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700"><strong>Solar Panel Array</strong> sized for your needs</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700"><strong>Lithium Battery Storage</strong> for backup power</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Smart Hybrid Inverter</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Essential Loads Protection</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Basic Monitoring System</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I'm%20interested%20in%20the%20Family%20Starter%20package%20for%20my%20home%20in%20Rayton/Pretoria%20East.%20Can%20I%20get%20a%20FREE%20Site%20Assessment?" 
+                           target="_blank"
+                           class="inline-flex items-center justify-center gap-3 bg-black text-white w-full py-4 rounded-lg font-bold hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
+                            <span>📋</span>
+                            <span class="badge">FREE ASSESSMENT</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Family Plus Package (Most Popular) -->
+                <div class="bg-white rounded-2xl overflow-hidden border-2 border-black card-hover premium-package">
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                            <div class="text-5xl mb-4">🏡</div>
+                            <h3 class="text-3xl font-black mb-2">Family Plus</h3>
+                            <div class="text-lg text-gray-600">Most popular for families in Bronkhorstspruit & Cullinan</div>
+                        </div>
+                        
+                        <div class="text-center mb-8">
+                            <div class="text-xl font-bold text-gray-700 mb-2">Complete Home Solution</div>
+                            <div class="text-lg font-bold badge bg-black text-white px-3 py-1 rounded-full inline-block">ZERO UPFRONT COST AVAILABLE</div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-lg font-bold mb-4 pb-2 border-b-2 border-black">Package Includes:</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700"><strong>Premium Solar Panel Array</strong></span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700"><strong>Extended Battery Storage</strong></span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Advanced Hybrid Inverter</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Full Home Loadshedding Protection</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Smart Home Energy Management</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Mobile App Monitoring & Control</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I'm%20interested%20in%20the%20Family%20Plus%20package%20for%20my%20home%20in%20Bronkhorstspruit/Cullinan.%20Can%20I%20get%20a%20FREE%20Site%20Assessment?" 
+                           target="_blank"
+                           class="inline-flex items-center justify-center gap-3 bg-black text-white w-full py-4 rounded-lg font-bold hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
+                            <span>📋</span>
+                            <span class="badge">FREE ASSESSMENT</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Family Premium Package -->
+                <div class="bg-white rounded-2xl overflow-hidden border-2 border-black card-hover">
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                            <div class="text-5xl mb-4">🏘️</div>
+                            <h3 class="text-3xl font-black mb-2">Family Premium</h3>
+                            <div class="text-lg text-gray-600">Complete energy independence for large homes & farms</div>
+                        </div>
+                        
+                        <div class="text-center mb-8">
+                            <div class="text-xl font-bold text-gray-700 mb-2">Ultimate Energy Freedom</div>
+                            <div class="text-lg font-bold badge bg-black text-white px-3 py-1 rounded-full inline-block">ZERO UPFRONT COST AVAILABLE</div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-lg font-bold mb-4 pb-2 border-b-2 border-black">Package Includes:</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700"><strong>Maximum Solar Generation</strong></span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700"><strong>Extended Battery Storage</strong> for full independence</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Commercial Grade Inverter</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Complete Energy Independence</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">EV Charging Capability</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm mt-1">✓</span>
+                                    <span class="text-gray-700">Premium Monitoring & Analytics</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I'm%20interested%20in%20the%20Family%20Premium%20package%20for%20my%20farm/home%20in%20Cullinan/Bronkhorstspruit.%20Can%20I%20get%20a%20FREE%20Site%20Assessment?" 
+                           target="_blank"
+                           class="inline-flex items-center justify-center gap-3 bg-black text-white w-full py-4 rounded-lg font-bold hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
+                            <span>📋</span>
+                            <span class="badge">FREE ASSESSMENT</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Package Selection CTA -->
+            <div class="text-center bg-gray-50 p-10 rounded-2xl border-2 border-black">
+                <h3 class="text-3xl font-black mb-6">Not Sure Which Package You Need for Your Area?</h3>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Our expert consultants will assess your home in Bronkhorstspruit, Cullinan, Rayton or Pretoria East and recommend the perfect solution during your FREE site assessment.
+                </p>
+                <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I'm%20not%20sure%20which%20solar%20package%20is%20right%20for%20my%20home%20in%20Bronkhorstspruit/Cullinan/Rayton.%20Can%20I%20get%20a%20FREE%20Site%20Assessment%20with%20expert%20recommendations?" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center gap-4 bg-black text-white px-8 md:px-12 py-5 rounded-xl font-bold text-lg hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
+                    <span>👨‍💼</span>
+                    <span>GET LOCAL EXPERT RECOMMENDATION</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Installation Process -->
+    <section id="process" class="py-24 bg-gray-50 border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    Simple 5-Step Process<br>From Consultation to Power in Your Area
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Our streamlined process ensures minimal disruption to your home in Bronkhorstspruit, Cullinan, Rayton or Pretoria East while delivering maximum results.
+                </p>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="grid md:grid-cols-5 gap-6 mb-20">
+                <div class="text-center">
+                    <div class="icon-circle-black mx-auto mb-6">
+                        1
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Free Local Assessment</h4>
+                    <p class="text-gray-600 text-sm">
+                        30-minute consultation to understand your energy needs in your specific area
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="icon-circle-black mx-auto mb-6">
+                        2
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Custom Design</h4>
+                    <p class="text-gray-600 text-sm">
+                        Personalized system design with 3D renderings and detailed savings projections
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="icon-circle-black mx-auto mb-6">
+                        3
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Approval & Finance</h4>
+                    <p class="text-gray-600 text-sm">
+                        Quick approval process with multiple financing options including zero upfront cost
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="icon-circle-black mx-auto mb-6">
+                        4
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Professional Installation</h4>
+                    <p class="text-gray-600 text-sm">
+                        3-5 day installation by certified technicians with minimal disruption
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="icon-circle-black mx-auto mb-6">
+                        5
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Activation & Support</h4>
+                    <p class="text-gray-600 text-sm">
+                        System activation, training, and ongoing 24/7 monitoring and local support
+                    </p>
+                </div>
+            </div>
+
+            <!-- Timeline Visual -->
+            <div class="bg-white p-10 rounded-2xl border-2 border-black">
+                <h3 class="text-3xl font-black mb-10 text-center">
+                    Start Your Solar Journey Today in Your Area
+                </h3>
+                
+                <div class="text-center">
+                    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                        The first step is completely free and without obligation. Schedule your FREE local site assessment and discover how much you can save in Bronkhorstspruit, Cullinan, Rayton or Pretoria East.
+                    </p>
+                    
+                    <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I%20want%20to%20start%20my%20solar%20journey%20in%20Bronkhorstspruit/Cullinan/Rayton%20with%20a%20FREE%20Site%20Assessment.%20Please%20schedule%20an%20appointment." 
+                       target="_blank"
+                       class="inline-flex items-center justify-center gap-4 bg-black text-white px-8 md:px-16 py-6 rounded-xl font-black text-lg md:text-xl hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
+                        <span>📅</span>
+                        <span>SCHEDULE FREE LOCAL ASSESSMENT</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-24 bg-white border-b-2 border-black">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-6xl font-black mb-8">
+                    Ready to Transform Your<br>Family's Energy Future?
+                </h2>
+                <p class="text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Join families in Bronkhorstspruit, Cullinan, Rayton and Pretoria East who have eliminated loadshedding stress and taken control of their electricity costs.
+                </p>
+                
+                <!-- Benefits Summary -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-black">
+                        <div class="text-3xl mb-4">💰</div>
+                        <div class="font-bold text-lg">80% Bill Reduction</div>
+                        <div class="text-gray-600 text-sm">Guaranteed minimum savings</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-black">
+                        <div class="text-3xl mb-4">⚡</div>
+                        <div class="font-bold text-lg">Loadshedding Proof</div>
+                        <div class="text-gray-600 text-sm">Continuous power 24/7</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-black">
+                        <div class="text-3xl mb-4">🏆</div>
+                        <div class="font-bold text-lg">10-Year Warranty</div>
+                        <div class="text-gray-600 text-sm">Complete peace of mind</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-black">
+                        <div class="text-3xl mb-4">👨‍💻</div>
+                        <div class="font-bold text-lg">Local Support</div>
+                        <div class="text-gray-600 text-sm">24/7 technical assistance</div>
+                    </div>
+                </div>
+                
+                <!-- Main CTA -->
+                <div class="mb-16">
+                    <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I'm%20ready%20to%20transform%20my%20family's%20energy%20future%20in%20Bronkhorstspruit/Cullinan/Rayton%20and%20end%20loadshedding%20forever.%20Please%20schedule%20my%20FREE%20Local%20Site%20Assessment%20today!" 
+                       target="_blank"
+                       class="inline-flex items-center justify-center gap-4 bg-black text-white px-8 md:px-20 py-6 md:py-8 rounded-xl font-black text-lg md:text-2xl transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 group mx-auto border-2 border-black">
+                        <span class="text-2xl">📋</span>
+                        <span>GET FREE LOCAL ASSESSMENT VIA WHATSAPP</span>
+                        <span class="group-hover:translate-x-3 transition-transform duration-300">→</span>
+                    </a>
+                    <p class="text-gray-700 text-lg md:text-xl mt-8">
+                        ⚡ Zero Upfront Cost Available • 10-Year Comprehensive Warranty • 24/7 Local Support • No Obligation Assessment
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-3xl font-black mb-6">
+                        SolarConnector
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Your trusted <strong>solar installer in Bronkhorstspruit</strong>, providing premium <strong>solar panels in Cullinan</strong>, <strong>solar solutions in Rayton</strong>, and <strong>solar power in Pretoria East</strong>.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span>📍</span>
+                            <span>Serving Bronkhorstspruit, Cullinan, Rayton & Pretoria East</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span>📞</span>
+                            <span>24/7 Local Support Available</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Navigation</h4>
+                    <div class="grid gap-3">
+                        <a href="#hero" class="hover:text-gray-300 transition-colors">Home</a>
+                        <a href="#local" class="hover:text-gray-300 transition-colors">Local Service Areas</a>
+                        <a href="#problems" class="hover:text-gray-300 transition-colors">The Problem</a>
+                        <a href="#solution" class="hover:text-gray-300 transition-colors">Our Solution</a>
+                        <a href="#packages" class="hover:text-gray-300 transition-colors">Packages</a>
+                        <a href="#guarantee" class="hover:text-gray-300 transition-colors">Guarantee</a>
+                        <a href="#process" class="hover:text-gray-300 transition-colors">Process</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Local Solar Packages</h4>
+                    <div class="space-y-3">
+                        <div class="text-gray-300">Family Starter Package</div>
+                        <div class="text-gray-300">Family Plus Package</div>
+                        <div class="text-gray-300">Family Premium Package</div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-800">
+                        <h4 class="text-lg font-bold mb-4">Our Local Guarantees</h4>
+                        <div class="space-y-2 text-sm">
+                            <div>80% Bill Reduction</div>
+                            <div>10-Year Warranty</div>
+                            <div>Zero Upfront Cost</div>
+                            <div>24/7 Local Support</div>
+                            <div>Free Local Assessment</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Get Your Free Local Assessment</h4>
+                    <p class="text-gray-300 mb-6">
+                        Take the first step toward energy independence in Bronkhorstspruit, Cullinan, Rayton or Pretoria East. Chat with us on WhatsApp for a free, no-obligation site assessment.
+                    </p>
+                    <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I%20want%20a%20FREE%20Local%20Site%20Assessment%20for%20my%20home%20in%20Bronkhorstspruit/Cullinan/Rayton.%20Please%20schedule%20an%20appointment." 
+                       target="_blank"
+                       class="inline-flex items-center justify-center gap-3 bg-white text-black px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-md w-full border-2 border-white">
+                        <span>📋</span>
+                        <span class="badge">FREE ASSESSMENT</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-gray-800 text-center">
+                <p class="text-white/80 text-sm md:text-base">
+                    © 2024 SolarConnector | <strong>Solar Installer Bronkhorstspruit</strong> | <strong>Solar Panels Cullinan</strong> | <strong>Solar Rayton</strong> | <strong>Solar Pretoria East</strong> | 
+                    80% Electricity Bill Reduction Guaranteed | Zero Upfront Cost Available | 10-Year Comprehensive Warranty | 
+                    24/7 Local Technical Support | Free Site Assessments Available | Serving Families in Bronkhorstspruit, Cullinan, Rayton & Pretoria East
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <!-- WhatsApp Widget -->
     <div class="whatsapp-widget">
@@ -857,40 +1586,16 @@
     <!-- JavaScript -->
     <script>
         // Mobile menu functionality
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        function toggleMobileMenu() {
-            mobileMenu.classList.toggle('open');
-            // Toggle hamburger to X
-            const spans = mobileMenuToggle.querySelectorAll('span');
-            if (mobileMenu.classList.contains('open')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
+        function openMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('hidden');
         }
         
         function closeMobileMenu() {
-            mobileMenu.classList.remove('open');
-            const spans = mobileMenuToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
+            document.getElementById('mobileMenu').classList.add('hidden');
         }
         
-        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
-                closeMobileMenu();
-            }
-        });
+        // Mobile menu button event
+        document.querySelector('.mobile-menu-button').addEventListener('click', openMobileMenu);
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
