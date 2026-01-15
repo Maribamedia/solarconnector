@@ -73,6 +73,9 @@
       }
     </script>
     
+    <!-- Google Maps Extended Component Library -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
+    
     <style>
       html {
         scroll-behavior: smooth;
@@ -280,6 +283,26 @@
         }
       }
       
+      /* Google Maps Store Locator Custom Styles */
+      gmpx-store-locator {
+        width: 100%;
+        height: 600px;
+        --gmpx-color-surface: #ffffff;
+        --gmpx-color-on-surface: #000000;
+        --gmpx-color-on-surface-variant: #6b7280;
+        --gmpx-color-primary: #000000;
+        --gmpx-color-outline: #e5e7eb;
+        --gmpx-fixed-panel-width-row-layout: 400px;
+        --gmpx-fixed-panel-height-column-layout: 400px;
+        --gmpx-font-family-base: "Inter", system-ui, -apple-system, sans-serif;
+        --gmpx-font-family-headings: "Inter", system-ui, -apple-system, sans-serif;
+        --gmpx-font-size-base: 0.875rem;
+        --gmpx-hours-color-open: #10b981;
+        --gmpx-hours-color-closed: #ef4444;
+        --gmpx-rating-color: #f59e0b;
+        --gmpx-rating-color-empty: #d1d5db;
+      }
+      
       @media (max-width: 768px) {
         .mobile-stack {
           flex-direction: column;
@@ -325,6 +348,11 @@
         
         .header-logo-subtext {
           font-size: 0.625rem !important;
+        }
+        
+        gmpx-store-locator {
+          height: 500px;
+          --gmpx-fixed-panel-height-column-layout: 300px;
         }
       }
       
@@ -471,6 +499,7 @@
                     <a href="#packages" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Packages</a>
                     <a href="#guarantee" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Guarantee</a>
                     <a href="#process" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Process</a>
+                    <a href="#map" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 transition-colors">Service Area Map</a>
                     <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I%20would%20like%20to%20request%20a%20FREE%20Site%20Assessment%20for%20my%20home%20in%20Bronkhorstspruit/Cullinan/Rayton." 
                        target="_blank"
                        onclick="closeMobileMenu()"
@@ -1440,6 +1469,68 @@
         </div>
     </section>
 
+    <!-- Service Area Map Section -->
+    <section id="map" class="py-24 bg-white border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-12">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    Our Service Area in Pretoria East & Surrounds
+                </h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    We proudly serve families and businesses in Bronkhorstspruit, Cullinan, Rayton, and throughout Pretoria East with premium solar solutions.
+                </p>
+            </div>
+            
+            <!-- Google Maps Store Locator -->
+            <div class="h-[600px] w-full rounded-2xl overflow-hidden border-2 border-black">
+                <gmpx-api-loader key="AIzaSyDQiM4fe6FOVrF9CN5B7xwT1zI8ZxqYpjo" solution-channel="GMP_QB_locatorplus_v11_cF"></gmpx-api-loader>
+                <gmpx-store-locator></gmpx-store-locator>
+            </div>
+            
+            <!-- Map Legend -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-black">
+                    <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white font-bold">📍</div>
+                    <div>
+                        <div class="font-bold">Bronkhorstspruit</div>
+                        <div class="text-sm text-gray-600">Main service area</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-black">
+                    <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white font-bold">📍</div>
+                    <div>
+                        <div class="font-bold">Cullinan</div>
+                        <div class="text-sm text-gray-600">Farm & residential solar</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-black">
+                    <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white font-bold">📍</div>
+                    <div>
+                        <div class="font-bold">Rayton</div>
+                        <div class="text-sm text-gray-600">Family home specialists</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-black">
+                    <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white font-bold">📍</div>
+                    <div>
+                        <div class="font-bold">Pretoria East</div>
+                        <div class="text-sm text-gray-600">Estate & suburb experts</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map CTA -->
+            <div class="text-center mt-12">
+                <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I'm%20in%20your%20service%20area%20and%20want%20a%20FREE%20Site%20Assessment.%20Please%20confirm%20if%20you%20serve%20my%20location%20in%20Bronkhorstspruit/Cullinan/Rayton/Pretoria%20East." 
+                   target="_blank"
+                   class="inline-flex items-center justify-center gap-3 bg-black text-white px-8 md:px-12 py-4 rounded-lg font-bold text-lg hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
+                    <span>📍</span>
+                    <span class="badge">CHECK IF WE SERVE YOUR EXACT LOCATION</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA Section -->
     <section class="py-24 bg-white border-b-2 border-black">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1525,6 +1616,7 @@
                         <a href="#packages" class="hover:text-gray-300 transition-colors">Packages</a>
                         <a href="#guarantee" class="hover:text-gray-300 transition-colors">Guarantee</a>
                         <a href="#process" class="hover:text-gray-300 transition-colors">Process</a>
+                        <a href="#map" class="hover:text-gray-300 transition-colors">Service Area Map</a>
                     </div>
                 </div>
                 
@@ -1677,6 +1769,68 @@
                     img.setAttribute('loading', 'lazy');
                 }
             });
+        });
+
+        // Google Maps Store Locator Configuration
+        const MAP_CONFIGURATION = {
+            "locations": [
+                {
+                    "title": "Bronkhorstspruit Service Area",
+                    "address1": "Bronkhorstspruit, Gauteng",
+                    "address2": "Solar Installer Bronkhorstspruit - Main Service Area",
+                    "coords": {"lat": -25.7872, "lng": 28.7421},
+                    "placeId": "ChIJJz8iK5Hllx4R9iJYg2W8JkE"
+                },
+                {
+                    "title": "Cullinan Service Area",
+                    "address1": "Cullinan, Gauteng",
+                    "address2": "Solar Panels Cullinan - Farm & Residential Solar",
+                    "coords": {"lat": -25.6700, "lng": 28.5220},
+                    "placeId": "ChIJG8QhK5Hllx4R9iJYg2W8JkE"
+                },
+                {
+                    "title": "Rayton Service Area",
+                    "address1": "Rayton, Gauteng",
+                    "address2": "Solar Rayton - Family Home Specialists",
+                    "coords": {"lat": -25.7456, "lng": 28.4470},
+                    "placeId": "ChIJH8QhK5Hllx4R9iJYg2W8JkE"
+                },
+                {
+                    "title": "Pretoria East Service Area",
+                    "address1": "Pretoria East, Gauteng",
+                    "address2": "Solar Pretoria East - Estate & Suburb Experts",
+                    "coords": {"lat": -25.7754, "lng": 28.2838},
+                    "placeId": "ChIJK8QhK5Hllx4R9iJYg2W8JkE"
+                }
+            ],
+            "mapOptions": {
+                "center": {"lat": -25.75, "lng": 28.45},
+                "fullscreenControl": true,
+                "mapTypeControl": false,
+                "streetViewControl": false,
+                "zoom": 10,
+                "zoomControl": true,
+                "maxZoom": 17,
+                "mapId": ""
+            },
+            "mapsApiKey": "AIzaSyDQiM4fe6FOVrF9CN5B7xwT1zI8ZxqYpjo",
+            "capabilities": {
+                "input": false,
+                "autocomplete": false,
+                "directions": false,
+                "distanceMatrix": false,
+                "details": false,
+                "actions": false
+            }
+        };
+
+        // Initialize the map when the page loads
+        document.addEventListener('DOMContentLoaded', async () => {
+            await customElements.whenDefined('gmpx-store-locator');
+            const locator = document.querySelector('gmpx-store-locator');
+            if (locator) {
+                locator.configureFromQuickBuilder(MAP_CONFIGURATION);
+            }
         });
     </script>
 </body>
