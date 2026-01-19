@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-    <title>SolarConnector | 80% Electricity Bill Reduction Guarantee | Residential Solar Solutions</title>
+    <title>Solar Connector | 80% Electricity Bill Reduction Guarantee | Residential Solar Solutions</title>
     <meta name="description" content="Guaranteed 80% electricity bill reduction within 30 days. Residential solar solutions with custom or prepaid installation options. 25-year performance warranty. Serving Gauteng areas.">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="SolarConnector | 80% Bill Reduction Guaranteed | Residential Solar">
+    <meta property="og:title" content="Solar Connector | 80% Bill Reduction Guaranteed | Residential Solar">
     <meta property="og:description" content="Residential solar solutions with guaranteed 80% electricity bill reduction within 30 days. Custom or prepaid installation with 25-year warranty.">
     <meta property="og:image" content="https://images.pexels.com/photos/89724/solar-system-sun-power-energy-89724.jpeg">
     <meta property="og:url" content="https://solarconnector.co.za">
@@ -204,6 +204,57 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       }
       
+      /* Slideshow Styles */
+      .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        border-radius: 1rem;
+        border: 3px solid #000000;
+        overflow: hidden;
+      }
+      
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .slide.active {
+        opacity: 1;
+      }
+      
+      .slide-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+      }
+      
+      .slide-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        border: 2px solid #000000;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .slide-dot.active {
+        background: #000000;
+        transform: scale(1.2);
+      }
+      
       /* WhatsApp Widget Styles */
       .whatsapp-widget {
         position: fixed;
@@ -306,6 +357,22 @@
         z-index: 0;
       }
       
+      /* Form Success Message */
+      .form-success {
+        display: none;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        border: 2px solid #000000;
+      }
+      
+      .form-success.show {
+        display: block;
+        animation: fadeIn 0.5s ease-in;
+      }
+      
       @media (max-width: 768px) {
         .mobile-stack {
           flex-direction: column;
@@ -338,6 +405,10 @@
         .service-area-map {
           height: 300px;
         }
+        
+        .slideshow-container {
+          height: 300px;
+        }
       }
     </style>
 </head>
@@ -354,7 +425,7 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="text-2xl font-black group-hover:opacity-80 transition-opacity">SolarConnector</span>
+                        <span class="text-2xl font-black group-hover:opacity-80 transition-opacity">Solar Connector</span>
                         <span class="hidden md:block text-sm text-gray-600 font-medium">Residential Solar Solutions</span>
                     </div>
                 </a>
@@ -414,7 +485,7 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Slideshow -->
     <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 bg-white border-b-2 border-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto">
@@ -461,6 +532,36 @@
                         <div class="text-lg font-bold mb-2">Year Warranty</div>
                         <div class="text-gray-600 text-sm">Performance guarantee for long-term reliability</div>
                     </div>
+                </div>
+
+                <!-- Picture Slideshow - Using GitHub repo images -->
+                <div class="mb-16">
+                    <div class="slideshow-container">
+                        <!-- Slide 1 -->
+                        <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide1.jpg');"></div>
+                        <!-- Slide 2 -->
+                        <div class="slide" style="background-image: url('https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide2.jpg');"></div>
+                        <!-- Slide 3 -->
+                        <div class="slide" style="background-image: url('https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide3.jpg');"></div>
+                        <!-- Slide 4 -->
+                        <div class="slide" style="background-image: url('https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide4.jpg');"></div>
+                        <!-- Slide 5 -->
+                        <div class="slide" style="background-image: url('https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide5.jpg');"></div>
+                        <!-- Slide 6 -->
+                        <div class="slide" style="background-image: url('https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide6.jpg');"></div>
+                        
+                        <div class="slide-dots">
+                            <div class="slide-dot active" onclick="currentSlide(0)"></div>
+                            <div class="slide-dot" onclick="currentSlide(1)"></div>
+                            <div class="slide-dot" onclick="currentSlide(2)"></div>
+                            <div class="slide-dot" onclick="currentSlide(3)"></div>
+                            <div class="slide-dot" onclick="currentSlide(4)"></div>
+                            <div class="slide-dot" onclick="currentSlide(5)"></div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-center text-sm mt-4">
+                        Real residential solar installations across Gauteng - see the transformation
+                    </p>
                 </div>
 
                 <!-- Main CTA -->
@@ -890,7 +991,7 @@
         </div>
     </section>
 
-    <!-- Free Audit Section -->
+    <!-- Free Audit Section with Formspree Integration -->
     <section id="audit" class="py-24 bg-gray-50 border-b-2 border-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-4xl mx-auto mb-16">
@@ -902,7 +1003,16 @@
                 </p>
             </div>
 
-            <div class="bg-white p-10 rounded-2xl border-2 border-black max-w-3xl mx-auto">
+            <!-- Success Message (Hidden by default) -->
+            <div id="form-success" class="form-success mb-8">
+                <div class="text-6xl mb-4">🎉</div>
+                <h3 class="text-3xl font-black mb-4">Thank You!</h3>
+                <p class="text-xl mb-6">Your free savings audit request has been submitted successfully.</p>
+                <p class="text-white/90">We will contact you within 24 hours with your personalized savings estimate.</p>
+            </div>
+
+            <!-- Form with Formspree Integration -->
+            <div id="audit-form-container" class="bg-white p-10 rounded-2xl border-2 border-black max-w-3xl mx-auto">
                 <h3 class="text-3xl font-black mb-8 text-center">What You'll Receive</h3>
                 
                 <div class="space-y-6 mb-10">
@@ -947,70 +1057,76 @@
                     </div>
                 </div>
 
-                <!-- Audit Form -->
-                <div class="space-y-6">
+                <!-- Formspree Form -->
+                <form id="audit-form" action="https://formspree.io/f/mrezgkvv" method="POST" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-bold mb-2">Your Name</label>
-                            <input type="text" class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange" placeholder="John Smith">
+                            <label class="block text-sm font-bold mb-2">Your Name *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange" placeholder="John Smith">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold mb-2">Phone Number</label>
-                            <input type="tel" class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange" placeholder="071 234 5678">
+                            <label class="block text-sm font-bold mb-2">Phone Number *</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange" placeholder="071 234 5678">
                         </div>
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-bold mb-2">Email Address</label>
-                        <input type="email" class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange" placeholder="john@example.com">
+                        <label class="block text-sm font-bold mb-2">Email Address *</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange" placeholder="john@example.com">
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-bold mb-2">Suburb / Area</label>
-                        <select class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange">
+                        <label class="block text-sm font-bold mb-2">Suburb / Area *</label>
+                        <select name="area" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange">
                             <option value="">Select your area</option>
-                            <option value="pretoria">Pretoria</option>
-                            <option value="centurion">Centurion</option>
-                            <option value="bronkhorstspruit">Bronkhorstspruit</option>
-                            <option value="midrand">Midrand</option>
-                            <option value="sandton">Sandton</option>
-                            <option value="fourways">Fourways</option>
-                            <option value="johannesburg">Johannesburg</option>
-                            <option value="randburg">Randburg</option>
-                            <option value="roodepoort">Roodepoort</option>
+                            <option value="Bronkhorstspruit">Bronkhorstspruit</option>
+                            <option value="Pretoria">Pretoria</option>
+                            <option value="Centurion">Centurion</option>
+                            <option value="Midrand">Midrand</option>
+                            <option value="Fourways">Fourways</option>
+                            <option value="Sandton">Sandton</option>
+                            <option value="Johannesburg">Johannesburg</option>
+                            <option value="Randburg">Randburg</option>
+                            <option value="Roodepoort">Roodepoort</option>
+                            <option value="Other">Other Area</option>
                         </select>
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-bold mb-2">Average Monthly Electricity Bill (R)</label>
-                        <select class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange">
+                        <label class="block text-sm font-bold mb-2">Average Monthly Electricity Bill (R) *</label>
+                        <select name="bill_amount" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange">
                             <option value="">Select your bill amount</option>
-                            <option value="2000">R2,000 - R3,000</option>
-                            <option value="3000">R3,000 - R4,000</option>
-                            <option value="4000">R4,000 - R5,000</option>
-                            <option value="5000">R5,000 - R7,000</option>
-                            <option value="7000">R7,000+</option>
+                            <option value="R2,000 - R3,000">R2,000 - R3,000</option>
+                            <option value="R3,000 - R4,000">R3,000 - R4,000</option>
+                            <option value="R4,000 - R5,000">R4,000 - R5,000</option>
+                            <option value="R5,000 - R7,000">R5,000 - R7,000</option>
+                            <option value="R7,000+">R7,000+</option>
                         </select>
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-bold mb-2">Preferred Solution</label>
-                        <select class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange">
+                        <label class="block text-sm font-bold mb-2">Preferred Solution *</label>
+                        <select name="preferred_solution" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange">
                             <option value="">Select preferred option</option>
-                            <option value="custom">Custom Solar Installation</option>
-                            <option value="prepaid">Prepaid Solar Installation</option>
-                            <option value="not-sure">Not Sure - Need Advice</option>
+                            <option value="Custom Solar Installation">Custom Solar Installation</option>
+                            <option value="Prepaid Solar Installation">Prepaid Solar Installation</option>
+                            <option value="Not Sure - Need Advice">Not Sure - Need Advice</option>
                         </select>
                     </div>
+
+                    <!-- Hidden fields for Formspree -->
+                    <input type="hidden" name="_subject" value="New Free Savings Audit Request - Solar Connector">
+                    <input type="hidden" name="_replyto" value="{{email}}">
+                    <input type="text" name="_gotcha" style="display:none">
                     
-                    <button class="w-full solar-gradient text-black py-4 rounded-xl font-black text-lg md:text-xl hover:shadow-xl transition-all duration-300 border-2 border-black">
+                    <button type="submit" class="w-full solar-gradient text-black py-4 rounded-xl font-black text-lg md:text-xl hover:shadow-xl transition-all duration-300 border-2 border-black">
                         GET FREE SAVINGS AUDIT
                     </button>
                     
                     <p class="text-center text-gray-600 text-sm">
                         No obligation • 100% Free • Get your personalized report within 24 hours
                     </p>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -1060,7 +1176,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div>
                     <div class="text-3xl font-black mb-6 text-solar-yellow">
-                        SolarConnector
+                        Solar Connector
                     </div>
                     <p class="text-gray-300 mb-6">
                         Residential solar solutions with guaranteed 80% electricity bill reduction within 30 days.
@@ -1112,7 +1228,7 @@
             
             <div class="pt-12 border-t border-gray-800 text-center">
                 <p class="text-white/80 text-sm">
-                    © 2024 SolarConnector | Residential Solar Solutions | 80% Electricity Bill Reduction Guarantee | 
+                    © 2024 Solar Connector | Residential Solar Solutions | 80% Electricity Bill Reduction Guarantee | 
                     Custom & Prepaid Solar Installation | 25-Year Performance Warranties | 
                     Serving: Bronkhorstspruit, Pretoria, Centurion, Midrand, Fourways, Sandton, Johannesburg, Randburg, Roodepoort
                 </p>
@@ -1123,7 +1239,7 @@
     <!-- WhatsApp Widget -->
     <div class="whatsapp-widget">
         <div class="whatsapp-pulse"></div>
-        <a href="https://wa.me/2776473499?text=Hi%20SolarConnector!%20I'm%20interested%20in%20your%2080%25%20bill%20reduction%20guarantee%20for%20residential%20solar." 
+        <a href="https://wa.me/2776473499?text=Hi%20Solar%20Connector!%20I'm%20interested%20in%20your%2080%25%20bill%20reduction%20guarantee%20for%20residential%20solar." 
            target="_blank" 
            class="whatsapp-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -1167,21 +1283,81 @@
             });
         });
 
-        // Form submission
-        document.querySelector('button[onclick="submitAudit()"]').addEventListener('click', function() {
-            const name = document.querySelector('input[type="text"]').value;
-            const phone = document.querySelector('input[type="tel"]').value;
-            const email = document.querySelector('input[type="email"]').value;
+        // Picture Slideshow Functionality
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slide-dot');
+        
+        function showSlide(n) {
+            slideIndex = n;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
             
-            if (name && phone && email) {
-                // In production, this would send to your backend
-                alert('Thank you! Your free savings audit request has been submitted. We will contact you within 24 hours.');
-                // Reset form
-                document.querySelectorAll('input, select').forEach(input => {
-                    input.value = '';
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.add('active');
+        }
+        
+        function currentSlide(n) {
+            showSlide(n);
+        }
+        
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+        
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Initialize slideshow
+        showSlide(0);
+
+        // Formspree Form Submission
+        document.getElementById('audit-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'SUBMITTING...';
+            submitButton.classList.add('opacity-50');
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
-            } else {
-                alert('Please fill in all required fields.');
+                
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById('form-success').classList.add('show');
+                    document.getElementById('audit-form-container').style.display = 'none';
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Scroll to success message
+                    document.getElementById('form-success').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your form. Please try again or contact us directly.');
+                console.error('Form submission error:', error);
+            } finally {
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+                submitButton.classList.remove('opacity-50');
             }
         });
 
@@ -1251,6 +1427,21 @@
                     img.setAttribute('loading', 'lazy');
                 }
             });
+            
+            // Preload slideshow images
+            const slideImages = [
+                'https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide1.jpg',
+                'https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide2.jpg',
+                'https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide3.jpg',
+                'https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide4.jpg',
+                'https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide5.jpg',
+                'https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide6.jpg'
+            ];
+            
+            slideImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
         });
 
         // Guarantee counter animation
@@ -1271,7 +1462,7 @@
         const guaranteeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const counter = document.querySelector('.text-6xl.md\\:text-8xl');
+                    const counter = document.querySelector('.guarantee-highlight .text-6xl');
                     if (counter) {
                         animateCounter(counter, 0, 80, 2000);
                     }
@@ -1283,6 +1474,34 @@
         if (guaranteeElement) {
             guaranteeObserver.observe(guaranteeElement);
         }
+
+        // Form validation
+        const form = document.getElementById('audit-form');
+        const inputs = form.querySelectorAll('input[required], select[required]');
+        
+        inputs.forEach(input => {
+            input.addEventListener('invalid', function(e) {
+                e.preventDefault();
+                this.classList.add('border-red-500');
+                
+                // Show custom error message
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'text-red-500 text-sm mt-1';
+                errorDiv.textContent = 'This field is required';
+                
+                if (!this.nextElementSibling || !this.nextElementSibling.classList.contains('text-red-500')) {
+                    this.parentNode.appendChild(errorDiv);
+                }
+            });
+            
+            input.addEventListener('input', function() {
+                this.classList.remove('border-red-500');
+                const errorDiv = this.parentNode.querySelector('.text-red-500');
+                if (errorDiv) {
+                    errorDiv.remove();
+                }
+            });
+        });
     </script>
 </body>
 </html>
