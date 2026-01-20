@@ -72,6 +72,14 @@
                   boxShadow: '0 0 0 10px rgba(245, 176, 65, 0)'
                 },
               }
+            },
+            screens: {
+              'xs': '375px',
+              'sm': '640px',
+              'md': '768px',
+              'lg': '1024px',
+              'xl': '1280px',
+              '2xl': '1536px',
             }
           }
         }
@@ -82,12 +90,14 @@
       html {
         scroll-behavior: smooth;
         -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
       }
       
       body {
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         background-color: #FFFFFF;
         color: #000000;
+        overflow-x: hidden;
       }
       
       .glass-effect {
@@ -141,7 +151,7 @@
         background: #FFFFFF;
         border: 2px solid #000000;
         border-radius: 1rem;
-        padding: 2rem;
+        padding: 1.5rem;
         position: relative;
         overflow: hidden;
       }
@@ -177,28 +187,26 @@
       .solution-card {
         border: 3px solid #000000;
         border-radius: 1rem;
-        padding: 2rem;
+        padding: 1.5rem;
         background: #FFFFFF;
         position: relative;
       }
       
       .solution-card.featured {
         border-color: #F5B041;
-        transform: scale(1.05);
-        z-index: 10;
       }
       
       .solution-card.featured::after {
         content: 'MOST POPULAR';
         position: absolute;
-        top: 20px;
-        right: -40px;
+        top: 15px;
+        right: -35px;
         background: #F5B041;
         color: #000000;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 900;
         letter-spacing: 1px;
-        padding: 6px 45px;
+        padding: 5px 35px;
         transform: rotate(45deg);
         z-index: 20;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -208,9 +216,9 @@
       .slideshow-container {
         position: relative;
         width: 100%;
-        height: 400px;
-        border-radius: 1rem;
-        border: 3px solid #000000;
+        height: 250px;
+        border-radius: 0.75rem;
+        border: 2px solid #000000;
         overflow: hidden;
       }
       
@@ -232,17 +240,17 @@
       
       .slide-dots {
         position: absolute;
-        bottom: 20px;
+        bottom: 15px;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
-        gap: 10px;
+        gap: 8px;
         z-index: 10;
       }
       
       .slide-dot {
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.5);
         border: 2px solid #000000;
@@ -258,15 +266,15 @@
       /* WhatsApp Widget Styles */
       .whatsapp-widget {
         position: fixed;
-        bottom: 30px;
-        right: 30px;
+        bottom: 20px;
+        right: 20px;
         z-index: 9999;
         transition: all 0.3s ease;
       }
       
       .whatsapp-button {
-        width: 60px;
-        height: 60px;
+        width: 56px;
+        height: 56px;
         background-color: #25D366;
         border-radius: 50%;
         display: flex;
@@ -284,8 +292,8 @@
       }
       
       .whatsapp-button svg {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
         fill: white;
       }
       
@@ -319,15 +327,15 @@
       /* Map Styles */
       .service-area-map {
         width: 100%;
-        height: 400px;
-        border-radius: 1rem;
-        border: 3px solid #000000;
+        height: 300px;
+        border-radius: 0.75rem;
+        border: 2px solid #000000;
         overflow: hidden;
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       }
       
       .service-area-item {
-        padding: 1rem;
+        padding: 0.75rem;
         border-bottom: 1px solid #e5e7eb;
         transition: all 0.3s ease;
       }
@@ -362,8 +370,8 @@
         display: none;
         background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         color: white;
-        padding: 2rem;
-        border-radius: 1rem;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
         text-align: center;
         border: 2px solid #000000;
       }
@@ -373,84 +381,176 @@
         animation: fadeIn 0.5s ease-in;
       }
       
+      /* Mobile Menu */
+      .mobile-menu-enter {
+        transform: translateX(100%);
+      }
+      
+      .mobile-menu-enter-active {
+        transform: translateX(0);
+        transition: transform 300ms ease-out;
+      }
+      
+      .mobile-menu-exit {
+        transform: translateX(0);
+      }
+      
+      .mobile-menu-exit-active {
+        transform: translateX(100%);
+        transition: transform 300ms ease-in;
+      }
+      
+      /* Touch-friendly button sizes */
+      .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+      }
+      
+      /* Responsive Typography */
+      @media (max-width: 640px) {
+        h1 {
+          font-size: 2.5rem !important;
+          line-height: 1.2 !important;
+        }
+        
+        h2 {
+          font-size: 2rem !important;
+          line-height: 1.3 !important;
+        }
+        
+        h3 {
+          font-size: 1.5rem !important;
+        }
+        
+        .text-hero {
+          font-size: 2.25rem !important;
+          line-height: 1.2 !important;
+        }
+      }
+      
+      /* Safe area insets for modern mobile devices */
+      @supports (padding: max(0px)) {
+        .safe-top {
+          padding-top: max(0.75rem, env(safe-area-inset-top));
+        }
+        
+        .safe-bottom {
+          padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+        }
+        
+        .safe-left {
+          padding-left: max(1rem, env(safe-area-inset-left));
+        }
+        
+        .safe-right {
+          padding-right: max(1rem, env(safe-area-inset-right));
+        }
+      }
+      
+      /* Improved mobile form inputs */
+      input, select, textarea, button {
+        font-size: 16px !important; /* Prevents iOS zoom on focus */
+      }
+      
       @media (max-width: 768px) {
-        .mobile-stack {
-          flex-direction: column;
-        }
-        
-        .mobile-center {
-          text-align: center;
-        }
-        
-        .solution-card.featured {
-          transform: scale(1);
-        }
-        
-        .solution-card.featured::after {
-          font-size: 10px;
-          padding: 4px 35px;
-          right: -35px;
-        }
-        
-        .whatsapp-widget {
-          bottom: 20px;
-          right: 20px;
-        }
-        
-        .whatsapp-button {
-          width: 56px;
-          height: 56px;
+        .slideshow-container {
+          height: 200px;
         }
         
         .service-area-map {
-          height: 300px;
+          height: 200px;
         }
         
+        .benefit-card {
+          padding: 1rem;
+        }
+        
+        .solution-card {
+          padding: 1rem;
+        }
+        
+        .solution-card.featured::after {
+          font-size: 8px;
+          padding: 4px 25px;
+          right: -25px;
+          top: 10px;
+        }
+        
+        .whatsapp-widget {
+          bottom: 16px;
+          right: 16px;
+        }
+        
+        .whatsapp-button {
+          width: 50px;
+          height: 50px;
+        }
+        
+        .warranty-card {
+          padding: 1.5rem !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
         .slideshow-container {
-          height: 300px;
+          height: 180px;
+        }
+        
+        .service-area-map {
+          height: 180px;
+        }
+        
+        .benefit-card {
+          padding: 0.75rem;
+        }
+        
+        .whatsapp-button {
+          width: 48px;
+          height: 48px;
         }
       }
     </style>
 </head>
-<body class="text-black antialiased">
+<body class="text-black antialiased safe-left safe-right">
     <!-- Navigation -->
-    <nav class="fixed w-full glass-effect z-50 shadow-lg">
+    <nav class="fixed w-full glass-effect z-50 shadow-lg safe-top">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center justify-between h-16 md:h-20">
                 <!-- Logo -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 rounded-xl bg-black flex items-center justify-center">
-                        <svg class="w-7 h-7 text-solar-yellow" fill="currentColor" viewBox="0 0 24 24">
+                <a href="#" class="flex items-center gap-2 md:gap-3 group">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-black flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 md:w-7 md:h-7 text-solar-yellow" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2L3 12H6V22H18V12H21L12 2Z"/>
                         </svg>
                     </div>
-                    <div>
-                        <span class="text-2xl font-black group-hover:opacity-80 transition-opacity">Solar Connector</span>
+                    <div class="hidden xs:block">
+                        <span class="text-xl md:text-2xl font-black group-hover:opacity-80 transition-opacity">Solar Connector</span>
                         <span class="hidden md:block text-sm text-gray-600 font-medium">Residential Solar Solutions</span>
                     </div>
                 </a>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center gap-8">
-                    <a href="#hero" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors">Home</a>
-                    <a href="#solutions" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors">Solutions</a>
-                    <a href="#guarantee" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors">Guarantee</a>
-                    <a href="#areas" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors">Service Areas</a>
-                    <a href="#warranty" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors">Warranty</a>
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <a href="#hero" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors px-2 py-1">Home</a>
+                    <a href="#solutions" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors px-2 py-1">Solutions</a>
+                    <a href="#guarantee" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors px-2 py-1">Guarantee</a>
+                    <a href="#areas" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors px-2 py-1">Service Areas</a>
+                    <a href="#warranty" class="nav-link text-sm font-semibold hover:text-solar-orange transition-colors px-2 py-1">Warranty</a>
                 </div>
 
                 <!-- Main CTA Button -->
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2 md:gap-4">
                     <a href="#audit" 
-                       class="bg-black text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-gray-900 transition-all duration-300 shadow-md border-2 border-black whitespace-nowrap">
-                        <span class="flex items-center gap-2">
-                            <span>⚡</span>
-                            <span>FREE SAVINGS AUDIT</span>
+                       class="bg-black text-white px-4 py-2.5 md:px-6 md:py-3 rounded-lg text-xs md:text-sm font-bold hover:bg-gray-900 transition-all duration-300 shadow-md border-2 border-black whitespace-nowrap touch-target flex items-center justify-center">
+                        <span class="flex items-center gap-1 md:gap-2">
+                            <span class="text-sm">⚡</span>
+                            <span class="hidden xs:inline">FREE SAVINGS AUDIT</span>
+                            <span class="xs:hidden">FREE AUDIT</span>
                         </span>
                     </a>
                     
                     <!-- Mobile Menu Button -->
-                    <button class="mobile-menu-button lg:hidden w-10 h-10 flex items-center justify-center border-2 border-black rounded-lg bg-white hover:bg-gray-50 transition-colors">
+                    <button class="mobile-menu-button lg:hidden w-10 h-10 flex items-center justify-center border-2 border-black rounded-lg bg-white hover:bg-gray-50 transition-colors touch-target">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -463,79 +563,82 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 z-40 hidden lg:hidden">
         <div class="absolute inset-0 bg-black bg-opacity-50" onclick="closeMobileMenu()"></div>
-        <div class="absolute top-0 right-0 w-64 h-full bg-white shadow-lg border-l-2 border-black">
-            <div class="p-6">
+        <div class="absolute top-0 right-0 w-full max-w-xs h-full bg-white shadow-lg border-l-2 border-black">
+            <div class="p-6 h-full flex flex-col">
                 <div class="flex justify-between items-center mb-8">
                     <h3 class="text-xl font-black">Menu</h3>
-                    <button onclick="closeMobileMenu()" class="w-8 h-8 flex items-center justify-center border border-black rounded">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button onclick="closeMobileMenu()" class="w-10 h-10 flex items-center justify-center border-2 border-black rounded-lg touch-target">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </button>
                 </div>
-                <div class="space-y-4">
-                    <a href="#hero" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Home</a>
-                    <a href="#solutions" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Solutions</a>
-                    <a href="#guarantee" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Guarantee</a>
-                    <a href="#areas" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Service Areas</a>
-                    <a href="#warranty" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50">Warranty</a>
-                    <a href="#audit" onclick="closeMobileMenu()" class="block py-3 px-4 bg-black text-white rounded-lg font-bold text-center hover:bg-gray-900">FREE SAVINGS AUDIT</a>
+                <div class="space-y-3 flex-1">
+                    <a href="#hero" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 touch-target text-center">Home</a>
+                    <a href="#solutions" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 touch-target text-center">Solutions</a>
+                    <a href="#guarantee" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 touch-target text-center">Guarantee</a>
+                    <a href="#areas" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 touch-target text-center">Service Areas</a>
+                    <a href="#warranty" onclick="closeMobileMenu()" class="block py-3 px-4 border-2 border-black rounded-lg font-semibold hover:bg-gray-50 touch-target text-center">Warranty</a>
+                </div>
+                <div class="pt-6 border-t-2 border-black">
+                    <a href="#audit" onclick="closeMobileMenu()" class="block w-full py-3 px-4 bg-black text-white rounded-lg font-bold text-center hover:bg-gray-900 touch-target">FREE SAVINGS AUDIT</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Hero Section with Slideshow -->
-    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 bg-white border-b-2 border-black">
+    <section id="hero" class="pt-24 pb-12 md:pt-32 md:pb-20 lg:pt-40 lg:pb-32 bg-white border-b-2 border-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto">
                 <!-- Guarantee Badge -->
-                <div class="inline-flex items-center gap-3 px-6 py-3.5 rounded-full guarantee-badge mb-10 animate-slide-up">
-                    <span class="w-3 h-3 rounded-full bg-black animate-ping"></span>
-                    <span class="text-sm font-black uppercase tracking-wider">80% ELECTRICITY BILL REDUCTION GUARANTEED</span>
+                <div class="inline-flex items-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3.5 rounded-full guarantee-badge mb-6 md:mb-10 animate-slide-up mx-auto flex justify-center w-full max-w-md">
+                    <span class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-black animate-ping"></span>
+                    <span class="text-xs md:text-sm font-black uppercase tracking-wider text-center">80% ELECTRICITY BILL REDUCTION GUARANTEED</span>
                 </div>
                 
                 <!-- Main Headline -->
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-                    <span class="block">Residential Solar Solutions</span>
-                    <span class="block text-solar-orange">With Guaranteed</span>
-                    <span class="block text-solar-orange">80% Bill Reduction</span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 md:mb-6 leading-tight text-center md:text-left">
+                    <span class="block">Residential Solar</span>
+                    <span class="block text-solar-orange">Solutions With</span>
+                    <span class="block text-solar-orange">Guaranteed 80%</span>
+                    <span class="block text-solar-orange">Bill Reduction</span>
                 </h1>
                 
                 <!-- Subheadline -->
-                <p class="text-2xl md:text-3xl text-gray-800 mb-12 max-w-5xl leading-relaxed">
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-800 mb-8 md:mb-12 leading-relaxed text-center md:text-left">
                     Transform your home's energy costs within 30 days. Choose custom or prepaid solar installation with 25-year performance warranty.
                 </p>
 
                 <!-- Key Benefits -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
                     <div class="benefit-card card-hover">
-                        <div class="text-5xl md:text-6xl font-black mb-3 text-solar-orange">80%+</div>
-                        <div class="text-lg font-bold mb-2">Bill Reduction</div>
-                        <div class="text-gray-600 text-sm">Guaranteed minimum savings within 30 days</div>
+                        <div class="text-4xl md:text-5xl lg:text-6xl font-black mb-2 md:mb-3 text-solar-orange">80%+</div>
+                        <div class="text-base md:text-lg font-bold mb-1 md:mb-2">Bill Reduction</div>
+                        <div class="text-gray-600 text-xs md:text-sm">Guaranteed minimum savings within 30 days</div>
                     </div>
                     
                     <div class="benefit-card card-hover">
-                        <div class="text-5xl md:text-6xl font-black mb-3 text-solar-orange">2</div>
-                        <div class="text-lg font-bold mb-2">Flexible Options</div>
-                        <div class="text-gray-600 text-sm">Custom or prepaid installation to suit your needs</div>
+                        <div class="text-4xl md:text-5xl lg:text-6xl font-black mb-2 md:mb-3 text-solar-orange">2</div>
+                        <div class="text-base md:text-lg font-bold mb-1 md:mb-2">Flexible Options</div>
+                        <div class="text-gray-600 text-xs md:text-sm">Custom or prepaid installation to suit your needs</div>
                     </div>
                     
                     <div class="benefit-card card-hover">
-                        <div class="text-5xl md:text-6xl font-black mb-3 text-solar-orange">30</div>
-                        <div class="text-lg font-bold mb-2">Days</div>
-                        <div class="text-gray-600 text-sm">To achieve guaranteed savings on your bill</div>
+                        <div class="text-4xl md:text-5xl lg:text-6xl font-black mb-2 md:mb-3 text-solar-orange">30</div>
+                        <div class="text-base md:text-lg font-bold mb-1 md:mb-2">Days</div>
+                        <div class="text-gray-600 text-xs md:text-sm">To achieve guaranteed savings on your bill</div>
                     </div>
                     
                     <div class="benefit-card card-hover">
-                        <div class="text-5xl md:text-6xl font-black mb-3 text-solar-orange">25</div>
-                        <div class="text-lg font-bold mb-2">Year Warranty</div>
-                        <div class="text-gray-600 text-sm">Performance guarantee for long-term reliability</div>
+                        <div class="text-4xl md:text-5xl lg:text-6xl font-black mb-2 md:mb-3 text-solar-orange">25</div>
+                        <div class="text-base md:text-lg font-bold mb-1 md:mb-2">Year Warranty</div>
+                        <div class="text-gray-600 text-xs md:text-sm">Performance guarantee for long-term reliability</div>
                     </div>
                 </div>
 
-                <!-- Picture Slideshow - Using GitHub repo images -->
-                <div class="mb-16">
+                <!-- Picture Slideshow -->
+                <div class="mb-12 md:mb-16">
                     <div class="slideshow-container">
                         <!-- Slide 1 -->
                         <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide1.jpg');"></div>
@@ -559,20 +662,20 @@
                             <div class="slide-dot" onclick="currentSlide(5)"></div>
                         </div>
                     </div>
-                    <p class="text-gray-600 text-center text-sm mt-4">
+                    <p class="text-gray-600 text-center text-xs md:text-sm mt-3 md:mt-4">
                         Real residential solar installations across Gauteng - see the transformation
                     </p>
                 </div>
 
                 <!-- Main CTA -->
-                <div class="mb-16">
+                <div class="mb-12 md:mb-16">
                     <a href="#audit" 
-                       class="inline-flex items-center justify-center gap-4 solar-gradient text-black px-8 md:px-16 py-6 rounded-xl font-black text-lg md:text-2xl transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 group mx-auto border-2 border-black">
-                        <span class="text-2xl">📊</span>
-                        <span>GET YOUR FREE SAVINGS AUDIT</span>
-                        <span class="group-hover:translate-x-3 transition-transform duration-300">→</span>
+                       class="inline-flex items-center justify-center gap-3 md:gap-4 solar-gradient text-black px-6 py-4 md:px-8 md:py-6 lg:px-16 rounded-lg md:rounded-xl font-black text-base md:text-lg lg:text-2xl transition-all duration-500 shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl hover:scale-[1.02] md:hover:scale-105 group mx-auto border-2 border-black w-full max-w-lg md:max-w-none touch-target">
+                        <span class="text-xl md:text-2xl">📊</span>
+                        <span class="text-center">GET YOUR FREE SAVINGS AUDIT</span>
+                        <span class="group-hover:translate-x-2 md:group-hover:translate-x-3 transition-transform duration-300 hidden sm:inline">→</span>
                     </a>
-                    <p class="text-gray-700 text-lg mt-6 text-center">
+                    <p class="text-gray-700 text-sm md:text-lg mt-4 md:mt-6 text-center">
                         ⚡ See exactly how much you can save • No obligation • 100% Free
                     </p>
                 </div>
@@ -581,151 +684,151 @@
     </section>
 
     <!-- Solutions Section -->
-    <section id="solutions" class="py-24 bg-gray-50 border-b-2 border-black">
+    <section id="solutions" class="py-12 md:py-16 lg:py-24 bg-gray-50 border-b-2 border-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    Choose Your Path to<br>Energy Independence
+            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6">
+                    Choose Your Path to Energy Independence
                 </h2>
-                <p class="text-xl text-gray-600 leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                     Two proven residential solar solutions, both delivering guaranteed 80% electricity bill reduction within 30 days.
                 </p>
             </div>
 
             <!-- Solutions Comparison -->
-            <div class="grid lg:grid-cols-2 gap-10 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start">
                 <!-- Custom Solar Installation -->
                 <div class="solution-card card-hover">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center">
-                            <span class="text-2xl text-white">🏠</span>
+                    <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-black flex items-center justify-center flex-shrink-0">
+                            <span class="text-xl md:text-2xl text-white">🏠</span>
                         </div>
                         <div>
-                            <h3 class="text-3xl font-black">Custom Solar Installation</h3>
-                            <p class="text-gray-600 mt-2">Tailored systems for homes</p>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl font-black">Custom Solar Installation</h3>
+                            <p class="text-gray-600 mt-1 md:mt-2 text-sm md:text-base">Tailored systems for homes</p>
                         </div>
                     </div>
                     
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-orange text-xl">✓</span>
+                    <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-orange text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold">Personalized System Design</h4>
-                                <p class="text-gray-600 text-sm">System customized to your home's energy needs</p>
+                                <h4 class="font-bold text-sm md:text-base">Personalized System Design</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">System customized to your home's energy needs</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-orange text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-orange text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold">Complete Ownership</h4>
-                                <p class="text-gray-600 text-sm">You own the entire solar system</p>
+                                <h4 class="font-bold text-sm md:text-base">Complete Ownership</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">You own the entire solar system</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-orange text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-orange text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold">Property Value Increase</h4>
-                                <p class="text-gray-600 text-sm">Adds significant value to your home</p>
+                                <h4 class="font-bold text-sm md:text-base">Property Value Increase</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Adds significant value to your home</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-orange text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-orange text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold">Long-term Investment</h4>
-                                <p class="text-gray-600 text-sm">Payback period typically 3-5 years</p>
+                                <h4 class="font-bold text-sm md:text-base">Long-term Investment</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Payback period typically 3-5 years</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="border-t border-gray-200 pt-6">
+                    <div class="border-t border-gray-200 pt-4 md:pt-6">
                         <div class="text-center">
-                            <div class="text-3xl font-black text-solar-orange mb-2">Ideal For</div>
-                            <p class="text-gray-600">Homeowners planning long-term residence<br>Those wanting full system ownership</p>
+                            <div class="text-xl md:text-2xl lg:text-3xl font-black text-solar-orange mb-1 md:mb-2">Ideal For</div>
+                            <p class="text-gray-600 text-sm md:text-base">Homeowners planning long-term residence<br>Those wanting full system ownership</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Prepaid Solar Installation -->
-                <div class="solution-card card-hover featured">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="w-16 h-16 rounded-full solar-gradient flex items-center justify-center">
-                            <span class="text-2xl text-black">💳</span>
+                <div class="solution-card card-hover featured mt-2 md:mt-0">
+                    <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full solar-gradient flex items-center justify-center flex-shrink-0">
+                            <span class="text-xl md:text-2xl text-black">💳</span>
                         </div>
                         <div>
-                            <h3 class="text-3xl font-black">Prepaid Solar Installation</h3>
-                            <p class="text-gray-600 mt-2">Pay-as-you-go solar options</p>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl font-black">Prepaid Solar Installation</h3>
+                            <p class="text-gray-600 mt-1 md:mt-2 text-sm md:text-base">Pay-as-you-go solar options</p>
                         </div>
                     </div>
                     
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-orange text-xl">✓</span>
+                    <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-orange text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold">Zero Upfront Cost</h4>
-                                <p class="text-gray-600 text-sm">No large initial investment required</p>
+                                <h4 class="font-bold text-sm md:text-base">Zero Upfront Cost</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">No large initial investment required</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-orange text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-orange text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold">Pay Per Use</h4>
-                                <p class="text-gray-600 text-sm">Only pay for the solar energy you use</p>
+                                <h4 class="font-bold text-sm md:text-base">Pay Per Use</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Only pay for the solar energy you use</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-orange text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-orange text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold">Flexible Payments</h4>
-                                <p class="text-gray-600 text-sm">Top-up as needed, similar to prepaid electricity</p>
+                                <h4 class="font-bold text-sm md:text-base">Flexible Payments</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Top-up as needed, similar to prepaid electricity</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-orange text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-orange text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold">Maintenance Included</h4>
-                                <p class="text-gray-600 text-sm">All repairs and upkeep covered</p>
+                                <h4 class="font-bold text-sm md:text-base">Maintenance Included</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">All repairs and upkeep covered</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="border-t border-gray-200 pt-6">
+                    <div class="border-t border-gray-200 pt-4 md:pt-6">
                         <div class="text-center">
-                            <div class="text-3xl font-black text-solar-orange mb-2">Ideal For</div>
-                            <p class="text-gray-600">Rental properties or temporary residence<br>Those preferring flexible payment options</p>
+                            <div class="text-xl md:text-2xl lg:text-3xl font-black text-solar-orange mb-1 md:mb-2">Ideal For</div>
+                            <p class="text-gray-600 text-sm md:text-base">Rental properties or temporary residence<br>Those preferring flexible payment options</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Both Include -->
-            <div class="mt-20 bg-black text-white p-10 rounded-2xl">
-                <h3 class="text-3xl font-black mb-10 text-center">
+            <div class="mt-12 md:mt-20 bg-black text-white p-6 md:p-10 rounded-xl md:rounded-2xl">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-black mb-8 md:mb-10 text-center">
                     Both Solutions Include:
                 </h3>
                 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="text-center p-6">
-                        <div class="text-4xl mb-4">⚡</div>
-                        <h4 class="text-xl font-bold mb-3">80% Bill Reduction</h4>
-                        <p class="text-white/80">Guaranteed within 30 days</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div class="text-center p-4 md:p-6">
+                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">⚡</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-3">80% Bill Reduction</h4>
+                        <p class="text-white/80 text-sm md:text-base">Guaranteed within 30 days</p>
                     </div>
                     
-                    <div class="text-center p-6">
-                        <div class="text-4xl mb-4">🔧</div>
-                        <h4 class="text-xl font-bold mb-3">Professional Installation</h4>
-                        <p class="text-white/80">Certified technicians</p>
+                    <div class="text-center p-4 md:p-6">
+                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">🔧</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Professional Installation</h4>
+                        <p class="text-white/80 text-sm md:text-base">Certified technicians</p>
                     </div>
                     
-                    <div class="text-center p-6">
-                        <div class="text-4xl mb-4">🛡️</div>
-                        <h4 class="text-xl font-bold mb-3">Loadshedding Protection</h4>
-                        <p class="text-white/80">24/7 backup power</p>
+                    <div class="text-center p-4 md:p-6">
+                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">🛡️</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Loadshedding Protection</h4>
+                        <p class="text-white/80 text-sm md:text-base">24/7 backup power</p>
                     </div>
                     
-                    <div class="text-center p-6">
-                        <div class="text-4xl mb-4">📱</div>
-                        <h4 class="text-xl font-bold mb-3">Monitoring System</h4>
-                        <p class="text-white/80">Real-time energy tracking</p>
+                    <div class="text-center p-4 md:p-6">
+                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">📱</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Monitoring System</h4>
+                        <p class="text-white/80 text-sm md:text-base">Real-time energy tracking</p>
                     </div>
                 </div>
             </div>
@@ -733,72 +836,72 @@
     </section>
 
     <!-- Guarantee Section -->
-    <section id="guarantee" class="py-24 bg-white border-b-2 border-black">
+    <section id="guarantee" class="py-12 md:py-16 lg:py-24 bg-white border-b-2 border-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
+            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6">
                     Our 80% Bill Reduction Guarantee
                 </h2>
-                <p class="text-xl text-gray-600 leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                     We're so confident in our solar solutions that we guarantee at least 80% reduction on your electricity bill within 30 days.
                 </p>
             </div>
 
-            <div class="guarantee-highlight p-10 rounded-2xl border-2 border-solar-orange mb-16">
-                <div class="text-center mb-10">
-                    <div class="text-6xl md:text-8xl font-black text-solar-orange mb-4">80%</div>
-                    <h3 class="text-3xl font-black mb-4">Minimum Bill Reduction Guaranteed</h3>
-                    <p class="text-xl text-gray-700">Achieved within your first 30 days of operation</p>
+            <div class="guarantee-highlight p-6 md:p-10 rounded-xl md:rounded-2xl border-2 border-solar-orange mb-12 md:mb-16">
+                <div class="text-center mb-8 md:mb-10">
+                    <div class="text-5xl md:text-6xl lg:text-8xl font-black text-solar-orange mb-3 md:mb-4">80%</div>
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-black mb-3 md:mb-4">Minimum Bill Reduction Guaranteed</h3>
+                    <p class="text-base md:text-xl text-gray-700">Achieved within your first 30 days of operation</p>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     <div class="text-center">
-                        <div class="text-3xl mb-4">📅</div>
-                        <h4 class="text-xl font-bold mb-2">30-Day Guarantee</h4>
-                        <p class="text-gray-600">Results visible on your very next electricity bill</p>
+                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">📅</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">30-Day Guarantee</h4>
+                        <p class="text-gray-600 text-sm md:text-base">Results visible on your very next electricity bill</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="text-3xl mb-4">📊</div>
-                        <h4 class="text-xl font-bold mb-2">Transparent Monitoring</h4>
-                        <p class="text-gray-600">Real-time tracking of your energy production and savings</p>
+                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">📊</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Transparent Monitoring</h4>
+                        <p class="text-gray-600 text-sm md:text-base">Real-time tracking of your energy production and savings</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="text-3xl mb-4">🤝</div>
-                        <h4 class="text-xl font-bold mb-2">Performance Commitment</h4>
-                        <p class="text-gray-600">We stand by our promise with written guarantee</p>
+                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">🤝</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Performance Commitment</h4>
+                        <p class="text-gray-600 text-sm md:text-base">We stand by our promise with written guarantee</p>
                     </div>
                 </div>
             </div>
 
             <!-- How It Works -->
-            <div class="bg-gray-50 p-10 rounded-2xl border-2 border-black">
-                <h3 class="text-3xl font-black mb-10 text-center">How the Guarantee Works</h3>
+            <div class="bg-gray-50 p-6 md:p-10 rounded-xl md:rounded-2xl border-2 border-black">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-black mb-8 md:mb-10 text-center">How the Guarantee Works</h3>
                 
-                <div class="grid md:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                     <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-xl mx-auto mb-4">1</div>
-                        <h4 class="font-bold mb-2">Initial Audit</h4>
-                        <p class="text-gray-600 text-sm">We analyze your current electricity usage</p>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">1</div>
+                        <h4 class="font-bold text-sm md:text-base mb-1 md:mb-2">Initial Audit</h4>
+                        <p class="text-gray-600 text-xs md:text-sm">We analyze your current electricity usage</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-xl mx-auto mb-4">2</div>
-                        <h4 class="font-bold mb-2">System Installation</h4>
-                        <p class="text-gray-600 text-sm">Professional installation of your chosen solution</p>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">2</div>
+                        <h4 class="font-bold text-sm md:text-base mb-1 md:mb-2">System Installation</h4>
+                        <p class="text-gray-600 text-xs md:text-sm">Professional installation of your chosen solution</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-xl mx-auto mb-4">3</div>
-                        <h4 class="font-bold mb-2">30-Day Operation</h4>
-                        <p class="text-gray-600 text-sm">System runs and collects performance data</p>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">3</div>
+                        <h4 class="font-bold text-sm md:text-base mb-1 md:mb-2">30-Day Operation</h4>
+                        <p class="text-gray-600 text-xs md:text-sm">System runs and collects performance data</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-xl mx-auto mb-4">4</div>
-                        <h4 class="font-bold mb-2">Results Verification</h4>
-                        <p class="text-gray-600 text-sm">Compare new bill with previous consumption</p>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black text-white flex items-center justify-center font-bold text-lg md:text-xl mx-auto mb-3 md:mb-4">4</div>
+                        <h4 class="font-bold text-sm md:text-base mb-1 md:mb-2">Results Verification</h4>
+                        <p class="text-gray-600 text-xs md:text-sm">Compare new bill with previous consumption</p>
                     </div>
                 </div>
             </div>
@@ -806,70 +909,70 @@
     </section>
 
     <!-- Service Areas Section -->
-    <section id="areas" class="py-24 bg-gray-50 border-b-2 border-black">
+    <section id="areas" class="py-12 md:py-16 lg:py-24 bg-gray-50 border-b-2 border-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
+            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6">
                     Serving Residential Homes Across Gauteng
                 </h2>
-                <p class="text-xl text-gray-600 leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                     We bring guaranteed solar savings to homeowners in these areas.
                 </p>
             </div>
 
             <!-- Service Areas Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <div class="bg-white p-6 rounded-xl border-2 border-black card-hover">
-                    <div class="text-3xl mb-4">📍</div>
-                    <h3 class="text-xl font-bold mb-3">Pretoria Region</h3>
-                    <div class="space-y-2">
-                        <div class="service-area-item">Pretoria</div>
-                        <div class="service-area-item">Centurion</div>
-                        <div class="service-area-item">Bronkhorstspruit</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
+                <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl border-2 border-black card-hover">
+                    <div class="text-2xl md:text-3xl mb-3 md:mb-4">📍</div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Pretoria Region</h3>
+                    <div class="space-y-1 md:space-y-2">
+                        <div class="service-area-item text-sm md:text-base">Pretoria</div>
+                        <div class="service-area-item text-sm md:text-base">Centurion</div>
+                        <div class="service-area-item text-sm md:text-base">Bronkhorstspruit</div>
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 rounded-xl border-2 border-black card-hover">
-                    <div class="text-3xl mb-4">📍</div>
-                    <h3 class="text-xl font-bold mb-3">Johannesburg North</h3>
-                    <div class="space-y-2">
-                        <div class="service-area-item">Sandton</div>
-                        <div class="service-area-item">Fourways</div>
-                        <div class="service-area-item">Randburg</div>
+                <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl border-2 border-black card-hover">
+                    <div class="text-2xl md:text-3xl mb-3 md:mb-4">📍</div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Johannesburg North</h3>
+                    <div class="space-y-1 md:space-y-2">
+                        <div class="service-area-item text-sm md:text-base">Sandton</div>
+                        <div class="service-area-item text-sm md:text-base">Fourways</div>
+                        <div class="service-area-item text-sm md:text-base">Randburg</div>
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 rounded-xl border-2 border-black card-hover">
-                    <div class="text-3xl mb-4">📍</div>
-                    <h3 class="text-xl font-bold mb-3">Midrand & Surrounds</h3>
-                    <div class="space-y-2">
-                        <div class="service-area-item">Midrand</div>
-                        <div class="service-area-item">Johannesburg</div>
+                <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl border-2 border-black card-hover">
+                    <div class="text-2xl md:text-3xl mb-3 md:mb-4">📍</div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Midrand & Surrounds</h3>
+                    <div class="space-y-1 md:space-y-2">
+                        <div class="service-area-item text-sm md:text-base">Midrand</div>
+                        <div class="service-area-item text-sm md:text-base">Johannesburg</div>
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 rounded-xl border-2 border-black card-hover">
-                    <div class="text-3xl mb-4">📍</div>
-                    <h3 class="text-xl font-bold mb-3">West Rand</h3>
-                    <div class="space-y-2">
-                        <div class="service-area-item">Roodepoort</div>
+                <div class="bg-white p-4 md:p-6 rounded-lg md:rounded-xl border-2 border-black card-hover">
+                    <div class="text-2xl md:text-3xl mb-3 md:mb-4">📍</div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">West Rand</h3>
+                    <div class="space-y-1 md:space-y-2">
+                        <div class="service-area-item text-sm md:text-base">Roodepoort</div>
                     </div>
                 </div>
             </div>
 
             <!-- Simple Map Visualization -->
-            <div class="service-area-map mb-12 flex items-center justify-center">
-                <div class="text-center p-8">
-                    <div class="text-6xl mb-6">🗺️</div>
-                    <h3 class="text-2xl font-black mb-4">Gauteng Service Area</h3>
-                    <p class="text-gray-600 mb-6">Serving residential homes across these key areas</p>
-                    <div class="inline-flex flex-wrap gap-2 justify-center">
-                        <span class="bg-solar-yellow text-black px-3 py-1 rounded-full text-sm font-bold">Pretoria</span>
-                        <span class="bg-solar-orange text-black px-3 py-1 rounded-full text-sm font-bold">Centurion</span>
-                        <span class="bg-solar-yellow text-black px-3 py-1 rounded-full text-sm font-bold">Sandton</span>
-                        <span class="bg-solar-orange text-black px-3 py-1 rounded-full text-sm font-bold">Fourways</span>
-                        <span class="bg-solar-yellow text-black px-3 py-1 rounded-full text-sm font-bold">Midrand</span>
-                        <span class="bg-solar-orange text-black px-3 py-1 rounded-full text-sm font-bold">Randburg</span>
+            <div class="service-area-map mb-8 md:mb-12 flex items-center justify-center">
+                <div class="text-center p-4 md:p-8">
+                    <div class="text-4xl md:text-6xl mb-4 md:mb-6">🗺️</div>
+                    <h3 class="text-xl md:text-2xl font-black mb-3 md:mb-4">Gauteng Service Area</h3>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">Serving residential homes across these key areas</p>
+                    <div class="inline-flex flex-wrap gap-1 md:gap-2 justify-center">
+                        <span class="bg-solar-yellow text-black px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">Pretoria</span>
+                        <span class="bg-solar-orange text-black px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">Centurion</span>
+                        <span class="bg-solar-yellow text-black px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">Sandton</span>
+                        <span class="bg-solar-orange text-black px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">Fourways</span>
+                        <span class="bg-solar-yellow text-black px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">Midrand</span>
+                        <span class="bg-solar-orange text-black px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">Randburg</span>
                     </div>
                 </div>
             </div>
@@ -877,7 +980,7 @@
             <!-- Area CTA -->
             <div class="text-center">
                 <a href="#audit" 
-                   class="inline-flex items-center justify-center gap-3 bg-black text-white px-8 md:px-12 py-4 rounded-lg font-bold text-lg hover:bg-gray-900 transition-colors shadow-md border-2 border-black">
+                   class="inline-flex items-center justify-center gap-2 md:gap-3 bg-black text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold text-base md:text-lg hover:bg-gray-900 transition-colors shadow-md border-2 border-black touch-target w-full max-w-xs">
                     <span>📍</span>
                     <span>CHECK IF WE SERVE YOUR AREA</span>
                 </a>
@@ -886,78 +989,78 @@
     </section>
 
     <!-- Warranty Section -->
-    <section id="warranty" class="py-24 bg-white border-b-2 border-black">
+    <section id="warranty" class="py-12 md:py-16 lg:py-24 bg-white border-b-2 border-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
+            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-20">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6">
                     25-Year Performance Warranties
                 </h2>
-                <p class="text-xl text-gray-600 leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                     Long-term reliability assurance with industry-leading warranty coverage.
                 </p>
             </div>
 
             <!-- Warranty Cards -->
-            <div class="grid md:grid-cols-2 gap-10 mb-16">
-                <div class="warranty-card p-10 card-hover">
-                    <div class="text-center mb-8">
-                        <div class="text-6xl font-black text-solar-yellow mb-4">25</div>
-                        <h3 class="text-3xl font-bold mb-2">Year Performance Warranty</h3>
-                        <p class="text-white/80">Guaranteed system performance over decades</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-12 md:mb-16">
+                <div class="warranty-card p-6 md:p-10 card-hover">
+                    <div class="text-center mb-6 md:mb-8">
+                        <div class="text-4xl md:text-6xl font-black text-solar-yellow mb-3 md:mb-4">25</div>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 md:mb-2">Year Performance Warranty</h3>
+                        <p class="text-white/80 text-sm md:text-base">Guaranteed system performance over decades</p>
                     </div>
                     
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-yellow text-xl">✓</span>
+                    <div class="space-y-3 md:space-y-4">
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-yellow text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold text-white">Panel Performance</h4>
-                                <p class="text-white/80 text-sm">Minimum 80% output after 25 years</p>
+                                <h4 class="font-bold text-white text-sm md:text-base">Panel Performance</h4>
+                                <p class="text-white/80 text-xs md:text-sm">Minimum 80% output after 25 years</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-yellow text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-yellow text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold text-white">Product Warranty</h4>
-                                <p class="text-white/80 text-sm">Manufacturer defects coverage</p>
+                                <h4 class="font-bold text-white text-sm md:text-base">Product Warranty</h4>
+                                <p class="text-white/80 text-xs md:text-sm">Manufacturer defects coverage</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-yellow text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-yellow text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold text-white">Workmanship Warranty</h4>
-                                <p class="text-white/80 text-sm">Installation quality guarantee</p>
+                                <h4 class="font-bold text-white text-sm md:text-base">Workmanship Warranty</h4>
+                                <p class="text-white/80 text-xs md:text-sm">Installation quality guarantee</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="warranty-card p-10 card-hover">
-                    <div class="text-center mb-8">
-                        <div class="text-6xl font-black text-solar-yellow mb-4">10+</div>
-                        <h3 class="text-3xl font-bold mb-2">Year Inverter Warranty</h3>
-                        <p class="text-white/80">Extended coverage on critical components</p>
+                <div class="warranty-card p-6 md:p-10 card-hover">
+                    <div class="text-center mb-6 md:mb-8">
+                        <div class="text-4xl md:text-6xl font-black text-solar-yellow mb-3 md:mb-4">10+</div>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 md:mb-2">Year Inverter Warranty</h3>
+                        <p class="text-white/80 text-sm md:text-base">Extended coverage on critical components</p>
                     </div>
                     
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-yellow text-xl">✓</span>
+                    <div class="space-y-3 md:space-y-4">
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-yellow text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold text-white">Inverter Protection</h4>
-                                <p class="text-white/80 text-sm">Core system component coverage</p>
+                                <h4 class="font-bold text-white text-sm md:text-base">Inverter Protection</h4>
+                                <p class="text-white/80 text-xs md:text-sm">Core system component coverage</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-yellow text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-yellow text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold text-white">Battery Warranty</h4>
-                                <p class="text-white/80 text-sm">Extended life and performance</p>
+                                <h4 class="font-bold text-white text-sm md:text-base">Battery Warranty</h4>
+                                <p class="text-white/80 text-xs md:text-sm">Extended life and performance</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-solar-yellow text-xl">✓</span>
+                        <div class="flex items-start gap-2 md:gap-3">
+                            <span class="text-solar-yellow text-lg md:text-xl">✓</span>
                             <div>
-                                <h4 class="font-bold text-white">Monitoring System</h4>
-                                <p class="text-white/80 text-sm">Performance tracking included</p>
+                                <h4 class="font-bold text-white text-sm md:text-base">Monitoring System</h4>
+                                <p class="text-white/80 text-xs md:text-sm">Performance tracking included</p>
                             </div>
                         </div>
                     </div>
@@ -965,26 +1068,26 @@
             </div>
 
             <!-- Warranty Benefits -->
-            <div class="bg-gray-50 p-10 rounded-2xl border-2 border-black">
-                <h3 class="text-3xl font-black mb-10 text-center">Why Our Warranty Matters</h3>
+            <div class="bg-gray-50 p-6 md:p-10 rounded-xl md:rounded-2xl border-2 border-black">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-black mb-8 md:mb-10 text-center">Why Our Warranty Matters</h3>
                 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
                     <div class="text-center">
-                        <div class="text-4xl mb-4">🛡️</div>
-                        <h4 class="text-xl font-bold mb-2">Peace of Mind</h4>
-                        <p class="text-gray-600">Long-term protection for your investment</p>
+                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">🛡️</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-2">Peace of Mind</h4>
+                        <p class="text-gray-600 text-sm md:text-base">Long-term protection for your investment</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="text-4xl mb-4">📈</div>
-                        <h4 class="text-xl font-bold mb-2">Performance Assurance</h4>
-                        <p class="text-gray-600">Guaranteed energy production over decades</p>
+                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">📈</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-2">Performance Assurance</h4>
+                        <p class="text-gray-600 text-sm md:text-base">Guaranteed energy production over decades</p>
                     </div>
                     
                     <div class="text-center">
-                        <div class="text-4xl mb-4">💼</div>
-                        <h4 class="text-xl font-bold mb-2">Value Retention</h4>
-                        <p class="text-gray-600">Maintains system value for property resale</p>
+                        <div class="text-3xl md:text-4xl mb-3 md:mb-4">💼</div>
+                        <h4 class="text-lg md:text-xl font-bold mb-2 md:mb-2">Value Retention</h4>
+                        <p class="text-gray-600 text-sm md:text-base">Maintains system value for property resale</p>
                     </div>
                 </div>
             </div>
@@ -992,92 +1095,92 @@
     </section>
 
     <!-- Free Audit Section with Formspree Integration -->
-    <section id="audit" class="py-24 bg-gray-50 border-b-2 border-black">
+    <section id="audit" class="py-12 md:py-16 lg:py-24 bg-gray-50 border-b-2 border-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto mb-16">
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    Get Your Free Electricity<br>Savings Audit
+            <div class="text-center max-w-4xl mx-auto mb-12 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6">
+                    Get Your Free Electricity Savings Audit
                 </h2>
-                <p class="text-xl text-gray-600 leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                     Discover exactly how much you can save with our guaranteed 80% bill reduction.
                 </p>
             </div>
 
             <!-- Success Message (Hidden by default) -->
-            <div id="form-success" class="form-success mb-8">
-                <div class="text-6xl mb-4">🎉</div>
-                <h3 class="text-3xl font-black mb-4">Thank You!</h3>
-                <p class="text-xl mb-6">Your free savings audit request has been submitted successfully.</p>
-                <p class="text-white/90">We will contact you within 24 hours with your personalized savings estimate.</p>
+            <div id="form-success" class="form-success mb-6 md:mb-8">
+                <div class="text-4xl md:text-6xl mb-3 md:mb-4">🎉</div>
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-black mb-3 md:mb-4">Thank You!</h3>
+                <p class="text-lg md:text-xl mb-4 md:mb-6">Your free savings audit request has been submitted successfully.</p>
+                <p class="text-white/90 text-sm md:text-base">We will contact you within 24 hours with your personalized savings estimate.</p>
             </div>
 
             <!-- Form with Formspree Integration -->
-            <div id="audit-form-container" class="bg-white p-10 rounded-2xl border-2 border-black max-w-3xl mx-auto">
-                <h3 class="text-3xl font-black mb-8 text-center">What You'll Receive</h3>
+            <div id="audit-form-container" class="bg-white p-6 md:p-10 rounded-xl md:rounded-2xl border-2 border-black max-w-3xl mx-auto">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-black mb-6 md:mb-8 text-center">What You'll Receive</h3>
                 
-                <div class="space-y-6 mb-10">
-                    <div class="flex items-start gap-4">
+                <div class="space-y-4 md:space-y-6 mb-8 md:mb-10">
+                    <div class="flex items-start gap-3 md:gap-4">
                         <div class="w-8 h-8 rounded-full bg-solar-yellow flex items-center justify-center flex-shrink-0">
-                            <span class="text-black font-bold">1</span>
+                            <span class="text-black font-bold text-sm">1</span>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-2">Personalized Savings Estimate</h4>
-                            <p class="text-gray-600">See your exact 80%+ reduction potential</p>
+                            <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Personalized Savings Estimate</h4>
+                            <p class="text-gray-600 text-sm md:text-base">See your exact 80%+ reduction potential</p>
                         </div>
                     </div>
                     
-                    <div class="flex items-start gap-4">
+                    <div class="flex items-start gap-3 md:gap-4">
                         <div class="w-8 h-8 rounded-full bg-solar-yellow flex items-center justify-center flex-shrink-0">
-                            <span class="text-black font-bold">2</span>
+                            <span class="text-black font-bold text-sm">2</span>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-2">Solution Recommendation</h4>
-                            <p class="text-gray-600">Custom or prepaid - which is best for you?</p>
+                            <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Solution Recommendation</h4>
+                            <p class="text-gray-600 text-sm md:text-base">Custom or prepaid - which is best for you?</p>
                         </div>
                     </div>
                     
-                    <div class="flex items-start gap-4">
+                    <div class="flex items-start gap-3 md:gap-4">
                         <div class="w-8 h-8 rounded-full bg-solar-yellow flex items-center justify-center flex-shrink-0">
-                            <span class="text-black font-bold">3</span>
+                            <span class="text-black font-bold text-sm">3</span>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-2">Installation Timeline</h4>
-                            <p class="text-gray-600">When you can start saving with solar</p>
+                            <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Installation Timeline</h4>
+                            <p class="text-gray-600 text-sm md:text-base">When you can start saving with solar</p>
                         </div>
                     </div>
                     
-                    <div class="flex items-start gap-4">
+                    <div class="flex items-start gap-3 md:gap-4">
                         <div class="w-8 h-8 rounded-full bg-solar-yellow flex items-center justify-center flex-shrink-0">
-                            <span class="text-black font-bold">4</span>
+                            <span class="text-black font-bold text-sm">4</span>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-2">Warranty Details</h4>
-                            <p class="text-gray-600">25-year performance guarantee explained</p>
+                            <h4 class="text-lg md:text-xl font-bold mb-1 md:mb-2">Warranty Details</h4>
+                            <p class="text-gray-600 text-sm md:text-base">25-year performance guarantee explained</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Formspree Form -->
-                <form id="audit-form" action="https://formspree.io/f/mrezgkvv" method="POST" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
+                <form id="audit-form" action="https://formspree.io/f/mrezgkvv" method="POST" class="space-y-4 md:space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div>
                             <label class="block text-sm font-bold mb-2">Your Name *</label>
-                            <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange" placeholder="John Smith">
+                            <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange text-base touch-target" placeholder="John Smith">
                         </div>
                         <div>
                             <label class="block text-sm font-bold mb-2">Phone Number *</label>
-                            <input type="tel" name="phone" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange" placeholder="071 234 5678">
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange text-base touch-target" placeholder="071 234 5678">
                         </div>
                     </div>
                     
                     <div>
                         <label class="block text-sm font-bold mb-2">Email Address *</label>
-                        <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange" placeholder="john@example.com">
+                        <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange text-base touch-target" placeholder="john@example.com">
                     </div>
                     
                     <div>
                         <label class="block text-sm font-bold mb-2">Suburb / Area *</label>
-                        <select name="area" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange">
+                        <select name="area" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange text-base touch-target">
                             <option value="">Select your area</option>
                             <option value="Bronkhorstspruit">Bronkhorstspruit</option>
                             <option value="Pretoria">Pretoria</option>
@@ -1094,7 +1197,7 @@
                     
                     <div>
                         <label class="block text-sm font-bold mb-2">Average Monthly Electricity Bill (R) *</label>
-                        <select name="bill_amount" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange">
+                        <select name="bill_amount" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange text-base touch-target">
                             <option value="">Select your bill amount</option>
                             <option value="R2,000 - R3,000">R2,000 - R3,000</option>
                             <option value="R3,000 - R4,000">R3,000 - R4,000</option>
@@ -1106,7 +1209,7 @@
                     
                     <div>
                         <label class="block text-sm font-bold mb-2">Preferred Solution *</label>
-                        <select name="preferred_solution" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange">
+                        <select name="preferred_solution" required class="w-full px-4 py-3 border-2 border-black rounded-lg focus:outline-none focus:border-solar-orange text-base touch-target">
                             <option value="">Select preferred option</option>
                             <option value="Custom Solar Installation">Custom Solar Installation</option>
                             <option value="Prepaid Solar Installation">Prepaid Solar Installation</option>
@@ -1119,11 +1222,11 @@
                     <input type="hidden" name="_replyto" value="{{email}}">
                     <input type="text" name="_gotcha" style="display:none">
                     
-                    <button type="submit" class="w-full solar-gradient text-black py-4 rounded-xl font-black text-lg md:text-xl hover:shadow-xl transition-all duration-300 border-2 border-black">
+                    <button type="submit" class="w-full solar-gradient text-black py-4 rounded-xl font-black text-lg md:text-xl hover:shadow-xl transition-all duration-300 border-2 border-black touch-target text-base">
                         GET FREE SAVINGS AUDIT
                     </button>
                     
-                    <p class="text-center text-gray-600 text-sm">
+                    <p class="text-center text-gray-600 text-xs md:text-sm">
                         No obligation • 100% Free • Get your personalized report within 24 hours
                     </p>
                 </form>
@@ -1132,38 +1235,38 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-24 bg-white">
+    <section class="py-12 md:py-16 lg:py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-4xl md:text-6xl font-black mb-8">
-                    Start Saving 80% on Your<br>Electricity Bill Within 30 Days
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 md:mb-8">
+                    Start Saving 80% on Your Electricity Bill Within 30 Days
                 </h2>
                 
-                <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
                     <div class="benefit-card">
-                        <div class="text-3xl mb-4">⚡</div>
-                        <div class="font-bold text-lg">Guaranteed Savings</div>
-                        <div class="text-gray-600 text-sm">80% bill reduction promise</div>
+                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">⚡</div>
+                        <div class="font-bold text-base md:text-lg">Guaranteed Savings</div>
+                        <div class="text-gray-600 text-xs md:text-sm">80% bill reduction promise</div>
                     </div>
                     <div class="benefit-card">
-                        <div class="text-3xl mb-4">🏠</div>
-                        <div class="font-bold text-lg">Two Solutions</div>
-                        <div class="text-gray-600 text-sm">Custom or prepaid options</div>
+                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">🏠</div>
+                        <div class="font-bold text-base md:text-lg">Two Solutions</div>
+                        <div class="text-gray-600 text-xs md:text-sm">Custom or prepaid options</div>
                     </div>
                     <div class="benefit-card">
-                        <div class="text-3xl mb-4">🛡️</div>
-                        <div class="font-bold text-lg">25-Year Warranty</div>
-                        <div class="text-gray-600 text-sm">Long-term performance guarantee</div>
+                        <div class="text-2xl md:text-3xl mb-3 md:mb-4">🛡️</div>
+                        <div class="font-bold text-base md:text-lg">25-Year Warranty</div>
+                        <div class="text-gray-600 text-xs md:text-sm">Long-term performance guarantee</div>
                     </div>
                 </div>
                 
                 <!-- Main CTA -->
-                <div class="mb-16">
+                <div class="mb-12 md:mb-16">
                     <a href="#audit" 
-                       class="inline-flex items-center justify-center gap-4 solar-gradient text-black px-8 md:px-20 py-6 md:py-8 rounded-xl font-black text-lg md:text-2xl transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 group mx-auto border-2 border-black">
-                        <span class="text-2xl">📊</span>
-                        <span>GET FREE SAVINGS AUDIT NOW</span>
-                        <span class="group-hover:translate-x-3 transition-transform duration-300">→</span>
+                       class="inline-flex items-center justify-center gap-3 md:gap-4 solar-gradient text-black px-6 py-4 md:px-8 md:py-6 lg:px-20 rounded-lg md:rounded-xl font-black text-base md:text-lg lg:text-2xl transition-all duration-500 shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl hover:scale-[1.02] md:hover:scale-105 group mx-auto border-2 border-black w-full max-w-lg md:max-w-none touch-target">
+                        <span class="text-xl md:text-2xl">📊</span>
+                        <span class="text-center">GET FREE SAVINGS AUDIT NOW</span>
+                        <span class="group-hover:translate-x-2 md:group-hover:translate-x-3 transition-transform duration-300 hidden sm:inline">→</span>
                     </a>
                 </div>
             </div>
@@ -1171,63 +1274,63 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-16">
+    <footer class="bg-black text-white py-12 md:py-16 safe-bottom">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
                 <div>
-                    <div class="text-3xl font-black mb-6 text-solar-yellow">
+                    <div class="text-2xl md:text-3xl font-black mb-4 md:mb-6 text-solar-yellow">
                         Solar Connector
                     </div>
-                    <p class="text-gray-300 mb-6">
+                    <p class="text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
                         Residential solar solutions with guaranteed 80% electricity bill reduction within 30 days.
                     </p>
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-3">
+                    <div class="space-y-2 md:space-y-3">
+                        <div class="flex items-center gap-2 md:gap-3">
                             <span class="text-solar-yellow">📍</span>
-                            <span>Serving Gauteng Areas</span>
+                            <span class="text-sm md:text-base">Serving Gauteng Areas</span>
                         </div>
-                        <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-2 md:gap-3">
                             <span class="text-solar-yellow">⚡</span>
-                            <span>80% Bill Reduction Guarantee</span>
+                            <span class="text-sm md:text-base">80% Bill Reduction Guarantee</span>
                         </div>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-white">Quick Links</h4>
-                    <div class="grid gap-3">
-                        <a href="#solutions" class="hover:text-solar-yellow transition-colors">Solar Solutions</a>
-                        <a href="#guarantee" class="hover:text-solar-yellow transition-colors">80% Guarantee</a>
-                        <a href="#areas" class="hover:text-solar-yellow transition-colors">Service Areas</a>
-                        <a href="#warranty" class="hover:text-solar-yellow transition-colors">25-Year Warranty</a>
-                        <a href="#audit" class="hover:text-solar-yellow transition-colors">Free Audit</a>
+                    <h4 class="text-lg font-bold mb-4 md:mb-6 text-white">Quick Links</h4>
+                    <div class="grid gap-2 md:gap-3">
+                        <a href="#solutions" class="hover:text-solar-yellow transition-colors text-sm md:text-base">Solar Solutions</a>
+                        <a href="#guarantee" class="hover:text-solar-yellow transition-colors text-sm md:text-base">80% Guarantee</a>
+                        <a href="#areas" class="hover:text-solar-yellow transition-colors text-sm md:text-base">Service Areas</a>
+                        <a href="#warranty" class="hover:text-solar-yellow transition-colors text-sm md:text-base">25-Year Warranty</a>
+                        <a href="#audit" class="hover:text-solar-yellow transition-colors text-sm md:text-base">Free Audit</a>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-white">Our Solutions</h4>
-                    <div class="space-y-3">
-                        <div class="text-gray-300">Custom Solar Installation</div>
-                        <div class="text-gray-300">Prepaid Solar Installation</div>
-                        <div class="text-gray-300">Residential Focus</div>
+                    <h4 class="text-lg font-bold mb-4 md:mb-6 text-white">Our Solutions</h4>
+                    <div class="space-y-2 md:space-y-3">
+                        <div class="text-gray-300 text-sm md:text-base">Custom Solar Installation</div>
+                        <div class="text-gray-300 text-sm md:text-base">Prepaid Solar Installation</div>
+                        <div class="text-gray-300 text-sm md:text-base">Residential Focus</div>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-white">Contact & Audit</h4>
-                    <p class="text-gray-300 mb-6">
+                    <h4 class="text-lg font-bold mb-4 md:mb-6 text-white">Contact & Audit</h4>
+                    <p class="text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
                         Get your free electricity savings audit today.
                     </p>
                     <a href="#audit" 
-                       class="inline-flex items-center justify-center gap-3 bg-solar-yellow text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors shadow-md w-full">
+                       class="inline-flex items-center justify-center gap-2 md:gap-3 bg-solar-yellow text-black px-4 py-3 md:px-6 md:py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors shadow-md w-full text-sm md:text-base touch-target">
                         <span>📊</span>
                         <span>FREE SAVINGS AUDIT</span>
                     </a>
                 </div>
             </div>
             
-            <div class="pt-12 border-t border-gray-800 text-center">
-                <p class="text-white/80 text-sm">
+            <div class="pt-8 md:pt-12 border-t border-gray-800 text-center">
+                <p class="text-white/80 text-xs md:text-sm">
                     © 2024 Solar Connector | Residential Solar Solutions | 80% Electricity Bill Reduction Guarantee | 
                     Custom & Prepaid Solar Installation | 25-Year Performance Warranties | 
                     Serving: Bronkhorstspruit, Pretoria, Centurion, Midrand, Fourways, Sandton, Johannesburg, Randburg, Roodepoort
@@ -1241,7 +1344,7 @@
         <div class="whatsapp-pulse"></div>
         <a href="https://wa.me/2776473499?text=Hi%20Solar%20Connector!%20I'm%20interested%20in%20your%2080%25%20bill%20reduction%20guarantee%20for%20residential%20solar." 
            target="_blank" 
-           class="whatsapp-button">
+           class="whatsapp-button touch-target">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 54 81.2 54 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
             </svg>
@@ -1253,14 +1356,23 @@
         // Mobile menu functionality
         function openMobileMenu() {
             document.getElementById('mobileMenu').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
         }
         
         function closeMobileMenu() {
             document.getElementById('mobileMenu').classList.add('hidden');
+            document.body.style.overflow = 'auto';
         }
         
         // Mobile menu button event
         document.querySelector('.mobile-menu-button').addEventListener('click', openMobileMenu);
+        
+        // Close mobile menu when clicking outside
+        document.getElementById('mobileMenu').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeMobileMenu();
+            }
+        });
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1273,12 +1385,17 @@
                 
                 if (targetElement) {
                     const headerHeight = document.querySelector('nav').offsetHeight;
+                    const offsetPosition = targetElement.offsetTop - headerHeight - 20;
+                    
                     window.scrollTo({
-                        top: targetElement.offsetTop - headerHeight - 20,
+                        top: offsetPosition,
                         behavior: 'smooth'
                     });
                     
                     closeMobileMenu();
+                    
+                    // Update URL without scrolling
+                    history.pushState(null, null, targetId);
                 }
             });
         });
@@ -1309,7 +1426,22 @@
         }
         
         // Auto-advance slides every 5 seconds
-        setInterval(nextSlide, 5000);
+        let slideshowInterval = setInterval(nextSlide, 5000);
+        
+        // Pause slideshow on hover/touch
+        const slideshowContainer = document.querySelector('.slideshow-container');
+        if (slideshowContainer) {
+            slideshowContainer.addEventListener('mouseenter', () => clearInterval(slideshowInterval));
+            slideshowContainer.addEventListener('mouseleave', () => {
+                slideshowInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Touch events for mobile
+            slideshowContainer.addEventListener('touchstart', () => clearInterval(slideshowInterval));
+            slideshowContainer.addEventListener('touchend', () => {
+                slideshowInterval = setInterval(nextSlide, 5000);
+            });
+        }
         
         // Initialize slideshow
         showSlide(0);
@@ -1326,7 +1458,7 @@
             // Disable button and show loading state
             submitButton.disabled = true;
             submitButton.textContent = 'SUBMITTING...';
-            submitButton.classList.add('opacity-50');
+            submitButton.classList.add('opacity-50', 'cursor-not-allowed');
             
             try {
                 const response = await fetch(form.action, {
@@ -1346,7 +1478,17 @@
                     form.reset();
                     
                     // Scroll to success message
-                    document.getElementById('form-success').scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('form-success').scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                    
+                    // Track conversion
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-123456789/AbC-D_efGhIjKlMnOpQrS'
+                        });
+                    }
                 } else {
                     throw new Error('Form submission failed');
                 }
@@ -1357,15 +1499,17 @@
                 // Re-enable button
                 submitButton.disabled = false;
                 submitButton.textContent = originalButtonText;
-                submitButton.classList.remove('opacity-50');
+                submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
             }
         });
 
         // Service area selection animation
         document.querySelectorAll('.service-area-item').forEach(item => {
             item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(5px)';
-                this.style.backgroundColor = '#f8f9fa';
+                if (window.innerWidth > 768) {
+                    this.style.transform = 'translateX(5px)';
+                    this.style.backgroundColor = '#f8f9fa';
+                }
             });
             
             item.addEventListener('mouseleave', function() {
@@ -1406,12 +1550,15 @@
             
             if (currentScroll <= 0) {
                 navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+                navbar.style.transform = 'translateY(0)';
                 return;
             }
             
-            if (currentScroll > lastScroll) {
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scroll down
                 navbar.style.transform = 'translateY(-100%)';
             } else {
+                // Scroll up
                 navbar.style.transform = 'translateY(0)';
                 navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
             }
@@ -1421,13 +1568,6 @@
 
         // Add loading="lazy" to all images
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                if (!img.hasAttribute('loading')) {
-                    img.setAttribute('loading', 'lazy');
-                }
-            });
-            
             // Preload slideshow images
             const slideImages = [
                 'https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide1.jpg',
@@ -1438,10 +1578,17 @@
                 'https://raw.githubusercontent.com/Maribamedia/solarconnector/main/slides/slide6.jpg'
             ];
             
+            // Preload images for better mobile performance
             slideImages.forEach(src => {
                 const img = new Image();
                 img.src = src;
             });
+            
+            // Touch device detection
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            if (isTouchDevice) {
+                document.body.classList.add('touch-device');
+            }
         });
 
         // Guarantee counter animation
@@ -1462,13 +1609,14 @@
         const guaranteeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const counter = document.querySelector('.guarantee-highlight .text-6xl');
-                    if (counter) {
+                    const counter = document.querySelector('.guarantee-highlight .text-5xl, .guarantee-highlight .text-6xl, .guarantee-highlight .text-8xl');
+                    if (counter && !counter.classList.contains('animated')) {
+                        counter.classList.add('animated');
                         animateCounter(counter, 0, 80, 2000);
                     }
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.3 });
 
         const guaranteeElement = document.querySelector('.guarantee-highlight');
         if (guaranteeElement) {
@@ -1501,6 +1649,58 @@
                     errorDiv.remove();
                 }
             });
+        });
+
+        // Mobile viewport height fix
+        function setVH() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', setVH);
+
+        // Improved touch handling for mobile
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Prevent zoom on double-tap for iOS
+        document.addEventListener('dblclick', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+
+        // Handle iOS form input zoom
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+            document.addEventListener('focus', function(e) {
+                if (['input', 'select', 'textarea'].includes(e.target.tagName.toLowerCase())) {
+                    document.body.style.fontSize = '16px';
+                }
+            }, true);
+            
+            document.addEventListener('blur', function(e) {
+                if (['input', 'select', 'textarea'].includes(e.target.tagName.toLowerCase())) {
+                    document.body.style.fontSize = '';
+                }
+            }, true);
+        }
+
+        // Performance optimizations
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    // Handle scroll-based animations
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
     </script>
 </body>
