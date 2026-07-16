@@ -1,97 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<title>Solar Connector | Bespoke Residential Energy-as-a-Service</title>
+<meta name="description" content="Bespoke residential solar solutions designed for how you live. End-to-end energy design, installation, and optimisation from a single trusted team. Speak to Victor.">
+<meta property="og:title" content="Solar Connector | Bespoke Residential Energy-as-a-Service">
+<meta property="og:description" content="Bespoke residential solar solutions designed for how you live. End-to-end energy design, installation, and optimisation from a single trusted team.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%231e3a8a'/%3E%3Cstop offset='100%25' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M28 74 L50 26 L72 74' stroke='url(%23g)' stroke-width='8' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+:root {
+--surface:#ffffff;--surface-1:#f8fafc;--surface-2:#f1f5f9;
+--on-surface:#0a0f1c;--on-surface-variant:#475569;--on-surface-muted:#64748b;
+--outline:#cbd5e1;--outline-variant:#e2e8f0;
+--primary:#1e3a8a;--primary-hover:#1e40af;--primary-container:#dbeafe;--primary-fixed:#172554;
+--accent:#f59e0b;--accent-subtle:#fffbeb;
+--max:1280px;--radius:16px;--radius-sm:10px;--radius-xs:8px;
+--section:6.5rem;--section-sm:4.5rem;--nav-height:76px;
+--transition-base:280ms cubic-bezier(0.22,1,0.36,1);
+--transition-fast:180ms cubic-bezier(0.22,1,0.36,1);
+--shadow-xs:0 1px 2px rgba(10,15,28,0.04);
+--shadow-sm:0 1px 3px rgba(10,15,28,0.06),0 1px 2px rgba(10,15,28,0.04);
+--shadow-md:0 4px 16px rgba(10,15,28,0.07),0 1px 4px rgba(10,15,28,0.04);
+--shadow-lg:0 12px 40px rgba(10,15,28,0.09),0 2px 8px rgba(10,15,28,0.04);
+--shadow-xl:0 24px 64px rgba(10,15,28,0.11),0 4px 16px rgba(10,15,28,0.05);
+--shadow-primary:0 4px 20px rgba(30,58,138,0.2);
+--shadow-primary-lg:0 8px 32px rgba(30,58,138,0.28);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{background:#ffffff;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#ffffff;color:var(--on-surface);font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;font-size:16px}
+a{color:inherit;text-decoration:none;transition:color var(--transition-fast)}
+img{max-width:100%;height:auto;display:block}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:0 auto}
+.logo-lockup{display:inline-flex;align-items:center;gap:10px;min-width:0;flex-shrink:0}
+.logo-mark{flex:0 0 auto;width:36px;height:36px}
+.wordmark{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:-0.015em;color:var(--primary);white-space:nowrap}
+.wordmark span{color:var(--on-surface-muted);font-weight:600;font-size:0.75rem;display:block;letter-spacing:0.02em;margin-top:-2px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;border-bottom:1px solid transparent;background:rgba(255,255,255,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:border-color var(--transition-base),box-shadow var(--transition-base),background var(--transition-base)}
+.nav.scrolled{border-bottom-color:var(--outline-variant);box-shadow:var(--shadow-sm);background:rgba(255,255,255,0.94)}
+.nav-inner{height:var(--nav-height);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-links{display:flex;align-items:center;gap:0.35rem;color:var(--on-surface-variant);font-size:0.9rem;font-weight:500}
+.nav-links a:not(.button){padding:0.45rem 0.85rem;border-radius:8px;transition:color var(--transition-fast),background var(--transition-fast);position:relative;white-space:nowrap}
+.nav-links a:not(.button):hover{color:var(--primary);background:rgba(30,58,138,0.05)}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 1.6rem;border-radius:999px;border:1.5px solid transparent;background:linear-gradient(135deg,#1e3a8a 0%,#1e40af 100%);color:#fff;font-weight:600;font-size:0.85rem;letter-spacing:0.02em;transition:transform var(--transition-fast),box-shadow var(--transition-fast),background var(--transition-fast);cursor:pointer;box-shadow:var(--shadow-primary);white-space:nowrap;font-family:'Plus Jakarta Sans',sans-serif}
+.button:hover{transform:translateY(-2px);box-shadow:var(--shadow-primary-lg);background:linear-gradient(135deg,#1e40af 0%,#1e3a8a 100%)}
+.button:active{transform:translateY(0) scale(0.98)}
+.button.secondary{background:rgba(255,255,255,0.9);color:var(--primary);border:1.5px solid var(--outline-variant);box-shadow:var(--shadow-xs);font-weight:600;letter-spacing:0;font-size:0.85rem}
+.button.secondary:hover{border-color:var(--primary);background:rgba(30,58,138,0.03);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.mobile-toggle{display:none;place-items:center;width:42px;height:42px;border-radius:999px;border:1.5px solid var(--outline-variant);background:rgba(255,255,255,0.9);color:var(--on-surface);cursor:pointer;transition:background var(--transition-fast),transform var(--transition-fast);flex-shrink:0}
+.mobile-toggle:hover{background:var(--surface-2)}
+.mobile-panel{display:none;padding:16px 24px 24px;border-top:1px solid var(--outline-variant);background:rgba(255,255,255,0.97);backdrop-filter:blur(16px)}
+.mobile-panel.open{display:grid;gap:6px;animation:slideDown 320ms cubic-bezier(0.22,1,0.36,1) forwards}
+@keyframes slideDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+.mobile-panel a{padding:0.7rem 1rem;border-radius:var(--radius-xs);transition:background var(--transition-fast),color var(--transition-fast);color:var(--on-surface-variant);font-weight:500;font-size:0.95rem}
+.mobile-panel a:hover{background:rgba(30,58,138,0.05);color:var(--primary)}
+.mobile-panel .button{width:100%;margin-top:6px;justify-content:center}
 
-Dragon Solar
-Speak to Charles
-Modern luxury home with residential solar panel installation
-Residential Energy-as-a-Service
-Solar infrastructure designed for how you live
-End-to-end energy solutions tailored to your home, your lifestyle, and your financial future. One trusted team — no juggling contractors.
+.hero{position:relative;min-height:780px;display:grid;align-items:center;padding:9rem 0 6rem;text-align:left;overflow:hidden;background:linear-gradient(160deg,#f0f4ff 0%,#ffffff 40%,#fffbf5 100%);isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(105deg,rgba(255,255,255,0.96) 0%,rgba(255,255,255,0.88) 42%,rgba(255,255,255,0.45) 68%,rgba(255,255,255,0.12) 100%),url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=80") center/cover;pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 18% 28%,rgba(30,58,138,0.07),transparent 32rem),radial-gradient(circle at 82% 18%,rgba(245,158,11,0.06),transparent 26rem);pointer-events:none}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr 0.95fr;gap:4rem;align-items:center}
+.hero-content{max-width:640px;padding:clamp(2rem,4vw,3rem);border:1px solid rgba(30,58,138,0.08);border-radius:var(--radius);background:rgba(255,255,255,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:var(--shadow-xl),0 0 0 1px rgba(255,255,255,0.5) inset;animation:fadeInUp 900ms cubic-bezier(0.22,1,0.36,1) forwards;opacity:0;transform:translateY(28px)}
+@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}
+.hero-visual{position:relative;display:grid;place-items:center;animation:fadeInUp 900ms 200ms cubic-bezier(0.22,1,0.36,1) forwards;opacity:0;transform:translateY(28px)}
 
-Start Your Energy Journey
-WhatsApp Charles
-Utility costs keep climbing. Homeowners across South Africa are looking for practical ways to reduce electricity and water expenses — without compromising on comfort or design. That's exactly where we come in.
+.eyebrow,.section-kicker{margin:0 0 0.85rem;color:var(--primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase}
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;margin:0;letter-spacing:-0.02em}
+h1{color:var(--on-surface);font-size:clamp(2.4rem,5.5vw,3.8rem);line-height:1.06;font-weight:800}
+h1 span{background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lead{max-width:560px;margin:1.5rem 0 2.2rem;color:var(--on-surface-variant);font-size:clamp(0.95rem,1.4vw,1.08rem);line-height:1.7;font-weight:450}
+.hero-actions,.center-actions{display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap;gap:0.85rem}
+.center-actions{justify-content:center}
+.hero-note{display:flex;justify-content:flex-start;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;color:var(--on-surface-muted);font-size:0.85rem;font-weight:450}
+.hero-note span.sep{color:var(--outline)}
 
-100%
-Bespoke Solutions
-Our Integrated Residential Offering
-Everything your home needs from a single, trusted team
-We deliver a comprehensive suite of services — so you never have to manage multiple vendors or navigate complex supply chains.
+.trust-bar{position:relative;z-index:10;margin-top:-3rem;padding:0 0 var(--section-sm)}
+.trust-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.trust-card{padding:1.8rem 1.5rem;border-radius:var(--radius);background:#fff;border:1px solid var(--outline-variant);box-shadow:var(--shadow-md);text-align:center;transition:transform var(--transition-base),box-shadow var(--transition-base)}
+.trust-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.trust-card .stat{font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem;font-weight:800;color:var(--primary);line-height:1;margin-bottom:0.5rem}
+.trust-card .stat-label{font-size:0.85rem;color:var(--on-surface-variant);font-weight:500}
 
-Residential rooftop with sleek solar panel installation
-01 — Design & Feasibility
-Home Energy Design & Feasibility
-Project design and feasibility studies tailored to your property's unique orientation, architecture, and energy profile. We map your consumption patterns to engineer a system that fits your home perfectly.
+section{position:relative;padding:var(--section) 0;scroll-margin-top:100px}
+.light-section{background:var(--surface-1);color:var(--on-surface)}
+.light-section .section-kicker{color:var(--primary)}
+.section-head{max-width:800px;margin:0 auto 3.5rem;text-align:center}
+.section-title{color:var(--on-surface);font-size:clamp(1.9rem,4.5vw,2.8rem);line-height:1.12;font-weight:800}
+.section-copy{max-width:680px;margin:1rem auto 0;color:var(--on-surface-variant);font-size:1rem;line-height:1.7;font-weight:450}
 
-Commercial building with large-scale solar panel array
-02 — Procurement & Supply
-Quality Component Procurement
-Supply chain management ensuring premium-tier panels, inverters, and battery storage at competitive cost. We source only from vetted, Tier-1 manufacturers with proven longevity.
+.grid{display:grid;gap:1.25rem}
+.steps{grid-template-columns:repeat(3,1fr)}
+.solutions{grid-template-columns:repeat(3,1fr)}
+.mini-grid{grid-template-columns:repeat(2,1fr)}
+.commit-grid{grid-template-columns:repeat(2,1fr)}
 
-Professional solar installation team mounting panels on a residential roof
-03 — Installation & Commissioning
-Professional Installation & Commissioning
-Expert installation by certified technicians who treat your home with the care it deserves. We commission every system rigorously to ensure flawless performance from day one.
+.card{border:1px solid rgba(30,58,138,0.07);background:rgba(255,255,255,0.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:var(--shadow-md),0 0 0 1px rgba(255,255,255,0.5) inset;transition:transform var(--transition-base),box-shadow var(--transition-base),border-color var(--transition-base);border-radius:var(--radius)}
+.card:hover{transform:translateY(-5px);border-color:rgba(30,58,138,0.16);box-shadow:var(--shadow-lg),0 0 0 1px rgba(255,255,255,0.5) inset}
+.step-card{min-height:260px;position:relative;overflow:hidden;padding:2rem}
+.number{position:absolute;right:1rem;top:-0.4rem;color:rgba(30,58,138,0.06);font-family:'Plus Jakarta Sans',sans-serif;font-size:5rem;font-weight:800;line-height:1;transition:color 400ms ease;pointer-events:none}
+.card:hover .number{color:rgba(30,58,138,0.13)}
+.card h3,.card h4{color:var(--on-surface);font-size:1.15rem;line-height:1.25;font-weight:700;margin-bottom:0.85rem}
+.card p{margin:0;color:var(--on-surface-variant);line-height:1.65;font-size:0.93rem}
+.icon-box{display:inline-grid;place-items:center;width:48px;height:48px;margin-bottom:1.25rem;border:1px solid rgba(30,58,138,0.1);border-radius:999px;background:rgba(30,58,138,0.04);color:var(--primary);transition:transform var(--transition-base),background var(--transition-base)}
+.card:hover .icon-box{transform:scale(1.08) rotate(-3deg);background:rgba(30,58,138,0.08)}
+.material-symbols-outlined{font-size:1.1rem;line-height:1.4;color:var(--primary);flex-shrink:0}
 
-Elegant modern home representing smart energy investment
-04 — Funding & Flexibility
-Flexible Payment & Funding Solutions
-Structured funding designed around your family's financial requirements. From outright purchase to energy-as-a-service subscriptions — we find the model that works for you.
+.solution-card{display:flex;flex-direction:column;min-height:100%;padding:2.2rem}
+.solution-card ul{display:grid;gap:0.6rem;margin:1.1rem 0 1.5rem;padding:0;list-style:none;color:var(--on-surface-variant)}
+.solution-card li{display:flex;gap:0.5rem;align-items:flex-start;font-size:0.9rem}
+.text-link{display:inline-flex;align-items:center;gap:0.4rem;margin-top:auto;color:var(--primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;transition:gap var(--transition-fast),color var(--transition-fast);position:relative;padding-bottom:2px}
+.text-link::after{content:"";position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--primary);transition:width var(--transition-base);border-radius:2px}
+.text-link:hover{gap:0.6rem}
+.text-link:hover::after{width:100%}
 
-Energy monitoring dashboard with real-time performance analytics
-05 — Monitoring & Optimisation
-Remote Monitoring & Continuous Optimisation
-Real-time performance tracking with proactive alerts. We continuously fine-tune your system to maximise savings and extend asset life — without you lifting a finger.
+.contrast-band{padding:var(--section) 0;background:linear-gradient(150deg,#1e3a8a 0%,#172554 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);position:relative;overflow:hidden;isolation:isolate}
+.contrast-band::before{content:"";position:absolute;inset:0;z-index:0;background:url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=80") center/cover;opacity:0.06;mix-blend-mode:luminosity}
+.contrast-band .section-kicker{color:rgba(255,255,255,0.7)}
+.contrast-band .section-title{color:#ffffff}
+.contrast-band .section-copy{color:rgba(255,255,255,0.85)}
+.pathway{display:grid;grid-template-columns:0.85fr 1.15fr;gap:3.5rem;align-items:center;position:relative;z-index:1}
+.pathway .section-head{margin:0;text-align:left}
+.pathway-flow{display:grid;gap:0.85rem}
+.flow-card{display:grid;grid-template-columns:50px 1fr;gap:1rem;align-items:start;border-radius:var(--radius);padding:1.3rem 1.5rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform var(--transition-base),background var(--transition-base),border-color var(--transition-base)}
+.flow-card:hover{transform:translateX(6px);background:rgba(255,255,255,0.13);border-color:rgba(255,255,255,0.22)}
+.flow-card span{display:grid;place-items:center;width:50px;height:50px;border:1px solid rgba(255,255,255,0.25);border-radius:999px;background:rgba(255,255,255,0.1);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.85rem;flex-shrink:0}
+.flow-card h3{color:#fff;font-size:1.08rem;margin-bottom:0.3rem;font-weight:700}
+.flow-card p{margin:0;color:rgba(255,255,255,0.82);font-size:0.9rem;line-height:1.55}
 
-Qualified technician performing solar system maintenance and inspection
-06 — Ongoing Care
-Insurance, Warranty & Maintenance
-Comprehensive protection for your investment — including insurance solutions, warranty management, and ongoing O&M services to keep everything running at peak efficiency.
+.split-section{display:grid;grid-template-columns:0.9fr 1.1fr;gap:3.5rem;align-items:center}
+.commit-card{border-left:3px solid var(--primary);padding:1.8rem 2rem;background:var(--surface);border-radius:0 var(--radius-sm) var(--radius-sm) 0;box-shadow:var(--shadow-sm)}
+.commit-card h4{font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;color:var(--on-surface)}
+.commit-card p{font-size:0.9rem;color:var(--on-surface-variant);line-height:1.6}
 
-Why Dragon Solar
-Engineering heritage.
-National reach. Personal care.
-Nationwide Execution
-Rapid mobilisation and installation capability across all provinces in South Africa — with the same precision everywhere.
+.contact-card{max-width:880px;margin:0 auto;text-align:center;border-radius:var(--radius);padding:3.5rem;overflow:hidden;background:rgba(255,255,255,0.9);border:1px solid rgba(30,58,138,0.08);box-shadow:var(--shadow-xl)}
 
-Bespoke Structuring
-Every solution is custom-structured to your operational and financial objectives. No cookie-cutter packages.
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;text-align:left;margin-top:2rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.form-group.full{grid-column:1 / -1}
+.form-group label{font-size:0.8rem;font-weight:600;color:var(--on-surface);letter-spacing:0.02em}
+.form-group input,.form-group select,.form-group textarea{padding:0.85rem 1rem;border:1.5px solid var(--outline-variant);border-radius:var(--radius-xs);background:var(--surface);color:var(--on-surface);font-family:'Inter',sans-serif;font-size:0.95rem;transition:border-color var(--transition-fast),box-shadow var(--transition-fast);outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(30,58,138,0.08)}
+.form-group input::placeholder{color:var(--on-surface-muted);opacity:0.6}
+.form-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
 
-Single Point of Accountability
-One team from concept to long-term optimisation. No finger-pointing, no gaps, no excuses.
+.footer{border-top:1px solid var(--outline-variant);background:var(--surface-1);padding:4rem 0 2rem}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:2.5rem;margin-bottom:2.5rem}
+.footer-col h4{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--on-surface);margin-bottom:1.2rem}
+.footer-col a,.footer-col p{display:block;color:var(--on-surface-variant);font-size:0.9rem;margin-bottom:0.6rem;transition:color var(--transition-fast)}
+.footer-col a:hover{color:var(--primary)}
+.footer-bottom{border-top:1px solid var(--outline-variant);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:0.8rem;color:var(--on-surface-muted)}
 
-Premium Quality
-The same engineering rigour we bring to large enterprises, now designed exclusively for your home.
+.whatsapp{position:fixed;right:1.5rem;bottom:1.5rem;z-index:60;display:grid;place-items:center;width:56px;height:56px;border-radius:999px;background:linear-gradient(135deg,#1e3a8a 0%,#172554 100%);box-shadow:var(--shadow-primary-lg);transition:transform var(--transition-base),box-shadow var(--transition-base);animation:floatIn 800ms cubic-bezier(0.22,1,0.36,1) 1.2s both}
+@keyframes floatIn{from{opacity:0;transform:translateY(18px) scale(0.85)}to{opacity:1;transform:translateY(0) scale(1)}}
+.whatsapp:hover{transform:scale(1.08) rotate(-4deg);box-shadow:0 14px 44px rgba(30,58,138,0.4)}
+.whatsapp svg{width:26px;height:26px;fill:white}
 
-Trusted by Discerning Homeowners
-What our clients say
-Dragon Solar transformed our home energy setup with absolute professionalism. The entire process — from the initial conversation with Charles to the final commissioning — was seamless. We haven't thought about load shedding since.
-— Homeowner, Sandton, Johannesburg
+.glow-divider{width:min(var(--max),calc(100% - 48px));height:1px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(30,58,138,0.12),transparent)}
 
-Premium homes across South Africa
-Let's Start the Conversation
-Every home is different.
-Let's understand yours.
-1
-Tell us about your home
-Share your energy needs and aspirations with Charles directly.
+.form-success{display:none;padding:3rem;text-align:center;background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 100%);color:white;border-radius:var(--radius);box-shadow:var(--shadow-xl)}
+.form-success.visible{display:block;animation:fadeInUp 500ms ease forwards}
+.form-success h3{font-size:1.8rem;margin-bottom:0.5rem}
+.form-success p{opacity:0.9;font-size:1rem}
 
-2
-Site assessment
-We'll visit your property to understand its unique potential.
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 750ms cubic-bezier(0.22,1,0.36,1),transform 750ms cubic-bezier(0.22,1,0.36,1)}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+.slide-in-left{opacity:0;transform:translateX(-36px);transition:opacity 800ms cubic-bezier(0.22,1,0.36,1),transform 800ms cubic-bezier(0.22,1,0.36,1)}
+.slide-in-left.in-view{opacity:1;transform:translateX(0)}
 
-3
-Bespoke proposal
-A tailored solution designed around your lifestyle and budget.
+.quote-section{background:var(--surface-1);padding:var(--section) 0}
+.quote-card{max-width:780px;margin:0 auto;text-align:center;padding:3rem 2rem}
+.quote-card .quote-text{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:600;line-height:1.5;color:var(--on-surface);margin-bottom:1.5rem;letter-spacing:-0.01em}
+.quote-card .quote-attribution{color:var(--on-surface-muted);font-size:0.9rem;font-weight:500}
+.quote-card .quote-attribution strong{color:var(--primary);font-weight:700}
 
-Your journey starts with a direct conversation with our Managing Director, Charles Lombard.
-No call centres. No forms that vanish into the void.
-Call or WhatsApp: +27 84 925 4444
+@media(prefers-reduced-motion:no-preference){
+.flow-card:nth-child(1){transition-delay:0ms}
+.flow-card:nth-child(2){transition-delay:90ms}
+.flow-card:nth-child(3){transition-delay:180ms}
+.steps .card:nth-child(1){transition-delay:0ms}
+.steps .card:nth-child(2){transition-delay:80ms}
+.steps .card:nth-child(3){transition-delay:160ms}
+}
+@media(max-width:1120px){
+.nav-links a:not(.button){display:none}
+.solutions{grid-template-columns:repeat(2,1fr)}
+.steps,.mini-grid,.trust-inner{grid-template-columns:repeat(2,1fr)}
+.pathway,.split-section{grid-template-columns:1fr;gap:2.5rem}
+.hero-grid{grid-template-columns:1fr;gap:2rem}
+.footer-top{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:860px){
+:root{--section:5rem;--section-sm:3.5rem;--nav-height:68px}
+.wrap{width:min(100% - 32px,var(--max))}
+.nav-inner{height:var(--nav-height);gap:10px}
+.wordmark{font-size:0.9rem}
+.logo-mark{width:30px;height:30px}
+.nav-links{display:none}
+.mobile-toggle{display:grid}
+.hero{min-height:auto;padding-top:7rem;padding-bottom:4.5rem;text-align:center}
+.hero::before{background:linear-gradient(180deg,rgba(255,255,255,0.88),rgba(255,255,255,0.94)),url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=80") center/cover}
+.hero-content{margin:0 auto;width:100%;padding:clamp(1.5rem,5vw,2.5rem)}
+.hero-actions{justify-content:center}
+.hero-note{justify-content:center}
+.steps,.solutions,.mini-grid,.commit-grid{grid-template-columns:1fr}
+.pathway{gap:2rem}
+.contact-card{padding:2rem}
+.form-grid{grid-template-columns:1fr}
+.footer-top{grid-template-columns:1fr;gap:1.5rem}
+.footer-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:560px){
+h1{font-size:clamp(2rem,9vw,2.6rem);line-height:1.08}
+.wrap{width:min(100% - 22px,var(--max))}
+.nav-inner{height:62px}
+.wordmark{font-size:0.8rem;letter-spacing:0}
+.logo-mark{width:26px;height:26px}
+.mobile-toggle{width:38px;height:38px;flex:0 0 38px}
+.hero{padding-top:6rem}
+.hero-content{padding:1.2rem}
+.eyebrow{font-size:0.62rem}
+.lead{margin:1rem 0 1.5rem;font-size:0.9rem}
+.hero-actions{align-items:stretch;flex-direction:column}
+.hero-actions .button{width:100%;justify-content:center}
+.hero-note{display:grid;justify-content:center;gap:0.35rem;text-align:center}
+.hero-note span.sep{display:none}
+.card{padding:1.4rem}
+.section-title{font-size:clamp(1.6rem,7vw,2.2rem)}
+.flow-card{grid-template-columns:1fr;text-align:center}
+.flow-card span{margin:0 auto}
+.section-kicker{font-size:0.65rem}
+.trust-card{padding:1.4rem 1rem}
+.trust-card .stat{font-size:1.6rem}
+.contact-card{padding:1.5rem}
+.footer{padding:2.5rem 0 1.5rem}
+.whatsapp{width:48px;height:48px;right:1rem}
+.whatsapp svg{width:22px;height:22px}
+}
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation-duration:0.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:0.001ms!important}
+.reveal,.slide-in-left,.hero-content{opacity:1;transform:none}
+}
+</style>
+<base target="_blank">
+</head>
+<body>
 
-Message Charles on WhatsApp
-Dragon Solar
-Bespoke Residential Energy-as-a-Service — South Africa
+<nav class="nav" aria-label="Main navigation">
+<div class="wrap nav-inner">
+<a class="logo-lockup" href="#top" aria-label="Solar Connector home">
+<svg class="logo-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+<defs><linearGradient id="logoGrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#172554"/><stop offset="52%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient></defs>
+<path d="M28 74 L50 26 L72 74" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linejoin="round"/>
+</svg>
+<div class="wordmark">Solar Connector<span>Bespoke Residential Energy</span></div>
+</a>
+<div class="nav-links">
+<a href="#offering">Our Offering</a>
+<a href="#why">Why Us</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+<a class="button" href="https://wa.me/27766473499?text=Hi%20Solar%20Connector%2C%20I%20am%20interested%20in%20a%20bespoke%20residential%20solar%20solution.">WhatsApp Victor</a>
+</div>
+<button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+<span class="material-symbols-outlined" style="font-size:1.4rem;">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="mobile-panel">
+<a href="#offering">Our Offering</a>
+<a href="#why">Why Us</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+<a class="button" href="https://wa.me/27766473499?text=Hi%20Solar%20Connector%2C%20I%20am%20interested%20in%20a%20bespoke%20residential%20solar%20solution.">WhatsApp Victor</a>
+</div>
+</nav>
 
-Privacy Policy Terms of Service +27 84 925 4444
+<main id="top">
+<header class="hero">
+<div class="wrap hero-grid">
+<div class="hero-content">
+<p class="eyebrow">Bespoke Residential Energy-as-a-Service</p>
+<h1 class="slide-in-left">Solar infrastructure <span>designed for how you live</span></h1>
+<p class="lead">End-to-end energy solutions tailored to your home, your lifestyle, and your financial future. One trusted team — no juggling contractors.</p>
+<div class="hero-actions">
+<a class="button" href="https://wa.me/27766473499?text=Hi%20Solar%20Connector%2C%20I%20am%20interested%20in%20a%20bespoke%20residential%20solar%20solution.">Start Your Energy Journey</a>
+<a class="button secondary" href="#offering">Explore Our Offering</a>
+</div>
+<div class="hero-note">
+<span>Design & Feasibility</span>
+<span class="sep">&bull;</span>
+<span>Installation</span>
+<span class="sep">&bull;</span>
+<span>Ongoing Care</span>
+</div>
+</div>
+<div class="hero-visual" aria-hidden="true" style="position:relative;z-index:2;">
+<div style="position:relative;width:100%;max-width:480px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-xl);border:1px solid var(--outline-variant);margin-left:auto;">
+<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80" alt="Modern luxury home with residential solar" style="width:100%;height:360px;object-fit:cover;display:block;">
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,40,0.05) 0%,rgba(10,22,40,0.25) 100%);"></div>
+<div style="position:absolute;bottom:20px;left:20px;right:20px;">
+<div style="background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);padding:16px 20px;border-radius:var(--radius-sm);border:1px solid rgba(30,58,138,0.08);">
+<div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.9rem;color:var(--primary);margin-bottom:4px;">Speak to Victor</div>
+<div style="font-size:0.8rem;color:var(--on-surface-variant);">Direct conversation. No call centres. No forms that vanish into the void.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
 
-© 2026 Dragon Solar. All rights reserved.
+<div class="trust-bar">
+<div class="wrap trust-inner reveal">
+<div class="trust-card">
+<div class="stat">100%</div>
+<div class="stat-label">Bespoke Solutions</div>
+</div>
+<div class="trust-card">
+<div class="stat">Nationwide</div>
+<div class="stat-label">South Africa Coverage</div>
+</div>
+<div class="trust-card">
+<div class="stat">Single</div>
+<div class="stat-label">Point of Accountability</div>
+</div>
+<div class="trust-card">
+<div class="stat">25yr</div>
+<div class="stat-label">Warranty Backing</div>
+</div>
+</div>
+</div>
 
-Chat with Charles
+<section class="light-section" id="offering">
+<div class="wrap">
+<div class="section-head reveal">
+<p class="section-kicker">Our Integrated Residential Offering</p>
+<h2 class="section-title">Everything your home needs from a single, trusted team</h2>
+<p class="section-copy">We deliver a comprehensive suite of services — so you never have to manage multiple vendors or navigate complex supply chains.</p>
+</div>
+<div class="grid solutions">
+<article class="card solution-card reveal">
+<span class="icon-box"><span class="material-symbols-outlined">architecture</span></span>
+<h3>01 — Design & Feasibility</h3>
+<p>Project design and feasibility studies tailored to your property's unique orientation, architecture, and energy profile. We map your consumption patterns to engineer a system that fits your home perfectly.</p>
+</article>
+<article class="card solution-card reveal">
+<span class="icon-box"><span class="material-symbols-outlined">inventory_2</span></span>
+<h3>02 — Procurement & Supply</h3>
+<p>Supply chain management ensuring premium-tier panels, inverters, and battery storage at competitive cost. We source only from vetted, Tier-1 manufacturers with proven longevity.</p>
+</article>
+<article class="card solution-card reveal">
+<span class="icon-box"><span class="material-symbols-outlined">construction</span></span>
+<h3>03 — Installation & Commissioning</h3>
+<p>Expert installation by certified technicians who treat your home with the care it deserves. We commission every system rigorously to ensure flawless performance from day one.</p>
+</article>
+<article class="card solution-card reveal">
+<span class="icon-box"><span class="material-symbols-outlined">payments</span></span>
+<h3>04 — Funding & Flexibility</h3>
+<p>Structured funding designed around your family's financial requirements. From outright purchase to energy-as-a-service subscriptions — we find the model that works for you.</p>
+</article>
+<article class="card solution-card reveal">
+<span class="icon-box"><span class="material-symbols-outlined">monitoring</span></span>
+<h3>05 — Monitoring & Optimisation</h3>
+<p>Real-time performance tracking with proactive alerts. We continuously fine-tune your system to maximise savings and extend asset life — without you lifting a finger.</p>
+</article>
+<article class="card solution-card reveal">
+<span class="icon-box"><span class="material-symbols-outlined">verified_user</span></span>
+<h3>06 — Ongoing Care</h3>
+<p>Comprehensive protection for your investment — including insurance solutions, warranty management, and ongoing O&M services to keep everything running at peak efficiency.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="why">
+<div class="wrap">
+<div class="section-head reveal">
+<p class="section-kicker">Why Solar Connector</p>
+<h2 class="section-title">Engineering heritage. National reach. Personal care.</h2>
+<p class="section-copy">The same engineering rigour we bring to large enterprises, now designed exclusively for your home.</p>
+</div>
+<div class="split-section">
+<div class="reveal">
+<div style="position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--outline-variant);">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Premium residential property" style="width:100%;height:400px;object-fit:cover;">
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,22,40,0.6) 100%);"></div>
+<div style="position:absolute;bottom:24px;left:24px;right:24px;">
+<div style="color:rgba(255,255,255,0.9);font-size:0.85rem;font-weight:500;margin-bottom:4px;">Trusted Across South Africa</div>
+<div style="color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.1rem;">Premium homes in every province</div>
+</div>
+</div>
+</div>
+<div class="commit-grid reveal">
+<div class="commit-card">
+<h4>Nationwide Execution</h4>
+<p>Rapid mobilisation and installation capability across all provinces in South Africa — with the same precision everywhere.</p>
+</div>
+<div class="commit-card">
+<h4>Bespoke Structuring</h4>
+<p>Every solution is custom-structured to your operational and financial objectives. No cookie-cutter packages.</p>
+</div>
+<div class="commit-card">
+<h4>Single Point of Accountability</h4>
+<p>One team from concept to long-term optimisation. No finger-pointing, no gaps, no excuses.</p>
+</div>
+<div class="commit-card">
+<h4>Premium Quality</h4>
+<p>The same engineering rigour we bring to large enterprises, now designed exclusively for your home.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="glow-divider"></div>
+
+<section class="quote-section">
+<div class="wrap">
+<div class="quote-card reveal">
+<p class="quote-text">"Solar Connector transformed our home energy setup with absolute professionalism. The entire process — from the initial conversation to the final commissioning — was seamless. We haven't thought about load shedding since."</p>
+<p class="quote-attribution">— Homeowner, <strong>Sandton, Johannesburg</strong></p>
+</div>
+</div>
+</section>
+
+<section class="contrast-band" id="process">
+<div class="wrap pathway">
+<div class="section-head reveal">
+<p class="section-kicker">How It Works</p>
+<h2 class="section-title">Let's start the conversation</h2>
+<p class="section-copy">Every home is different. Let's understand yours. Your journey starts with a direct conversation — no call centres, no forms that vanish into the void.</p>
+</div>
+<div class="pathway-flow">
+<article class="flow-card reveal">
+<span>1</span>
+<div>
+<h3>Tell us about your home</h3>
+<p>Share your energy needs and aspirations with us directly. We listen first, then design.</p>
+</div>
+</article>
+<article class="flow-card reveal">
+<span>2</span>
+<div>
+<h3>Site assessment</h3>
+<p>We'll visit your property to understand its unique potential — orientation, roof structure, and consumption patterns.</p>
+</div>
+</article>
+<article class="flow-card reveal">
+<span>3</span>
+<div>
+<h3>Bespoke proposal</h3>
+<p>A tailored solution designed around your lifestyle and budget. Transparent pricing, no hidden costs.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<article class="card contact-card reveal">
+<p class="section-kicker">Start the Conversation</p>
+<h2 class="section-title">Let's understand your home</h2>
+<p class="section-copy">Tell us about your energy needs and aspirations. Our team will assess your property's potential and revert within 48 hours with a bespoke proposal.</p>
+
+<div id="formSuccess" class="form-success">
+<span class="material-symbols-outlined" style="font-size:3rem;color:white;margin-bottom:1rem;">check_circle</span>
+<h3>Enquiry Received</h3>
+<p>We will be in touch within 48 hours to arrange your site assessment and bespoke proposal.</p>
+</div>
+
+<form id="projectForm" action="https://formspree.io/f/mrezgkvv" method="POST" class="form-grid">
+<div class="form-group">
+<label for="name">Full Name *</label>
+<input type="text" id="name" name="name" required placeholder="Your name">
+</div>
+<div class="form-group">
+<label for="phone">Phone *</label>
+<input type="tel" id="phone" name="phone" required placeholder="+27 XX XXX XXXX">
+</div>
+<div class="form-group">
+<label for="email">Email *</label>
+<input type="email" id="email" name="email" required placeholder="you@email.com">
+</div>
+<div class="form-group">
+<label for="suburb">Suburb / Area *</label>
+<input type="text" id="suburb" name="suburb" required placeholder="e.g. Sandton, Cape Town">
+</div>
+<div class="form-group">
+<label for="bill">Average Monthly Electricity Bill (R) *</label>
+<select id="bill" name="bill" required>
+<option value="">Select range</option>
+<option value="2000-4000">R2,000 – R4,000</option>
+<option value="4000-7000">R4,000 – R7,000</option>
+<option value="7000-10000">R7,000 – R10,000</option>
+<option value="10000-15000">R10,000 – R15,000</option>
+<option value="15000+">R15,000+</option>
+</select>
+</div>
+<div class="form-group">
+<label for="interest">Primary Interest *</label>
+<select id="interest" name="interest" required>
+<option value="">Select interest</option>
+<option value="solar">Solar PV System</option>
+<option value="battery">Battery Backup</option>
+<option value="hybrid">Hybrid Solar + Battery</option>
+<option value="water">Solar Water Heating</option>
+<option value="unsure">Unsure — advise me</option>
+</select>
+</div>
+<div class="form-group full">
+<label for="details">Tell us about your home</label>
+<textarea id="details" name="details" rows="3" placeholder="Brief description: property type, current challenges with load shedding, specific goals..."></textarea>
+</div>
+<div class="form-group full" style="text-align:center;margin-top:0.5rem;">
+<input type="hidden" name="_subject" value="New Residential Solar Enquiry - Solar Connector">
+<input type="text" name="_gotcha" style="display:none">
+<button type="submit" class="button" style="min-height:52px;padding:0 2.5rem;font-size:0.95rem;">
+<span class="material-symbols-outlined" style="color:white;font-size:1.1rem;">send</span>
+Submit Enquiry
+</button>
+<p style="font-size:0.8rem;color:var(--on-surface-muted);margin-top:0.75rem;">No obligation. Response within 48 hours. Or <a href="https://wa.me/27766473499?text=Hi%20Solar%20Connector%2C%20I%20am%20interested%20in%20a%20bespoke%20residential%20solar%20solution." style="color:var(--primary);font-weight:600;">WhatsApp Victor directly</a>.</p>
+</div>
+</form>
+</article>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-col">
+<a class="logo-lockup" href="#top" aria-label="Solar Connector home" style="margin-bottom:1rem;">
+<svg class="logo-mark" width="28" height="28" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+<path d="M28 74 L50 26 L72 74" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linejoin="round"/>
+</svg>
+<span class="wordmark" style="font-size:0.95rem;">Solar Connector</span>
+</a>
+<p style="font-size:0.85rem;color:var(--on-surface-variant);line-height:1.6;">Bespoke Residential Energy-as-a-Service — South Africa. One trusted team from concept to long-term optimisation.</p>
+</div>
+<div class="footer-col">
+<h4>Services</h4>
+<a href="#offering">Design & Feasibility</a>
+<a href="#offering">Procurement & Supply</a>
+<a href="#offering">Installation</a>
+<a href="#offering">Funding Solutions</a>
+</div>
+<div class="footer-col">
+<h4>Company</h4>
+<a href="#why">Why Us</a>
+<a href="#process">Our Process</a>
+<a href="#contact">Contact</a>
+<a href="https://wa.me/27766473499?text=Hi%20Solar%20Connector%2C%20I%20am%20interested%20in%20a%20bespoke%20residential%20solar%20solution.">WhatsApp Victor</a>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<p>+27 76 647 3499</p>
+<p>victor@maribamedia.co.za</p>
+<p style="margin-top:1rem;font-size:0.8rem;color:var(--on-surface-muted);">Speak to Victor — direct conversation, no call centres.</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Solar Connector. All rights reserved.</p>
+<p>SAPVIA Members' Partner &bull; POPIA Compliant</p>
+</div>
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/27766473499?text=Hi%20Solar%20Connector%2C%20I%20am%20interested%20in%20a%20bespoke%20residential%20solar%20solution." target="_blank" rel="noopener" aria-label="Contact Victor on WhatsApp">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.062c-3.411 0-6.188 2.777-6.188 6.189 0 1.21.377 2.336 1.019 3.273l-.656 2.393 2.45-.64c.905.515 1.95.815 3.064.815 3.411 0 6.188-2.777 6.188-6.189 0-3.412-2.777-6.189-6.188-6.189zM15.523 14.854c-.216.608-1.246 1.107-1.712 1.147-.466.04-1.045.205-3.045-.63-2.001-.837-3.214-2.883-3.314-3.018-.1-.135-.853-1.134-.853-2.162 0-1.028.535-1.534.724-1.737.189-.203.411-.253.548-.253.136 0 .273 0 .393.006.126.006.297-.047.466.36.17.406.58 1.414.631 1.516.051.101.085.22.017.356-.068.135-.102.22-.203.339-.101.118-.213.265-.304.356-.101.101-.203.21-.085.412.119.202.527.871 1.131 1.408.777.691 1.43.906 1.633 1.008.203.101.321.085.44-.051.118-.135.514-.601.65-.806.135-.203.271-.169.456-.101.186.068 1.177.555 1.38.657.203.101.339.152.389.237.05.084.05.49-.166 1.098z"/></svg>
+</a>
+
+<script>
+(function(){
+var toggle=document.querySelector(".mobile-toggle");
+var panel=document.getElementById("mobile-menu");
+if(toggle&&panel){
+toggle.addEventListener("click",function(){
+var open=panel.classList.toggle("open");
+toggle.setAttribute("aria-expanded",String(open));
+var icon=toggle.querySelector(".material-symbols-outlined");
+if(icon)icon.textContent=open?"close":"menu";
+});
+panel.querySelectorAll("a").forEach(function(link){
+link.addEventListener("click",function(){
+panel.classList.remove("open");
+toggle.setAttribute("aria-expanded","false");
+var icon=toggle.querySelector(".material-symbols-outlined");
+if(icon)icon.textContent="menu";
+});
+});
+}
+
+var revealItems=document.querySelectorAll(".reveal,.slide-in-left");
+if("IntersectionObserver"in window){
+var revealObserver=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if(entry.isIntersecting){
+entry.target.classList.add("in-view");
+revealObserver.unobserve(entry.target);
+}
+});
+},{threshold:0.1,rootMargin:"0px 0px -40px 0px"});
+revealItems.forEach(function(item){revealObserver.observe(item);});
+}else{
+revealItems.forEach(function(item){item.classList.add("in-view");});
+}
+
+var nav=document.querySelector(".nav");
+var scrollHandler=function(){
+if(window.scrollY>15)nav.classList.add("scrolled");
+else nav.classList.remove("scrolled");
+};
+window.addEventListener("scroll",scrollHandler,{passive:true});
+scrollHandler();
+
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+anchor.addEventListener("click",function(e){
+var targetId=this.getAttribute("href");
+if(targetId==="#")return;
+var target=document.querySelector(targetId);
+if(target){
+e.preventDefault();
+var offset=document.querySelector(".nav").offsetHeight+16;
+window.scrollTo({top:target.offsetTop-offset,behavior:"smooth"});
+}
+});
+});
+
+var form=document.getElementById("projectForm");
+var successDiv=document.getElementById("formSuccess");
+if(form){
+form.addEventListener("submit",async function(e){
+e.preventDefault();
+var btn=form.querySelector('button[type="submit"]');
+var originalText=btn.innerHTML;
+btn.disabled=true;
+btn.innerHTML='<span class="material-symbols-outlined" style="color:white;font-size:1.1rem;">hourglass_top</span> Submitting...';
+var fd=new FormData(form);
+try{
+var resp=await fetch(form.action,{method:"POST",body:fd,headers:{"Accept":"application/json"}});
+if(resp.ok){
+form.style.display="none";
+successDiv.classList.add("visible");
+successDiv.scrollIntoView({behavior:"smooth",block:"center"});
+form.reset();
+}else{
+throw new Error("Form error");
+}
+}catch(err){
+alert("Submission error. Please try again or contact us directly at victor@maribamedia.co.za");
+}finally{
+btn.disabled=false;
+btn.innerHTML=originalText;
+}
+});
+}
+})();
+</script>
+
+</body>
+</html>
